@@ -53,7 +53,7 @@ uint256 ComputeMerkleRoot(std::vector<uint256> hashes, bool* mutated) {
         if (hashes.size() & 1) {
             hashes.push_back(hashes.back());
         }
-        SHA256D64(hashes[0].begin(), hashes[0].begin(), hashes.size() / 2);
+        SHA3_256D64(hashes[0].begin(), hashes[0].begin(), hashes.size() / 2);
         hashes.resize(hashes.size() / 2);
     }
     if (mutated) *mutated = mutation;

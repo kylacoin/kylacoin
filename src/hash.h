@@ -10,6 +10,7 @@
 #include <crypto/common.h>
 #include <crypto/ripemd160.h>
 #include <crypto/sha256.h>
+#include <crypto/sha3iuf.h>
 #include <prevector.h>
 #include <serialize.h>
 #include <uint256.h>
@@ -152,6 +153,53 @@ public:
     }
 };
 
+
+class CHash3Writer
+{
+private:
+    sha3_context ctx;
+
+    const int nType;
+    const int nVersion;
+public:
+
+    CHash3Writer(int nTypeIn, int nVersionIn) : nType(nTypeIn), nVersion(nVersionIn) {
+        sha3_Init256(&ctx);
+    }
+
+    int GetType() const { return nType; }
+    int GetVersion() const { return nVersion; }
+
+    void write(const char *pch, size_t size) {
+        sha3_Update(&ctx, (const unsigned char*)pch, size);
+    }
+
+    uint256 GetHash() {
+        uint8_t *result;
+        result = sha3_Finalize(&ctx);
+
+        uint8_t *result2;
+        sha3_context ctx2;
+        sha3_Init256(&ctx2);
+        sha3_Update(&ctx2, result, 32);
+        result2 = sha3_Finalize(&ctx2);
+
+        char result3[65];
+        result3[64] = 0;
+        for (int i=0; i<32; i++) {
+            sprintf(result3+i*2, "%02x", result2[31-i]);
+        }
+        return uint256S(result3);
+    }
+
+    template<typename T>
+    CHash3Writer& operator<<(const T& obj) {
+        // Serialize to this stream
+        ::Serialize(*this, obj);
+        return (*this);
+    }
+};
+
 /** Reads data from an underlying stream, while hashing the read data. */
 template<typename Source>
 class CHashVerifier : public CHashWriter
@@ -196,6 +244,14 @@ uint256 SerializeHash(const T& obj, int nType=SER_GETHASH, int nVersion=PROTOCOL
     return ss.GetHash();
 }
 
+template<typename T>
+uint256 SerializeHash3(const T& obj, int nType=SER_GETHASH, int nVersion=PROTOCOL_VERSION)
+{
+    CHash3Writer ss(nType, nVersion);
+    ss << obj;
+    return ss.GetHash();
+}
+
 /** Single-SHA256 a 32-byte input (represented as uint256). */
 [[nodiscard]] uint256 SHA256Uint256(const uint256& input);
 
@@ -210,5 +266,7 @@ void BIP32Hash(const ChainCode &chainCode, unsigned int nChild, unsigned char he
  * then calling CHashWriter::GetSHA256().
  */
 CHashWriter TaggedHash(const std::string& tag);
+
+void SHA3_256D64(unsigned char* out, const unsigned char* in, size_t blocks);
 
 #endif // BITCOIN_HASH_H

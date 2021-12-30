@@ -240,6 +240,8 @@ struct Peer {
     std::atomic_bool m_wants_addrv2{false};
     /** Whether this peer has already sent us a getaddr message. */
     bool m_getaddr_recvd{false};
+    /** Whether this peer has already sent us a mempool message. */
+    bool m_mempool_recvd{false};
     /** Number of addr messages that can be processed from this peer. Start at 1 to
      *  permit self-announcement. */
     double m_addr_token_bucket{1.0};
@@ -2540,6 +2542,7 @@ void PeerManagerImpl::ProcessMessage(CNode& pfrom, const std::string& msg_type, 
         }
 
         m_connman.PushMessage(&pfrom, msg_maker.Make(NetMsgType::VERACK));
+        m_connman.PushMessage(&pfrom, msg_maker.Make(NetMsgType::MEMPOOL));
 
         pfrom.nServices = nServices;
         pfrom.SetAddrLocal(addrMe);
@@ -3744,7 +3747,8 @@ void PeerManagerImpl::ProcessMessage(CNode& pfrom, const std::string& msg_type, 
     }
 
     if (msg_type == NetMsgType::MEMPOOL) {
-        if (!(pfrom.GetLocalServices() & NODE_BLOOM) && !pfrom.HasPermission(NetPermissionFlags::Mempool))
+        //if (!(pfrom.GetLocalServices() & NODE_BLOOM) && !pfrom.HasPermission(NetPermissionFlags::Mempool))
+        if (!(pfrom.GetLocalServices() & NODE_BLOOM))
         {
             if (!pfrom.HasPermission(NetPermissionFlags::NoBan))
             {
@@ -3754,7 +3758,8 @@ void PeerManagerImpl::ProcessMessage(CNode& pfrom, const std::string& msg_type, 
             return;
         }
 
-        if (m_connman.OutboundTargetReached(false) && !pfrom.HasPermission(NetPermissionFlags::Mempool))
+        //if (m_connman.OutboundTargetReached(false) && !pfrom.HasPermission(NetPermissionFlags::Mempool))
+        if (m_connman.OutboundTargetReached(false))
         {
             if (!pfrom.HasPermission(NetPermissionFlags::NoBan))
             {
@@ -3763,6 +3768,13 @@ void PeerManagerImpl::ProcessMessage(CNode& pfrom, const std::string& msg_type, 
             }
             return;
         }
+
+        // Only send one mempool response per connection to reduce resource waste
+        if (peer->m_mempool_recvd) {
+            LogPrint(BCLog::NET, "Ignoring repeated \"mempool\". peer=%d\n", pfrom.GetId());
+            return;
+        }
+        peer->m_mempool_recvd = true;
 
         if (pfrom.m_tx_relay != nullptr) {
             LOCK(pfrom.m_tx_relay->cs_tx_inventory);

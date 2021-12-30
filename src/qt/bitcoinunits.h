@@ -41,9 +41,12 @@ public:
     enum Unit
     {
         BTC,
+        dBTC,
+        cBTC,
         mBTC,
         uBTC,
-        SAT
+        nBTC,
+        pBTC
     };
 
     enum class SeparatorStyle

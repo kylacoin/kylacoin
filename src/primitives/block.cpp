@@ -10,7 +10,7 @@
 
 uint256 CBlockHeader::GetHash() const
 {
-    return SerializeHash(*this);
+    return SerializeHash3(*this);
 }
 
 std::string CBlock::ToString() const

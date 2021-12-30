@@ -7,10 +7,10 @@
 	 width="1024px" height="1024px" viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024" xml:space="preserve">
 <g>
 	<radialGradient id="SVGID_1_" cx="512" cy="512" r="494" gradientUnits="userSpaceOnUse">
-		<stop  offset="0" style="stop-color:#0D8DDF"/>
-		<stop  offset="0.4648" style="stop-color:#0D76DF"/>
-		<stop  offset="0.9838" style="stop-color:#0060D7"/>
-		<stop  offset="1" style="stop-color:#0025D4"/>
+		<stop  offset="0" style="stop-color:#00BF21"/>
+		<stop  offset="0.4648" style="stop-color:#00AA1E"/>
+		<stop  offset="0.9838" style="stop-color:#00AA01"/>
+		<stop  offset="1" style="stop-color:#007F2B"/>
 	</radialGradient>
 	<circle fill="url(#SVGID_1_)" cx="512" cy="512" r="494"/>
 </g>

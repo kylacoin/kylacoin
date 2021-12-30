@@ -8,7 +8,7 @@
 
 #include <cassert>
 
-static constexpr auto MAX_DIGITS_BTC = 16;
+static constexpr auto MAX_DIGITS_BTC = 20;
 
 BitcoinUnits::BitcoinUnits(QObject *parent):
         QAbstractListModel(parent),
@@ -20,9 +20,11 @@ QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
     unitlist.append(BTC);
-    unitlist.append(mBTC);
+    unitlist.append(dBTC);
+    unitlist.append(cBTC);
     unitlist.append(uBTC);
-    unitlist.append(SAT);
+    unitlist.append(nBTC);
+    unitlist.append(pBTC);
     return unitlist;
 }
 
@@ -31,9 +33,12 @@ bool BitcoinUnits::valid(int unit)
     switch(unit)
     {
     case BTC:
+    case dBTC:
+    case cBTC:
     case mBTC:
     case uBTC:
-    case SAT:
+    case nBTC:
+    case pBTC:
         return true;
     default:
         return false;
@@ -44,10 +49,13 @@ QString BitcoinUnits::longName(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("BTC");
-    case mBTC: return QString("mBTC");
-    case uBTC: return QString::fromUtf8("µBTC (bits)");
-    case SAT: return QString("Satoshi (sat)");
+    case BTC: return QString("YCN");
+    case dBTC: return QString("dYCN");
+    case cBTC: return QString("cYCN");
+    case mBTC: return QString("mYCN");
+    case uBTC: return QString::fromUtf8("µYCN");
+    case nBTC: return QString("nYCN");
+    case pBTC: return QString("pYCN");
     default: return QString("???");
     }
 }
@@ -56,8 +64,12 @@ QString BitcoinUnits::shortName(int unit)
 {
     switch(unit)
     {
-    case uBTC: return QString::fromUtf8("bits");
-    case SAT: return QString("sat");
+    case dBTC: return QString("deci");
+    case cBTC: return QString("centi");
+    case mBTC: return QString("mili");
+    case uBTC: return QString("micro");
+    case nBTC: return QString("nano");
+    case pBTC: return QString("pico");
     default: return longName(unit);
     }
 }
@@ -66,10 +78,13 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("Bitcoins");
-    case mBTC: return QString("Milli-Bitcoins (1 / 1" THIN_SP_UTF8 "000)");
-    case uBTC: return QString("Micro-Bitcoins (bits) (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-    case SAT: return QString("Satoshi (sat) (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case BTC: return QString("YCN");
+    case dBTC: return QString("Deci-YCN (1 / 1" THIN_SP_UTF8 "0)");
+    case cBTC: return QString("Centi-YCN (1 / 1" THIN_SP_UTF8 "00)");
+    case mBTC: return QString("Milli-YCN (1 / 1" THIN_SP_UTF8 "000)");
+    case uBTC: return QString("Micro-YCN (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case nBTC: return QString("Nano-YCN (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case pBTC: return QString("Pico-YCN (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
 }
@@ -78,11 +93,14 @@ qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case BTC: return 100000000;
-    case mBTC: return 100000;
-    case uBTC: return 100;
-    case SAT: return 1;
-    default: return 100000000;
+    case BTC: return 1000000000000;
+    case dBTC: return 100000000000;
+    case cBTC: return 10000000000;
+    case mBTC: return 1000000000;
+    case uBTC: return 1000000;
+    case nBTC: return 1000;
+    case pBTC: return 1;
+    default: return 1000000000000;
     }
 }
 
@@ -90,10 +108,13 @@ int BitcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case BTC: return 8;
-    case mBTC: return 5;
-    case uBTC: return 2;
-    case SAT: return 0;
+    case BTC: return 12;
+    case dBTC: return 11;
+    case cBTC: return 10;
+    case mBTC: return 9;
+    case uBTC: return 6;
+    case nBTC: return 3;
+    case pBTC: return 0;
     default: return 0;
     }
 }

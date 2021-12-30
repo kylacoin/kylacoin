@@ -96,3 +96,23 @@ CHashWriter TaggedHash(const std::string& tag)
     writer << taghash << taghash;
     return writer;
 }
+
+void SHA3_256D64(unsigned char* out, const unsigned char* in, size_t blocks)
+{
+    for (size_t s = 0; s < blocks; s++) {
+        uint8_t *result;
+        sha3_context ctx;
+        sha3_Init256(&ctx);
+        sha3_Update(&ctx, in+s*64, 64);
+        result = sha3_Finalize(&ctx);
+
+        uint8_t *result2;
+        sha3_context ctx2;
+        sha3_Init256(&ctx2);
+        sha3_Update(&ctx2, result, 32);
+        result2 = sha3_Finalize(&ctx2);
+        for (int i=0; i<32; i++) {
+            out[s*32+i] = result2[i];
+        }
+    }
+}
