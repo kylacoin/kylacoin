@@ -24,8 +24,21 @@ Algorithm
 -------
 Yilacoin uses double SHA3-256 instead of double SHA-256, which is more secure. SHA3 is also known as keccak but it's diffrent than keccak algorithm, and became standard from keccak in 2015.
 
-License
+Release Notes
+=======
+
+v1.0.1
 -------
+* RPC commands `sendtoaddress` and `getbalance` fixed.
+* Example addresses fixed.
+* Chain params updated.
+
+v1.0.0
+-------
+* Initial Release
+
+License
+=======
 
 Yilacoin is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see https://opensource.org/licenses/MIT.
