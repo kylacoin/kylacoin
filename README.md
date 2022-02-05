@@ -1,42 +1,31 @@
-Yilacoin Development Repository
+Kylacoin Development Repository
 =====================================
 
-https://yilacoin.eu.org
+https://kylacoin.v6.army/
 
-These are some comparisons for Yilacoin:
+These are some comparisons for Kylacoin:
 
-|                      | Bitcoin                                         | Yilacoin                                 |
+|                      | Bitcoin                                         | Kylacoin                                 |
 | :----                |     :---:                                       |       :----:                             |
-| Ticker               | BTC                                             | YCN                                      |
-| Symbol               | ₿                                               | Ɏ                                        |
+| Ticker               | BTC                                             | KCN                                      |
+| Symbol               | ₿                                               | Ꝁ                                        |
 | Block Time           | 10 Minutes                                      | 1 Minute                                 |
 | Decimals             | 8 Digits                                        | 12 Digits                                |
 | Minimum Value        | 0.00000001                                      | 0.000000000001                           |
 | Block Size           | 4 MB                                            | 400 KB                                   |
 | Halving              | 210,000 Blocks<br>(~ every 4 years)             | 2,100,000 Blocks<br>(~ every 4 years)    |
-| Starting Reward      | 50 BTC                                          | 0.005 YCN                                |
+| Starting Reward      | 50 BTC                                          | 0.005 KCN                                |
 | Block Maturity       | 100 Confirmations<br>(~ 16 hours and 40 minutes)| 60 Confirmations<br>(~ 1 hour)           |
 | Difficulty Retarget  | 2,016 Blocks<br>(~ every two weeks)             | 20,160 Blocks<br>(~ every two weeks)     |
-| Max Supply           | 21,000,000 BTC                                  | 9,021,000 YCN                            |
+| Max Supply           | 21,000,000 BTC                                  | 21,000 KCN                               |
 | Start Year           | 2009                                            | 2022                                     |
 
 Algorithm
 -------
-Yilacoin uses double SHA3-256 instead of double SHA-256, which is more secure. SHA3 is also known as keccak but it's diffrent than keccak algorithm, and became standard from keccak in 2015.
+Kylacoin uses double SHA3-256 instead of double SHA-256, which is more secure. SHA3 is also known as keccak but it's diffrent than keccak algorithm, and became standard from keccak in 2015.
 
 Release Notes
 =======
-v1.0.2
--------
-* Algorthm Fixed.
-* Chain params updated.
-
-v1.0.1
--------
-* RPC commands `sendtoaddress` and `getbalance` fixed.
-* Example addresses fixed.
-* Chain params updated.
-
 v1.0.0
 -------
 * Initial Release
@@ -44,5 +33,5 @@ v1.0.0
 License
 =======
 
-Yilacoin is released under the terms of the MIT license. See [COPYING](COPYING) for more
+Kylacoin is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see https://opensource.org/licenses/MIT.

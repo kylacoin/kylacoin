@@ -49,13 +49,13 @@ QString BitcoinUnits::longName(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("YCN");
-    case dBTC: return QString("dYCN");
-    case cBTC: return QString("cYCN");
-    case mBTC: return QString("mYCN");
-    case uBTC: return QString::fromUtf8("µYCN");
-    case nBTC: return QString("nYCN");
-    case pBTC: return QString("pYCN");
+    case BTC: return QString("KCN");
+    case dBTC: return QString("dKCN");
+    case cBTC: return QString("cKCN");
+    case mBTC: return QString("mKCN");
+    case uBTC: return QString::fromUtf8("µKCN");
+    case nBTC: return QString("nKCN");
+    case pBTC: return QString("pKCN");
     default: return QString("???");
     }
 }
@@ -78,13 +78,13 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("YCN");
-    case dBTC: return QString("Deci-YCN (1 / 1" THIN_SP_UTF8 "0)");
-    case cBTC: return QString("Centi-YCN (1 / 1" THIN_SP_UTF8 "00)");
-    case mBTC: return QString("Milli-YCN (1 / 1" THIN_SP_UTF8 "000)");
-    case uBTC: return QString("Micro-YCN (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-    case nBTC: return QString("Nano-YCN (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-    case pBTC: return QString("Pico-YCN (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case BTC: return QString("KCN");
+    case dBTC: return QString("Deci-KCN (1 / 1" THIN_SP_UTF8 "0)");
+    case cBTC: return QString("Centi-KCN (1 / 1" THIN_SP_UTF8 "00)");
+    case mBTC: return QString("Milli-KCN (1 / 1" THIN_SP_UTF8 "000)");
+    case uBTC: return QString("Micro-KCN (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case nBTC: return QString("Nano-KCN (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case pBTC: return QString("Pico-KCN (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
 }

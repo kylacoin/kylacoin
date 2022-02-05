@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Open yilacoin URI</string>
+   <string>Open kylacoin URI</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -26,7 +26,7 @@
      <item>
       <widget class="QValidatedLineEdit" name="uriEdit">
        <property name="placeholderText">
-        <string notr="true">yilacoin:</string>
+        <string notr="true">kylacoin:</string>
        </property>
       </widget>
      </item>

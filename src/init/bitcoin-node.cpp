@@ -12,7 +12,7 @@
 
 namespace init {
 namespace {
-const char* EXE_NAME = "yilacoin-node";
+const char* EXE_NAME = "kylacoin-node";
 
 class BitcoinNodeInit : public interfaces::Init
 {

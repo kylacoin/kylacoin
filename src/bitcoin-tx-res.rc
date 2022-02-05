@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Yilacoin"
-            VALUE "FileDescription",    "yilacoin-tx (CLI Yilacoin transaction editor utility)"
+            VALUE "CompanyName",        "Kylacoin"
+            VALUE "FileDescription",    "kylacoin-tx (CLI Kylacoin transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "yilacoin-tx"
+            VALUE "InternalName",       "kylacoin-tx"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "yilacoin-tx.exe"
-            VALUE "ProductName",        "yilacoin-tx"
+            VALUE "OriginalFilename",   "kylacoin-tx.exe"
+            VALUE "ProductName",        "kylacoin-tx"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

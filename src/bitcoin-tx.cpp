@@ -99,11 +99,11 @@ static int AppInitRawTx(int argc, char* argv[])
 
     if (argc < 2 || HelpRequested(gArgs) || gArgs.IsArgSet("-version")) {
         // First part of help message is specific to this utility
-        std::string strUsage = PACKAGE_NAME " yilacoin-tx utility version " + FormatFullVersion() + "\n";
+        std::string strUsage = PACKAGE_NAME " kylacoin-tx utility version " + FormatFullVersion() + "\n";
         if (!gArgs.IsArgSet("-version")) {
             strUsage += "\n"
-                "Usage:  yilacoin-tx [options] <hex-tx> [commands]  Update hex-encoded yilacoin transaction\n"
-                "or:     yilacoin-tx [options] -create [commands]   Create hex-encoded yilacoin transaction\n"
+                "Usage:  kylacoin-tx [options] <hex-tx> [commands]  Update hex-encoded kylacoin transaction\n"
+                "or:     kylacoin-tx [options] -create [commands]   Create hex-encoded kylacoin transaction\n"
                 "\n";
             strUsage += gArgs.GetHelpMessage();
         }
