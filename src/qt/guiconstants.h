@@ -43,7 +43,7 @@ static const int TOOLTIP_WRAP_THRESHOLD = 80;
 #define SPINNER_FRAMES 36
 
 #define QAPP_ORG_NAME "Kylacoin"
-#define QAPP_ORG_DOMAIN "kylacoin.v6.army"
+#define QAPP_ORG_DOMAIN "kylacoin.eu.org"
 #define QAPP_APP_NAME_DEFAULT "Kylacoin-Qt"
 #define QAPP_APP_NAME_TESTNET "Kylacoin-Qt-testnet"
 #define QAPP_APP_NAME_SIGNET "Kylacoin-Qt-signet"

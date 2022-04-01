@@ -91,8 +91,8 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].min_activation_height = 0; // No activation delay
 
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000c784c784c784");
-        consensus.defaultAssumeValid = uint256S("0x000000000368e031fb3fa6bfc4dfe2bfda88fb8bc1ae8d89d9f454762b2d1d18");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000086edaffe1ed7ff");
+        consensus.defaultAssumeValid = uint256S("0x0000000000348569aa42864d215997655a9b7e664087a185a0b2a7a6c2111924");
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -119,7 +119,7 @@ public:
         // This is fine at runtime as we'll fall back to using them as an addrfetch if they don't support the
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
-        vSeeds.emplace_back("seed.kylacoin.v6.army");
+        vSeeds.emplace_back("seed.kylacoin.eu.org");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,28); // C
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,26); // B
@@ -138,13 +138,18 @@ public:
 
         checkpointData = {
             {
-                {      0, uint256S("0x0000000091ddc5a0b9f0ed098a4db06ee9bc286a104f092f4fb476eb9364b7c9")},
-                {    100, uint256S("0x00000000ecf70b5d120ab647be866f421a628f0a81cec8db84945a63adfaf3e4")},
-                {   1000, uint256S("0x00000000cb39122095736b83fdb58fd2c33be77af086baa28713693019f407e9")},
-                {  10000, uint256S("0x0000000018ac0acf006dc1d35b454bf9fff667ed3928e5306a83ac748e8c5476")},
-                {  20000, uint256S("0x00000000f6b5cafe1c19127f107bd64fb03b7eda42026b52eecf58d3cd9a0f79")},
-                {  27000, uint256S("0x000000001159eae241b2011656b58d8c0c1ea952b1204868aa886146d12472e6")},
-                {  27888, uint256S("0x000000000368e031fb3fa6bfc4dfe2bfda88fb8bc1ae8d89d9f454762b2d1d18")},
+                {       0, uint256S("0x0000000091ddc5a0b9f0ed098a4db06ee9bc286a104f092f4fb476eb9364b7c9")},
+                {     100, uint256S("0x00000000ecf70b5d120ab647be866f421a628f0a81cec8db84945a63adfaf3e4")},
+                {    1000, uint256S("0x00000000cb39122095736b83fdb58fd2c33be77af086baa28713693019f407e9")},
+                {   10000, uint256S("0x0000000018ac0acf006dc1d35b454bf9fff667ed3928e5306a83ac748e8c5476")},
+                {   20000, uint256S("0x00000000f6b5cafe1c19127f107bd64fb03b7eda42026b52eecf58d3cd9a0f79")},
+                {   40000, uint256S("0x000000003fb4850bc3ca1c1202523344bc2b8ae00e96a9e55bea706539b91976")},
+                {   60000, uint256S("0x000000000cb831eda363fa3c4728f2f480fb2ff9a0bd38b5c4748befa63e04a6")},
+                {   80000, uint256S("0x0000000003c9dee6a7d560fcd41c36821a5a9ebe6e21dcc810b0296ea22028d0")},
+                {  100000, uint256S("0x00000000013b73246ad1952c90950a9dea7554dbd8385afa9d9ff39b84ffc625")},
+                {  120000, uint256S("0x0000000001ef9ef80ba075c14bbb9bc97f3f7c8e000bbe32cb211bb5ced00585")},
+                {  140000, uint256S("0x0000000001e71853e8583cf742f5af5fe4293ee5f4a0a9630b76f073e3563ed7")},
+                {  142812, uint256S("0x0000000000348569aa42864d215997655a9b7e664087a185a0b2a7a6c2111924")},
             }
         };
 
@@ -154,9 +159,9 @@ public:
 
         chainTxData = ChainTxData{
             // Data from RPC: getchaintxstats 4096 00000000000000000008a89e854d57e5667df88f1cdef6fde2fbca1de5b639ad
-            /* nTime    */ 1644362341,
-            /* nTxCount */ 52984,
-            /* dTxRate  */ 0.210204324538782,
+            /* nTime    */ 1648808817,
+            /* nTxCount */ 171020,
+            /* dTxRate  */ 0.03641552192990768,
         };
     }
 };
@@ -218,7 +223,7 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.emplace_back("testnet-seed.kylacoin.v6.army");
+        vSeeds.emplace_back("testnet-seed.kylacoin.eu.org");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,38); // G
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,33); // E
@@ -265,7 +270,7 @@ public:
 
         if (!args.IsArgSet("-signetchallenge")) {
             bin = ParseHex("512103ad5e0edad18cb1f0fc0d28a3d4f1f3e445640337489abb10404f2d1e086be430210359ef5021964fe22d6f8e05b2463c9540ce96883fe3b278760f048f5189f2e6c452ae");
-            vSeeds.emplace_back("signet-seed.kylacoin.v6.army");
+            vSeeds.emplace_back("signet-seed.kylacoin.eu.org");
 
             consensus.nMinimumChainWork = uint256{};
             consensus.defaultAssumeValid = uint256{};

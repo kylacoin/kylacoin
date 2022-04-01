@@ -1,7 +1,7 @@
 Kylacoin Development Repository
 =====================================
 
-https://kylacoin.v6.army/
+https://kylacoin.eu.org/
 
 These are some comparisons for Kylacoin:
 
@@ -26,6 +26,13 @@ Kylacoin uses double SHA3-256 instead of double SHA-256, which is more secure. S
 
 Release Notes
 =======
+v1.0.2
+-------
+* Chain params updated
+* Website address updated
+* DNS Seeds updated
+* Test RPC addresses fixed
+
 v1.0.1
 -------
 * Chain params updated
