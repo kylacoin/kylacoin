@@ -26,6 +26,12 @@ Kylacoin uses double SHA3-256 instead of double SHA-256, which is more secure. S
 
 Release Notes
 =======
+v1.0.3
+-------
+* Chain params updated
+* Changed client name to "Kylacoin Core"
+* Max supply fixed
+
 v1.0.2
 -------
 * Chain params updated
