@@ -91,8 +91,8 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].min_activation_height = 0; // No activation delay
 
-        consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000009b7dc658805b5a");
-        consensus.defaultAssumeValid = uint256S("0x000000000062cf5f7da259adc10eea484e6819d96eccea90596c658764515b30");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000472e37d0063bb81");
+        consensus.defaultAssumeValid = uint256S("0x0000000000b27952aed5a16ac2f8b6b532c5a83b93dc2e98f71de8834b516ecb");
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -105,8 +105,8 @@ public:
         pchMessageStart[3] = 0x0e;
         nDefaultPort = 5111;
         nPruneAfterHeight = 1000000;
-        m_assumed_blockchain_size = 0;
-        m_assumed_chain_state_size = 0;
+        m_assumed_blockchain_size = 1;
+        m_assumed_chain_state_size = 1;
 
         genesis = CreateGenesisBlock(1644088100, 600184878, 0x1d00ffff, 1, 5000000000, "047eb6f0deea46efeff2f3b0aea364f9e0718e821a5becce3c5c7d1a207694af4ff4aa4d3daaaf8dd5a9685a2c6797cbcba94983efd8919d5a1d1e45bacd057c44", "0000000000000000");
         consensus.hashGenesisBlock = genesis.GetHash();
@@ -119,7 +119,7 @@ public:
         // This is fine at runtime as we'll fall back to using them as an addrfetch if they don't support the
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
-        vSeeds.emplace_back("seed.kylacoin.eu.org");
+        vSeeds.emplace_back("seed.kylacoin.com");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,28); // C
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,26); // B
@@ -147,10 +147,10 @@ public:
                 {   60000, uint256S("0x000000000cb831eda363fa3c4728f2f480fb2ff9a0bd38b5c4748befa63e04a6")},
                 {   80000, uint256S("0x0000000003c9dee6a7d560fcd41c36821a5a9ebe6e21dcc810b0296ea22028d0")},
                 {  100000, uint256S("0x00000000013b73246ad1952c90950a9dea7554dbd8385afa9d9ff39b84ffc625")},
-                {  120000, uint256S("0x0000000001ef9ef80ba075c14bbb9bc97f3f7c8e000bbe32cb211bb5ced00585")},
-                {  140000, uint256S("0x0000000001e71853e8583cf742f5af5fe4293ee5f4a0a9630b76f073e3563ed7")},
-                {  142812, uint256S("0x0000000000348569aa42864d215997655a9b7e664087a185a0b2a7a6c2111924")},
-                {  145741, uint256S("0x000000000062cf5f7da259adc10eea484e6819d96eccea90596c658764515b30")},
+                {  200000, uint256S("0x00000000016b703713d61f9a0bca725d6c2ec1b81fd0cc149688972936439d57")},
+                {  300000, uint256S("0x000000000188ac3cd45ebdd06d7d827e3dfb306ab97e1608773920809525859e")},
+                {  400000, uint256S("0x00000000002034811a860e97cecbe0b6a62a445cbedb34d80665dbedf8504860")},
+                {  463400, uint256S("0x0000000000b27952aed5a16ac2f8b6b532c5a83b93dc2e98f71de8834b516ecb")},
             }
         };
 
@@ -160,9 +160,9 @@ public:
 
         chainTxData = ChainTxData{
             // Data from RPC: getchaintxstats 4096 00000000000000000008a89e854d57e5667df88f1cdef6fde2fbca1de5b639ad
-            /* nTime    */ 1649415299,
-            /* nTxCount */ 174340,
-            /* dTxRate  */ 0.0281693994460419,
+            /* nTime    */ 1673458279,
+            /* nTxCount */ 509726,
+            /* dTxRate  */ 0.01862770492451016,
         };
     }
 };
@@ -224,7 +224,7 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.emplace_back("testnet-seed.kylacoin.eu.org");
+        vSeeds.emplace_back("testnet-seed.kylacoin.com");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,38); // G
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,33); // E
@@ -271,7 +271,7 @@ public:
 
         if (!args.IsArgSet("-signetchallenge")) {
             bin = ParseHex("512103ad5e0edad18cb1f0fc0d28a3d4f1f3e445640337489abb10404f2d1e086be430210359ef5021964fe22d6f8e05b2463c9540ce96883fe3b278760f048f5189f2e6c452ae");
-            vSeeds.emplace_back("signet-seed.kylacoin.eu.org");
+            vSeeds.emplace_back("signet-seed.kylacoin.com");
 
             consensus.nMinimumChainWork = uint256{};
             consensus.defaultAssumeValid = uint256{};
