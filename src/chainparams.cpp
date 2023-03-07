@@ -91,8 +91,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].min_activation_height = 0; // No activation delay
 
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000472e37d0063bb81");
-        consensus.defaultAssumeValid = uint256S("0x0000000000b27952aed5a16ac2f8b6b532c5a83b93dc2e98f71de8834b516ecb");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000528c711d66b14bf");
+        consensus.defaultAssumeValid = uint256S("0x00000000000235a89d3706e4843bf634593c0d5d08cb9cf5a62d4e78072cac4a");
+
+        consensus.nDevRewardHeight = 494000;
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -150,7 +152,9 @@ public:
                 {  200000, uint256S("0x00000000016b703713d61f9a0bca725d6c2ec1b81fd0cc149688972936439d57")},
                 {  300000, uint256S("0x000000000188ac3cd45ebdd06d7d827e3dfb306ab97e1608773920809525859e")},
                 {  400000, uint256S("0x00000000002034811a860e97cecbe0b6a62a445cbedb34d80665dbedf8504860")},
-                {  463400, uint256S("0x0000000000b27952aed5a16ac2f8b6b532c5a83b93dc2e98f71de8834b516ecb")},
+                {  450000, uint256S("0x000000000036cd3913f263a70df9aafb82ef46ef51eae7683ad68ab6c2e4eb63")},
+                {  490000, uint256S("0x000000000029b023aaf9b749c5ba2fe918084c6628167c8bfbcee9a823c4e322")},
+                {  493978, uint256S("0x00000000000235a89d3706e4843bf634593c0d5d08cb9cf5a62d4e78072cac4a")},
             }
         };
 
@@ -159,10 +163,10 @@ public:
         };
 
         chainTxData = ChainTxData{
-            // Data from RPC: getchaintxstats 4096 00000000000000000008a89e854d57e5667df88f1cdef6fde2fbca1de5b639ad
-            /* nTime    */ 1673458279,
-            /* nTxCount */ 509726,
-            /* dTxRate  */ 0.01862770492451016,
+            // Data from RPC: getchaintxstats 4096 00000000000235a89d3706e4843bf634593c0d5d08cb9cf5a62d4e78072cac4a
+            /* nTime    */ 1678198969,
+            /* nTxCount */ 541970,
+            /* dTxRate  */ 0.001477374813287142,
         };
     }
 };
@@ -205,6 +209,8 @@ public:
 
         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000100010001");
         consensus.defaultAssumeValid = uint256{};
+
+        consensus.nDevRewardHeight = 0;
 
         pchMessageStart[0] = 0x92;
         pchMessageStart[1] = 0x1a;
@@ -353,6 +359,8 @@ public:
 
         vFixedSeeds.clear();
 
+        consensus.nDevRewardHeight = 0;
+
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,38);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,33);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,168);
@@ -407,6 +415,8 @@ public:
 
         consensus.nMinimumChainWork = uint256{};
         consensus.defaultAssumeValid = uint256{};
+
+        consensus.nDevRewardHeight = 0;
 
         pchMessageStart[0] = 0xd2;
         pchMessageStart[1] = 0x13;
