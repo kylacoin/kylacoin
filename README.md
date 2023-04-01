@@ -1,67 +1,72 @@
-Kylacoin Development Repository
+Kylacoin Core integration/staging tree
 =====================================
 
-https://kylacoin.com/
+https://kylacoin.com
 
-These are some comparisons for Kylacoin:
+What is Kylacoin Core? 
+----------------
 
-|                      | Bitcoin                                         | Kylacoin                                 |
-| :----                |     :---:                                       |       :----:                             |
-| Ticker               | BTC                                             | KCN                                      |
-| Symbol               | ₿                                               | Ꝁ                                        |
-| Block Time           | 10 Minutes                                      | 1 Minute                                 |
-| Decimals             | 8 Digits                                        | 12 Digits                                |
-| Minimum Value        | 0.00000001                                      | 0.000000000001                           |
-| Block Size           | 4 MB                                            | 400 KB                                   |
-| Halving              | 210,000 Blocks<br>(~ every 4 years)             | 2,100,000 Blocks<br>(~ every 4 years)    |
-| Starting Reward      | 50 BTC                                          | 0.005 KCN                                |
-| Block Maturity       | 100 Confirmations<br>(~ 16 hours and 40 minutes)| 60 Confirmations<br>(~ 1 hour)           |
-| Difficulty Retarget  | 2,016 Blocks<br>(~ every two weeks)             | 20,160 Blocks<br>(~ every two weeks)     |
-| Max Supply           | 21,000,000 BTC                                  | 21,000 KCN                               |
-| Start Year           | 2009                                            | 2022                                     |
+Kylacoin Core connects to the Kylacoin peer-to-peer network to download and fully
+validate blocks and transactions. It also includes a wallet and graphical user
+interface, which can be optionally built.
 
-Algorithm
--------
-Kylacoin uses double SHA3-256 instead of double SHA-256, which is more secure. SHA3 is also known as keccak but it's diffrent than keccak algorithm, and became standard from keccak in 2015.
-
-Release Notes
-=======
-v1.2.0 (mandatory update)
--------
-* Chain params updated
-* DevReward added
-
-v1.1.0
--------
-* Allow connect to non-standard ports
-* Chain params updated
-* Website updated
-* Various languages were added
-
-v1.0.3
--------
-* Chain params updated
-* Changed client name to "Kylacoin Core"
-* Max supply fixed
-
-v1.0.2
--------
-* Chain params updated
-* Website address updated
-* DNS Seeds updated
-* Test RPC addresses fixed
-
-v1.0.1
--------
-* Chain params updated
-* filenames fixed
-
-v1.0.0
--------
-* Initial Release
+Further information about Kylacoin Core is available in the [doc folder](/doc).
 
 License
-=======
+-------
 
-Kylacoin is released under the terms of the MIT license. See [COPYING](COPYING) for more
+Kylacoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see https://opensource.org/licenses/MIT.
+
+Development Process
+-------------------
+
+The `master` branch is regularly built (see `doc/build-*.md` for instructions) and tested, but it is not guaranteed to be
+completely stable. [Tags](https://github.com/kylacoin/kylacoin/tags) are created
+regularly from release branches to indicate new official, stable release versions of Kylacoin Core.
+
+The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md)
+and useful hints for developers can be found in [doc/developer-notes.md](doc/developer-notes.md).
+
+Testing
+-------
+
+Testing and code review is the bottleneck for development; we get more pull
+requests than we can review and test on short notice. Please be patient and help out by testing
+other people's pull requests, and remember this is a security-critical project where any mistake might cost people
+lots of money.
+
+### Automated Testing
+
+Developers are strongly encouraged to write [unit tests](src/test/README.md) for new code, and to
+submit new unit tests for old code. Unit tests can be compiled and run
+(assuming they weren't disabled in configure) with: `make check`. Further details on running
+and extending unit tests can be found in [/src/test/README.md](/src/test/README.md).
+
+There are also [regression and integration tests](/test), written
+in Python.
+These tests can be run (if the [test dependencies](/test) are installed) with: `test/functional/test_runner.py`
+
+The CI (Continuous Integration) systems make sure that every pull request is built for Windows, Linux, and macOS,
+and that unit/sanity tests are run automatically.
+
+### Manual Quality Assurance (QA) Testing
+
+Changes should be tested by somebody other than the developer who wrote the
+code. This is especially important for large or high-risk changes. It is useful
+to add a test plan to the pull request description if testing the changes is
+not straightforward.
+
+Translations
+------------
+
+**Translation workflow is not yet set up for Kylacoin Core.  For strings which are common to Bitcoin Core, see below.**
+
+Changes to translations as well as new translations can be submitted to
+[Bitcoin Core's Transifex page](https://www.transifex.com/bitcoin/bitcoin/).
+
+Translations are periodically pulled from Transifex and merged into the git repository. See the
+[translation process](doc/translation_process.md) for details on how this works.
+
+**Important**: We do not accept translation changes as GitHub pull requests because the next
+pull from Transifex would automatically overwrite them again.

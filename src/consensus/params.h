@@ -108,6 +108,9 @@ struct Params {
     /** By default assume that the signatures in ancestors of this block are valid */
     uint256 defaultAssumeValid;
     uint32_t nDevRewardHeight;
+    uint32_t n2023DiffAlgoHeight;
+    int64_t n2023DiffAlgoWindow;
+    int64_t n2023DiffAlgoTimespan;
 
     /**
      * If true, witness commitments contain a payload equal to a Bitcoin Script solution
