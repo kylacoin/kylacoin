@@ -88,11 +88,16 @@ unsigned int CalculateNextWorkRequired(const CBlockIndex* pindexLast, int64_t nF
             nActualTimespan = params.nPowTargetTimespan/4;
         if (nActualTimespan > params.nPowTargetTimespan*4)
             nActualTimespan = params.nPowTargetTimespan*4;
-    } else {
+    } else if((pindexLast->nHeight+1) < params.n2023DiffAlgoHeight2) {
         if (nActualTimespan < params.n2023DiffAlgoTimespan/1.007)
             nActualTimespan = params.n2023DiffAlgoTimespan/1.007;
         if (nActualTimespan > params.n2023DiffAlgoTimespan*1.5)
             nActualTimespan = params.n2023DiffAlgoTimespan*1.5;
+    } else {
+        if (nActualTimespan < params.n2023DiffAlgoTimespan/1.014)
+            nActualTimespan = params.n2023DiffAlgoTimespan/1.014;
+        if (nActualTimespan > params.n2023DiffAlgoTimespan*1.014)
+            nActualTimespan = params.n2023DiffAlgoTimespan*1.014;
     }
 
     // Retarget

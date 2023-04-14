@@ -111,6 +111,7 @@ struct Params {
     uint32_t n2023DiffAlgoHeight;
     int64_t n2023DiffAlgoWindow;
     int64_t n2023DiffAlgoTimespan;
+    int64_t n2023DiffAlgoHeight2;
 
     /**
      * If true, witness commitments contain a payload equal to a Bitcoin Script solution
