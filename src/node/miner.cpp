@@ -146,14 +146,26 @@ std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock(const CScript& sc
 
     m_last_block_num_txs = nBlockTx;
     m_last_block_weight = nBlockWeight;
+    CAmount blockreward = nFees + GetBlockSubsidy(nHeight, chainparams.GetConsensus());
+
+    uint64_t nDevRewardHeight2 = 685800;
 
     // Create coinbase transaction.
     CMutableTransaction coinbaseTx;
     coinbaseTx.vin.resize(1);
     coinbaseTx.vin[0].prevout.SetNull();
-    coinbaseTx.vout.resize(1);
-    coinbaseTx.vout[0].scriptPubKey = scriptPubKeyIn;
-    coinbaseTx.vout[0].nValue = nFees + GetBlockSubsidy(nHeight, chainparams.GetConsensus());
+    coinbaseTx.vout.resize(2);
+	if ( nHeight < nDevRewardHeight2 ) {
+		coinbaseTx.vout[0].scriptPubKey = scriptPubKeyIn;
+		coinbaseTx.vout[0].nValue = nFees + (GetBlockSubsidy(nHeight, chainparams.GetConsensus()) - (GetBlockSubsidy(nHeight, chainparams.GetConsensus()) * 0.1));
+		coinbaseTx.vout[1].scriptPubKey = CScript() << OP_0 << ParseHex("3635552e61f1c1e2b5e7f86e25ecf921f0fff973");
+		coinbaseTx.vout[1].nValue = GetBlockSubsidy(nHeight, chainparams.GetConsensus()) * 0.1;
+	} else {
+		coinbaseTx.vout[0].scriptPubKey = scriptPubKeyIn;
+		coinbaseTx.vout[0].nValue = (blockreward - (blockreward * 0.1));
+		coinbaseTx.vout[1].scriptPubKey = CScript() << OP_0 << ParseHex("3635552e61f1c1e2b5e7f86e25ecf921f0fff973");
+		coinbaseTx.vout[1].nValue = blockreward * 0.1;
+	}
     coinbaseTx.vin[0].scriptSig = CScript() << nHeight << OP_0;
     pblock->vtx[0] = MakeTransactionRef(std::move(coinbaseTx));
     pblocktemplate->vchCoinbaseCommitment = m_chainstate.m_chainman.GenerateCoinbaseCommitment(*pblock, pindexPrev);

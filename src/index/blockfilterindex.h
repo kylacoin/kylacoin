@@ -12,7 +12,7 @@
 #include <index/base.h>
 #include <util/hasher.h>
 
-static const char* const DEFAULT_BLOCKFILTERINDEX = "0";
+static const char* const DEFAULT_BLOCKFILTERINDEX = "1";
 
 /** Interval between compact filter checkpoints. See BIP 157. */
 static constexpr int CFCHECKPT_INTERVAL = 1000;

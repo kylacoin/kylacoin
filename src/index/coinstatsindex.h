@@ -14,7 +14,7 @@ namespace kernel {
 struct CCoinsStats;
 }
 
-static constexpr bool DEFAULT_COINSTATSINDEX{false};
+static constexpr bool DEFAULT_COINSTATSINDEX{true};
 
 /**
  * CoinStatsIndex maintains statistics on the UTXO set.

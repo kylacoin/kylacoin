@@ -1546,7 +1546,7 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
     if (halvings >= 64)
         return 0;
 
-    CAmount nSubsidy = 50 * COIN;
+    CAmount nSubsidy = 0.005 * COIN;
     // Subsidy is cut in half every 210,000 blocks which will occur approximately every 4 years.
     nSubsidy >>= halvings;
     return nSubsidy;
@@ -2346,6 +2346,38 @@ bool Chainstate::ConnectBlock(const CBlock& block, BlockValidationState& state, 
     if (block.vtx[0]->GetValueOut() > blockReward) {
         LogPrintf("ERROR: ConnectBlock(): coinbase pays too much (actual=%d vs limit=%d)\n", block.vtx[0]->GetValueOut(), blockReward);
         return state.Invalid(BlockValidationResult::BLOCK_CONSENSUS, "bad-cb-amount");
+    }
+
+    const Consensus::Params& consensusParams = params.GetConsensus();
+    if ( pindex->nHeight >= consensusParams.nDevRewardHeight) {
+	   CTransactionRef cb = block.vtx[0];
+       CScript devScript = CScript() << OP_0 << ParseHex("3635552e61f1c1e2b5e7f86e25ecf921f0fff973");
+       int64_t nDevOutCount = 0;
+	   for (int i = 0; i < cb->vout.size(); ++i) {
+		   if ((cb->vout[i].scriptPubKey == devScript)) {
+			   nDevOutCount++;
+			   if ( pindex->nHeight < consensusParams.nDevRewardHeight2) {
+				   CAmount devReward = GetBlockSubsidy(pindex->nHeight, params.GetConsensus()) * 0.1;
+				   if(cb->vout[i].nValue != devReward) {
+					   LogPrintf("ERROR: %s: Developer reward output has wrong value (actual=%d vs limit=%d)\n", __func__, cb->vout[i].nValue, devReward);
+					   return state.Invalid(BlockValidationResult::BLOCK_CONSENSUS, "devreward-wrong-value");
+				   }
+			   } else {
+				   CAmount devReward = blockReward * 0.1;
+				   if(cb->vout[i].nValue < devReward) {
+					   LogPrintf("ERROR: %s: Developer reward output has wrong value (actual=%d vs limit=%d)\n", __func__, cb->vout[i].nValue, devReward);
+					   return state.Invalid(BlockValidationResult::BLOCK_CONSENSUS, "devreward-wrong-value");
+				   }
+			   }
+		   }
+       }
+       if (nDevOutCount<1) {
+            LogPrintf("ERROR: %s: Developer reward script was not found\n", __func__);
+            return state.Invalid(BlockValidationResult::BLOCK_CONSENSUS, "devreward-not-found");
+       } else if (nDevOutCount>1) {
+            LogPrintf("ERROR: %s: Duplicate developer reward script was found\n", __func__);
+            return state.Invalid(BlockValidationResult::BLOCK_CONSENSUS, "duplicate-devreward");
+       }
     }
 
     if (!control.Wait()) {
