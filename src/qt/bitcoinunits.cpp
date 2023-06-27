@@ -10,7 +10,7 @@
 
 #include <cassert>
 
-static constexpr auto MAX_DIGITS_BTC = 16;
+static constexpr auto MAX_DIGITS_BTC = 20;
 
 BitcoinUnits::BitcoinUnits(QObject *parent):
         QAbstractListModel(parent),
@@ -22,19 +22,25 @@ QList<BitcoinUnit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnit> unitlist;
     unitlist.append(Unit::BTC);
+    unitlist.append(Unit::dBTC);
+    unitlist.append(Unit::cBTC);
     unitlist.append(Unit::mBTC);
     unitlist.append(Unit::uBTC);
-    unitlist.append(Unit::SAT);
+    unitlist.append(Unit::nBTC);
+    unitlist.append(Unit::pBTC);
     return unitlist;
 }
 
 QString BitcoinUnits::longName(Unit unit)
 {
     switch (unit) {
-    case Unit::BTC: return QString("BTC");
-    case Unit::mBTC: return QString("mBTC");
-    case Unit::uBTC: return QString::fromUtf8("µBTC (bits)");
-    case Unit::SAT: return QString("Satoshi (sat)");
+    case Unit::BTC: return QString("KCN");
+    case Unit::dBTC: return QString("dKCN");
+    case Unit::cBTC: return QString("cKCN");
+    case Unit::mBTC: return QString("mKCN");
+    case Unit::uBTC: return QString::fromUtf8("µKCN");
+    case Unit::nBTC: return QString("nKCN");
+    case Unit::pBTC: return QString("pKCN");
     } // no default case, so the compiler can warn about missing cases
     assert(false);
 }
@@ -42,10 +48,13 @@ QString BitcoinUnits::longName(Unit unit)
 QString BitcoinUnits::shortName(Unit unit)
 {
     switch (unit) {
-    case Unit::BTC: return longName(unit);
-    case Unit::mBTC: return longName(unit);
-    case Unit::uBTC: return QString("bits");
-    case Unit::SAT: return QString("sat");
+    case Unit::BTC: return QString("KCN");
+    case Unit::dBTC: return QString("deci");
+    case Unit::cBTC: return QString("centi");
+    case Unit::mBTC: return QString("mili");
+    case Unit::uBTC: return QString("micro");
+    case Unit::nBTC: return QString("nano");
+    case Unit::pBTC: return QString("pico");
     } // no default case, so the compiler can warn about missing cases
     assert(false);
 }
@@ -53,10 +62,13 @@ QString BitcoinUnits::shortName(Unit unit)
 QString BitcoinUnits::description(Unit unit)
 {
     switch (unit) {
-    case Unit::BTC: return QString("Bitcoins");
-    case Unit::mBTC: return QString("Milli-Bitcoins (1 / 1" THIN_SP_UTF8 "000)");
-    case Unit::uBTC: return QString("Micro-Bitcoins (bits) (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-    case Unit::SAT: return QString("Satoshi (sat) (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case Unit::BTC: return QString("KCN");
+    case Unit::dBTC: return QString("Deci-KCN (1 / 1" THIN_SP_UTF8 "0)");
+    case Unit::cBTC: return QString("Centi-KCN (1 / 1" THIN_SP_UTF8 "00)");
+    case Unit::mBTC: return QString("Milli-KCN (1 / 1" THIN_SP_UTF8 "000)");
+    case Unit::uBTC: return QString("Micro-KCN (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case Unit::nBTC: return QString("Nano-KCN (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case Unit::pBTC: return QString("Pico-KCN (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     } // no default case, so the compiler can warn about missing cases
     assert(false);
 }
@@ -64,10 +76,13 @@ QString BitcoinUnits::description(Unit unit)
 qint64 BitcoinUnits::factor(Unit unit)
 {
     switch (unit) {
-    case Unit::BTC: return 100'000'000;
-    case Unit::mBTC: return 100'000;
-    case Unit::uBTC: return 100;
-    case Unit::SAT: return 1;
+    case Unit::BTC:  return 1'000'000'000'000;
+    case Unit::dBTC: return 100'000'000'000;
+    case Unit::cBTC: return 10'000'000'000;
+    case Unit::mBTC: return 1'000'000'000;
+    case Unit::uBTC: return 1'000'000;
+    case Unit::nBTC: return 1'000;
+    case Unit::pBTC: return 1;
     } // no default case, so the compiler can warn about missing cases
     assert(false);
 }
@@ -75,10 +90,13 @@ qint64 BitcoinUnits::factor(Unit unit)
 int BitcoinUnits::decimals(Unit unit)
 {
     switch (unit) {
-    case Unit::BTC: return 8;
-    case Unit::mBTC: return 5;
-    case Unit::uBTC: return 2;
-    case Unit::SAT: return 0;
+    case Unit::BTC: return 12;
+    case Unit::dBTC: return 11;
+    case Unit::cBTC: return 10;
+    case Unit::mBTC: return 9;
+    case Unit::uBTC: return 6;
+    case Unit::nBTC: return 3;
+    case Unit::pBTC: return 0;
     } // no default case, so the compiler can warn about missing cases
     assert(false);
 }
@@ -233,9 +251,12 @@ qint8 ToQint8(BitcoinUnit unit)
 {
     switch (unit) {
     case BitcoinUnit::BTC: return 0;
-    case BitcoinUnit::mBTC: return 1;
-    case BitcoinUnit::uBTC: return 2;
-    case BitcoinUnit::SAT: return 3;
+    case BitcoinUnit::dBTC: return 1;
+    case BitcoinUnit::cBTC: return 2;
+    case BitcoinUnit::mBTC: return 3;
+    case BitcoinUnit::uBTC: return 4;
+    case BitcoinUnit::nBTC: return 5;
+    case BitcoinUnit::pBTC: return 6;
     } // no default case, so the compiler can warn about missing cases
     assert(false);
 }
@@ -244,9 +265,12 @@ BitcoinUnit FromQint8(qint8 num)
 {
     switch (num) {
     case 0: return BitcoinUnit::BTC;
-    case 1: return BitcoinUnit::mBTC;
-    case 2: return BitcoinUnit::uBTC;
-    case 3: return BitcoinUnit::SAT;
+    case 1: return BitcoinUnit::dBTC;
+    case 2: return BitcoinUnit::cBTC;
+    case 3: return BitcoinUnit::mBTC;
+    case 4: return BitcoinUnit::uBTC;
+    case 5: return BitcoinUnit::nBTC;
+    case 6: return BitcoinUnit::pBTC;
     }
     assert(false);
 }
