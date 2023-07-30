@@ -141,7 +141,6 @@ Intro::Intro(QWidget *parent, int64_t blockchain_size_gb, int64_t chain_state_si
 
     const int min_prune_target_GB = std::ceil(MIN_DISK_SPACE_FOR_BLOCK_FILES / 1e9);
     ui->pruneGB->setRange(min_prune_target_GB, std::numeric_limits<int>::max());
-	ui->prune->setChecked(false);
     if (gArgs.GetIntArg("-prune", 0) > 1) { // -prune=1 means enabled, above that it's a size in MiB
         ui->prune->setChecked(true);
         ui->prune->setEnabled(false);

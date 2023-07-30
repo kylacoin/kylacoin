@@ -688,8 +688,8 @@ void InitParameterInteraction(ArgsManager& args)
         // when only connecting to trusted nodes, do not seed via DNS, or listen by default
         if (args.SoftSetBoolArg("-dnsseed", false))
             LogPrintf("%s: parameter interaction: -connect or -maxconnections=0 set -> setting -dnsseed=0\n", __func__);
-        // if (args.SoftSetBoolArg("-listen", false))
-        //     LogPrintf("%s: parameter interaction: -connect or -maxconnections=0 set -> setting -listen=0\n", __func__);
+        if (args.SoftSetBoolArg("-listen", false))
+            LogPrintf("%s: parameter interaction: -connect or -maxconnections=0 set -> setting -listen=0\n", __func__);
     }
 
     std::string proxy_arg = args.GetArg("-proxy", "");
@@ -1283,7 +1283,7 @@ bool AppInitMain(NodeContext& node, interfaces::BlockAndHeaderTipInfo* tip_info)
         for (const std::string& socket_addr : args.GetArgs(port_option)) {
             std::string host_out;
             uint16_t port_out{0};
-            if (!SplitHostPort(socket_addr, port_out, host_out)) {
+            if (socket_addr.rfind("ipc:", 0) != 0 && !SplitHostPort(socket_addr, port_out, host_out)) {
                 return InitError(InvalidPortErrMsg(port_option, socket_addr));
             }
         }

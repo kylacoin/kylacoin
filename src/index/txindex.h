@@ -7,7 +7,7 @@
 
 #include <index/base.h>
 
-static constexpr bool DEFAULT_TXINDEX{true};
+static constexpr bool DEFAULT_TXINDEX{false};
 
 /**
  * TxIndex is used to look up transactions included in the blockchain by hash.

@@ -311,8 +311,6 @@ static QString GetDefaultProxyAddress()
 
 void OptionsModel::SetPruneTargetGB(int prune_target_gb)
 {
-    prune_target_gb = 0;
-
     const util::SettingsValue cur_value = node().getPersistentSetting("prune");
     const util::SettingsValue new_value = PruneSetting(prune_target_gb > 0, prune_target_gb);
 
