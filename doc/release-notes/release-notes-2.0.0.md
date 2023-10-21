@@ -1,0 +1,12 @@
+- Security upgrade (Chain Parameters)
+- We now have a restore option for restoring backed up wallet
+- Pre-syncing phase added to avoid sudden change in difficulty
+- Difficulty algorithm tuned from block height 685800
+- Dev reward now includes fees from block height 685800
+- Taproot smart contract in now available
+- Users now have an option for select the type of wallet address
+- A default fallback fee is added to avoid any errors at user end
+- Many more translations were fixed
+- We're now able to see how many network addressed were processed from the peers tab
+- Qt upgrade
+- Many more updates

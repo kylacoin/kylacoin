@@ -1,0 +1,4 @@
+- Chain params updated
+- Website address updated
+- DNS Seeds updated
+- Test RPC addresses fixed

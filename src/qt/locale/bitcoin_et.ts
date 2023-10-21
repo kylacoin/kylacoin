@@ -66,13 +66,13 @@
         <translation type="unfinished">Vastuvõtvad aadressid</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">Need on sinu Bitcoin aadressid maksete saatmiseks. Ennem müntide saatmist kontrolli alati summat ja makse saaja aadressi.</translation>
+        <source>These are your Kylacoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">Need on sinu Kylacoin aadressid maksete saatmiseks. Ennem müntide saatmist kontrolli alati summat ja makse saaja aadressi.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your Kylacoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
-        <translation type="unfinished">Need on sinu Bitcoin aadressid makse vastuvõtuks.Kasuta ‘Loo uus vastuvõttu aadress’ nuppu vastuvõtmise vahekaardis, et luua uus aadress. Allkirjastamine on võimalik ainult 'pärand' tüüpi aadressidega.</translation>
+        <translation type="unfinished">Need on sinu Kylacoin aadressid makse vastuvõtuks.Kasuta ‘Loo uus vastuvõttu aadress’ nuppu vastuvõtmise vahekaardis, et luua uus aadress. Allkirjastamine on võimalik ainult 'pärand' tüüpi aadressidega.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -163,8 +163,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Kinnita rahakoti krüpteerimine.</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation type="unfinished">Hoiatus:Kui sa krüpteerid oma rahakoti ja kaotad salafraasi, siis sa&lt;b&gt;KAOTAD OMA BITCOINID&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYLACOINS&lt;/b&gt;!</source>
+        <translation type="unfinished">Hoiatus:Kui sa krüpteerid oma rahakoti ja kaotad salafraasi, siis sa&lt;b&gt;KAOTAD OMA KYLACOINID&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -183,8 +183,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Sisesta rahakoti vana salafraas ja uus salafraas.</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished">Pea meeles, et rahakoti krüpteerimine ei välista bitcoinide vargust, kui sinu arvuti on nakatunud pahavaraga.</translation>
+        <source>Remember that encrypting your wallet cannot fully protect your kylacoins from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished">Pea meeles, et rahakoti krüpteerimine ei välista kylacoinide vargust, kui sinu arvuti on nakatunud pahavaraga.</translation>
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -375,8 +375,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Rahakott:</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
-        <translation type="unfinished">Saada münte Bitcoini aadressile</translation>
+        <source>Send coins to a Kylacoin address</source>
+        <translation type="unfinished">Saada münte Kylacoini aadressile</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -415,12 +415,12 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Muuda Salasõna...</translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
-        <translation type="unfinished">Omandi tõestamiseks allkirjasta sõnumid oma Bitcoini aadressiga</translation>
+        <source>Sign messages with your Kylacoin addresses to prove you own them</source>
+        <translation type="unfinished">Omandi tõestamiseks allkirjasta sõnumid oma Kylacoini aadressiga</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
-        <translation type="unfinished">Kinnita sõnumid kindlustamaks et need allkirjastati määratud Bitcoini aadressiga</translation>
+        <source>Verify messages to ensure they were signed with specified Kylacoin addresses</source>
+        <translation type="unfinished">Kinnita sõnumid kindlustamaks et need allkirjastati määratud Kylacoini aadressiga</translation>
     </message>
     <message>
         <source>Close Wallet…</source>
@@ -451,8 +451,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Sünkroniseerin võrguga...</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation type="unfinished">Loo maksepäring (genereerib QR koodid ja bitcoini: URId)</translation>
+        <source>Request payments (generates QR codes and kylacoin: URIs)</source>
+        <translation type="unfinished">Loo maksepäring (genereerib QR koodid ja kylacoini: URId)</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -506,7 +506,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">%1 klient</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Bitcoin network.</source>
+        <source>%n active connection(s) to Kylacoin network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />
@@ -713,8 +713,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Muuda saatvat aadressi</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Bitcoin address.</source>
-        <translation type="unfinished">Sisestatud aadress "%1" ei ole korrektne Bitcoin aadress.</translation>
+        <source>The entered address "%1" is not a valid Kylacoin address.</source>
+        <translation type="unfinished">Sisestatud aadress "%1" ei ole korrektne Kylacoin aadress.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -844,8 +844,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Ekspert</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation type="unfinished">Bitcoini kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
+        <source>Automatically open the Kylacoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation type="unfinished">Kylacoini kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -924,8 +924,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Vorm</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation type="unfinished">Kuvatav info ei pruugi olla ajakohane. Ühenduse loomisel süngitakse sinu rahakott automaatselt Bitcoin võrgustikuga, kuid see toiming on hetkel lõpetamata.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Kylacoin network after a connection is established, but this process has not completed yet.</source>
+        <translation type="unfinished">Kuvatav info ei pruugi olla ajakohane. Ühenduse loomisel süngitakse sinu rahakott automaatselt Kylacoin võrgustikuga, kuid see toiming on hetkel lõpetamata.</translation>
     </message>
     <message>
         <source>Pending:</source>
@@ -962,8 +962,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Maksepäringu tõrge</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation type="unfinished">Bitcoin ei käivitu: vajuta-maksa toiming</translation>
+        <source>Cannot start kylacoin: click-to-pay handler</source>
+        <translation type="unfinished">Kylacoin ei käivitu: vajuta-maksa toiming</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1374,8 +1374,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         </translation>
     </message>
     <message>
-        <source>Warning: Invalid Bitcoin address</source>
-        <translation type="unfinished">Hoiatus: Ebakorrektne Bitcoin aadress</translation>
+        <source>Warning: Invalid Kylacoin address</source>
+        <translation type="unfinished">Hoiatus: Ebakorrektne Kylacoin aadress</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -1424,8 +1424,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Allkirjastamise teade</translation>
     </message>
     <message>
-        <source>The Bitcoin address to sign the message with</source>
-        <translation type="unfinished">Bitcoin aadress millega sõnum allkirjastada</translation>
+        <source>The Kylacoin address to sign the message with</source>
+        <translation type="unfinished">Kylacoin aadress millega sõnum allkirjastada</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1448,8 +1448,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Kopeeri praegune signatuur vahemällu</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Bitcoin address</source>
-        <translation type="unfinished">Allkirjasta sõnum Bitcoini aadressi sulle kuulumise tõestamiseks</translation>
+        <source>Sign the message to prove you own this Kylacoin address</source>
+        <translation type="unfinished">Allkirjasta sõnum Kylacoini aadressi sulle kuulumise tõestamiseks</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1468,12 +1468,12 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Kinnita Sõnum</translation>
     </message>
     <message>
-        <source>The Bitcoin address the message was signed with</source>
-        <translation type="unfinished">Bitcoin aadress millega sõnum on allkirjastatud</translation>
+        <source>The Kylacoin address the message was signed with</source>
+        <translation type="unfinished">Kylacoin aadress millega sõnum on allkirjastatud</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
-        <translation type="unfinished">Kinnita sõnum tõestamaks selle allkirjastatust määratud Bitcoini aadressiga.</translation>
+        <source>Verify the message to ensure it was signed with the specified Kylacoin address</source>
+        <translation type="unfinished">Kinnita sõnum tõestamaks selle allkirjastatust määratud Kylacoini aadressiga.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>

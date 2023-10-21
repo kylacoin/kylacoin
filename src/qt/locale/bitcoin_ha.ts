@@ -62,13 +62,13 @@
         <translation type="unfinished">Adireshi da za a karba dashi</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">Waɗannan adiresoshin Bitcoin ne don tura kuɗi bitcoin . ka tabbatar da cewa adreshin daidai ne kamin ka tura abua a ciki</translation>
+        <source>These are your Kylacoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">Waɗannan adiresoshin Kylacoin ne don tura kuɗi kylacoin . ka tabbatar da cewa adreshin daidai ne kamin ka tura abua a ciki</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your Kylacoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
-        <translation type="unfinished">Waɗannan adiresoshin Bitcoin ne don karɓar kuɗi. Yi amfani da maɓallin 'Ƙirƙiri sabon adireshin karɓa' a cikin shafin karɓa don ƙirƙirar sababbin adireshi.
+        <translation type="unfinished">Waɗannan adiresoshin Kylacoin ne don karɓar kuɗi. Yi amfani da maɓallin 'Ƙirƙiri sabon adireshin karɓa' a cikin shafin karɓa don ƙirƙirar sababbin adireshi.
 zaka iya shiga ne kawai da adiresoshin 'na musamman' kawai.</translation>
     </message>
     <message>
@@ -156,8 +156,8 @@ zaka iya shiga ne kawai da adiresoshin 'na musamman' kawai.</translation>
         <translation type="unfinished">tabbar da an sakaye walet</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation type="unfinished">Jan kunne: idan aka sakaye walet kuma aka manta laƙabin sirri, za a Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt; RASA DUKKAN BITCOINS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYLACOINS&lt;/b&gt;!</source>
+        <translation type="unfinished">Jan kunne: idan aka sakaye walet kuma aka manta laƙabin sirri, za a Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt; RASA DUKKAN KYLACOINS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -243,7 +243,7 @@ zaka iya shiga ne kawai da adiresoshin 'na musamman' kawai.</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Bitcoin network.</source>
+        <source>%n active connection(s) to Kylacoin network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />
@@ -261,8 +261,8 @@ zaka iya shiga ne kawai da adiresoshin 'na musamman' kawai.</translation>
 <context>
     <name>Intro</name>
     <message>
-        <source>Bitcoin</source>
-        <translation type="unfinished">Bitkoin</translation>
+        <source>Kylacoin</source>
+        <translation type="unfinished">Kylacoin</translation>
     </message>
     <message numerus="yes">
         <source>%n GB of space available</source>

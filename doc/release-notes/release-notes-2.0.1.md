@@ -1,0 +1,7 @@
+- Added static seed nodes
+- Disabled constats index by default (crash un-safety)
+- Disabled transaction index by default
+- Disabled -listen while using -connect or -maxconnections=0
+- Allowing ipc binding for zmq (bugfix)
+- Allowing pruning mode
+- Chain parameters are updated according to the chain stats

@@ -100,14 +100,14 @@ static int AppInitRawTx(int argc, char* argv[])
 
     if (argc < 2 || HelpRequested(gArgs) || gArgs.IsArgSet("-version")) {
         // First part of help message is specific to this utility
-        std::string strUsage = PACKAGE_NAME " bitcoin-tx utility version " + FormatFullVersion() + "\n";
+        std::string strUsage = PACKAGE_NAME " kylacoin-tx utility version " + FormatFullVersion() + "\n";
 
         if (gArgs.IsArgSet("-version")) {
             strUsage += FormatParagraph(LicenseInfo());
         } else {
             strUsage += "\n"
-                "Usage:  bitcoin-tx [options] <hex-tx> [commands]  Update hex-encoded bitcoin transaction\n"
-                "or:     bitcoin-tx [options] -create [commands]   Create hex-encoded bitcoin transaction\n"
+                "Usage:  kylacoin-tx [options] <hex-tx> [commands]  Update hex-encoded kylacoin transaction\n"
+                "or:     kylacoin-tx [options] -create [commands]   Create hex-encoded kylacoin transaction\n"
                 "\n";
             strUsage += gArgs.GetHelpMessage();
         }
@@ -553,7 +553,7 @@ static CAmount AmountFromValue(const UniValue& value)
     if (!value.isNum() && !value.isStr())
         throw std::runtime_error("Amount is not a number or string");
     CAmount amount;
-    if (!ParseFixedPoint(value.getValStr(), 8, &amount))
+    if (!ParseFixedPoint(value.getValStr(), 12, &amount))
         throw std::runtime_error("Invalid amount");
     if (!MoneyRange(amount))
         throw std::runtime_error("Amount out of range");
@@ -810,7 +810,7 @@ static int CommandLineRawTx(int argc, char* argv[])
             if (argc < 2)
                 throw std::runtime_error("too few parameters");
 
-            // param: hex-encoded bitcoin transaction
+            // param: hex-encoded kylacoin transaction
             std::string strHexTx(argv[1]);
             if (strHexTx == "-")                 // "-" implies standard input
                 strHexTx = readStdin();

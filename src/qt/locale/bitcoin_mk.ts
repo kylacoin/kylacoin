@@ -179,8 +179,8 @@
         <translation type="unfinished">Прикажи информации за Qt</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
-        <translation type="unfinished">Испрати биткоини на Биткоин адреса</translation>
+        <source>Send coins to a Kylacoin address</source>
+        <translation type="unfinished">Испрати кайлакоини на Кайлакоин адреса</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -231,7 +231,7 @@
         <translation type="unfinished">&amp;Прозорец</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Bitcoin network.</source>
+        <source>%n active connection(s) to Kylacoin network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />
@@ -337,8 +337,8 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>Bitcoin</source>
-        <translation type="unfinished">Биткоин</translation>
+        <source>Kylacoin</source>
+        <translation type="unfinished">Кайлакоин</translation>
     </message>
     <message numerus="yes">
         <source>%n GB of space available</source>

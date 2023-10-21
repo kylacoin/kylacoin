@@ -1,0 +1,4 @@
+- Allow connect to non-standard ports
+- Chain params updated
+- Website updated
+- Various languages were added

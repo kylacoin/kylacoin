@@ -66,13 +66,13 @@
         <translation type="unfinished">پتے موصول ہورہے ہیں</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">یہ آپ کے ادائیگی بھیجنے کے لئے بٹ کوائن ایڈریس ہیں.سکے بھیجنے سے پہلے ہمیشہ رقم اور وصول کنندہ پتہ چیک کریں۔</translation>
+        <source>These are your Kylacoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">یہ آپ کے ادائیگی بھیجنے کے لئے کائیلا کوائن ایڈریس ہیں.سکے بھیجنے سے پہلے ہمیشہ رقم اور وصول کنندہ پتہ چیک کریں۔</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your Kylacoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
-        <translation type="unfinished">ادائیگیوں کے لئے آپ کے بٹ کوائن ایڈریس ہیں۔ نئے پتے بنانے کے لئے وصول کنندہ ٹیب میں 'نیا وصول کنندہ پتہ بنائیں' بٹن کا استعمال کریں۔دستخط صرف 'میراثی' قسم کے پتے کے ساتھ ہی ممکن ہے۔</translation>
+        <translation type="unfinished">ادائیگیوں کے لئے آپ کے کائیلا کوائن ایڈریس ہیں۔ نئے پتے بنانے کے لئے وصول کنندہ ٹیب میں 'نیا وصول کنندہ پتہ بنائیں' بٹن کا استعمال کریں۔دستخط صرف 'میراثی' قسم کے پتے کے ساتھ ہی ممکن ہے۔</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -163,7 +163,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">پرس کی خفیہ کاری کی تصدیق کریں</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYLACOINS&lt;/b&gt;!</source>
         <translation type="unfinished">انتباہ: اگر آپ اپنا بٹوہ انکرپٹ کرتے ہیں اور اپنا پاس فریز کھو دیتے ہیں تو ، آپ اپنے تمام بٹکوئنز کھو دیں گے.</translation>
     </message>
     <message>
@@ -183,8 +183,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">پرس کے لئے پرانا پاسفریج اور نیا پاسفریز درج کریں۔</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished">یاد رکھیں کہ آپ کے پرس کو خفیہ کرنا آپ کے بٹ کوائنز کو میلویئر/چور سے آپ کے کمپیوٹر میں انفیکشن لگانے کے ذریعہ چوری ہونے سے پوری طرح محفوظ نہیں رکھ سکتا ہے۔</translation>
+        <source>Remember that encrypting your wallet cannot fully protect your kylacoins from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished">یاد رکھیں کہ آپ کے پرس کو خفیہ کرنا آپ کے کائیلا کوائنز کو میلویئر/چور سے آپ کے کمپیوٹر میں انفیکشن لگانے کے ذریعہ چوری ہونے سے پوری طرح محفوظ نہیں رکھ سکتا ہے۔</translation>
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -412,8 +412,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">پراکسی &lt;b&gt;فعال&lt;/b&gt; ہے:%1</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
-        <translation type="unfinished">بٹ کوائن ایڈریس پر سکے بھیجیں</translation>
+        <source>Send coins to a Kylacoin address</source>
+        <translation type="unfinished">کائیلا کوائن ایڈریس پر سکے بھیجیں</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -452,7 +452,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">سائن اور پیغام…</translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
+        <source>Sign messages with your Kylacoin addresses to prove you own them</source>
         <translation type="unfinished">اپنے ویکیپیڈیا پتوں کے ساتھ پیغامات پر دستخط کریں تاکہ آپ ان کے مالک ہوں</translation>
     </message>
     <message>
@@ -460,8 +460,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">پیغام کی توثیق کریں…</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
-        <translation type="unfinished">پیغامات کی توثیق کریں تاکہ یہ یقینی بن سکے کہ ان پر بٹ کوائن کے مخصوص پتوں پر دستخط ہوئے ہیں</translation>
+        <source>Verify messages to ensure they were signed with specified Kylacoin addresses</source>
+        <translation type="unfinished">پیغامات کی توثیق کریں تاکہ یہ یقینی بن سکے کہ ان پر کائیلا کوائن کے مخصوص پتوں پر دستخط ہوئے ہیں</translation>
     </message>
     <message>
         <source>Open &amp;URI…</source>
@@ -516,8 +516,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">ساتھیوں سے منسلک کرنے</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation type="unfinished">ادائیگی کی درخواست کریں: ( کوئیک رسپانس ( کیو۔آر ) کوڈ اور بٹ کوائن ( یونیورسل ادائیگیوں کا نظام) کے ذریعے سے</translation>
+        <source>Request payments (generates QR codes and kylacoin: URIs)</source>
+        <translation type="unfinished">ادائیگی کی درخواست کریں: ( کوئیک رسپانس ( کیو۔آر ) کوڈ اور کائیلا کوائن ( یونیورسل ادائیگیوں کا نظام) کے ذریعے سے</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -571,12 +571,12 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">سب سے نیا</translation>
     </message>
     <message>
-        <source>Load Partially Signed Bitcoin Transaction</source>
-        <translation type="unfinished">جزوی طور پر دستخط شدہ بٹ کوائن ٹرانزیکشن لوڈ کریں۔</translation>
+        <source>Load Partially Signed Kylacoin Transaction</source>
+        <translation type="unfinished">جزوی طور پر دستخط شدہ کائیلا کوائن ٹرانزیکشن لوڈ کریں۔</translation>
     </message>
     <message>
-        <source>Load Partially Signed Bitcoin Transaction from clipboard</source>
-        <translation type="unfinished">کلپ بورڈ سے جزوی طور پر دستخط شدہ بٹ کوائن ٹرانزیکشن لوڈ کریں۔</translation>
+        <source>Load Partially Signed Kylacoin Transaction from clipboard</source>
+        <translation type="unfinished">کلپ بورڈ سے جزوی طور پر دستخط شدہ کائیلا کوائن ٹرانزیکشن لوڈ کریں۔</translation>
     </message>
     <message>
         <source>Node window</source>
@@ -595,8 +595,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">اور پتے وصول کرنا</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
-        <translation type="unfinished">بٹ کوائن کا یو۔آر۔آئی۔ کھولیں</translation>
+        <source>Open a kylacoin: URI</source>
+        <translation type="unfinished">کائیلا کوائن کا یو۔آر۔آئی۔ کھولیں</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -615,8 +615,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">تمام والیٹس بند کریں</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Bitcoin command-line options</source>
-        <translation type="unfinished">ممکنہ بٹ کوائن کمانڈ لائن اختیارات کے ساتھ فہرست حاصل کرنے کے لیے %1 مدد کا پیغام دکھائیں۔</translation>
+        <source>Show the %1 help message to get a list with possible Kylacoin command-line options</source>
+        <translation type="unfinished">ممکنہ کائیلا کوائن کمانڈ لائن اختیارات کے ساتھ فہرست حاصل کرنے کے لیے %1 مدد کا پیغام دکھائیں۔</translation>
     </message>
     <message>
         <source>&amp;Mask values</source>
@@ -656,7 +656,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">'%1'کلائنٹ</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Bitcoin network.</source>
+        <source>%n active connection(s) to Kylacoin network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />
@@ -1111,8 +1111,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>Intro</name>
     <message>
-        <source>Bitcoin</source>
-        <translation type="unfinished">بٹ کوائن</translation>
+        <source>Kylacoin</source>
+        <translation type="unfinished">کائیلا کوائن</translation>
     </message>
     <message numerus="yes">
         <source>%n GB of space available</source>
@@ -1209,12 +1209,12 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">فارم</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcoin network, as detailed below.</source>
-        <translation type="unfinished">ہو سکتا ہے حالیہ لین دین ابھی تک نظر نہ آئے، اور اس وجہ سے آپ کے والیٹ کا بیلنس غلط ہو سکتا ہے۔ یہ معلومات درست ہوں گی جب آپ کے والیٹ نے بٹ کوائن نیٹ ورک کے ساتھ مطابقت پذیری مکمل کر لی ہو، جیسا کہ ذیل میں تفصیل ہے۔</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the kylacoin network, as detailed below.</source>
+        <translation type="unfinished">ہو سکتا ہے حالیہ لین دین ابھی تک نظر نہ آئے، اور اس وجہ سے آپ کے والیٹ کا بیلنس غلط ہو سکتا ہے۔ یہ معلومات درست ہوں گی جب آپ کے والیٹ نے کائیلا کوائن نیٹ ورک کے ساتھ مطابقت پذیری مکمل کر لی ہو، جیسا کہ ذیل میں تفصیل ہے۔</translation>
     </message>
     <message>
-        <source>Attempting to spend bitcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation type="unfinished">ایسے بٹ کوائنز خرچ کرنے کی کوشش کرنا جو ابھی تک ظاہر نہ ہونے والے لین دین سے متاثر ہوں نیٹ ورک کے ذریعے قبول نہیں کیا جائے گا۔</translation>
+        <source>Attempting to spend kylacoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation type="unfinished">ایسے کائیلا کوائنز خرچ کرنے کی کوشش کرنا جو ابھی تک ظاہر نہ ہونے والے لین دین سے متاثر ہوں نیٹ ورک کے ذریعے قبول نہیں کیا جائے گا۔</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1252,8 +1252,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open bitcoin URI</source>
-        <translation type="unfinished">بٹ کوائن URI کھولیں۔</translation>
+        <source>Open kylacoin URI</source>
+        <translation type="unfinished">کائیلا کوائن URI کھولیں۔</translation>
     </message>
     <message>
         <source>URI:</source>
@@ -1396,8 +1396,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">فارم</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation type="unfinished">ظاہر کی گئی معلومات پرانی ہو سکتی ہے۔ کنکشن قائم ہونے کے بعد آپ کا والیٹ خود بخود بٹ کوائن نیٹ ورک کے ساتھ ہم آہنگ ہوجاتا ہے، لیکن یہ عمل ابھی مکمل نہیں ہوا ہے۔</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Kylacoin network after a connection is established, but this process has not completed yet.</source>
+        <translation type="unfinished">ظاہر کی گئی معلومات پرانی ہو سکتی ہے۔ کنکشن قائم ہونے کے بعد آپ کا والیٹ خود بخود کائیلا کوائن نیٹ ورک کے ساتھ ہم آہنگ ہوجاتا ہے، لیکن یہ عمل ابھی مکمل نہیں ہوا ہے۔</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1781,8 +1781,8 @@ If you are receiving this error you should request the merchant provide a BIP21 
         <translation type="unfinished">اور پیغام</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Bitcoin network.</source>
-        <translation type="unfinished">ادائیگی کی درخواست کے ساتھ منسلک کرنے کے لیے ایک اختیاری پیغام، جو درخواست کے کھلنے پر ظاہر ہوگا۔ نوٹ: پیغام بٹ کوائن نیٹ ورک پر ادائیگی کے ساتھ نہیں بھیجا جائے گا۔</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Kylacoin network.</source>
+        <translation type="unfinished">ادائیگی کی درخواست کے ساتھ منسلک کرنے کے لیے ایک اختیاری پیغام، جو درخواست کے کھلنے پر ظاہر ہوگا۔ نوٹ: پیغام کائیلا کوائن نیٹ ورک پر ادائیگی کے ساتھ نہیں بھیجا جائے گا۔</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2092,8 +2092,8 @@ If you are receiving this error you should request the merchant provide a BIP21 
         </translation>
     </message>
     <message>
-        <source>Warning: Invalid Bitcoin address</source>
-        <translation type="unfinished">انتباہ: غلط بٹ کوائن ایڈریس</translation>
+        <source>Warning: Invalid Kylacoin address</source>
+        <translation type="unfinished">انتباہ: غلط کائیلا کوائن ایڈریس</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2123,8 +2123,8 @@ If you are receiving this error you should request the merchant provide a BIP21 
         <translation type="unfinished">پہلے استعمال شدہ پتہ کا انتخاب کریں۔</translation>
     </message>
     <message>
-        <source>The Bitcoin address to send the payment to</source>
-        <translation type="unfinished">ادائیگی بھیجنے کے لیے بٹ کوائن کا پتہ</translation>
+        <source>The Kylacoin address to send the payment to</source>
+        <translation type="unfinished">ادائیگی بھیجنے کے لیے کائیلا کوائن کا پتہ</translation>
     </message>
     <message>
         <source>Paste address from clipboard</source>
@@ -2139,8 +2139,8 @@ If you are receiving this error you should request the merchant provide a BIP21 
         <translation type="unfinished">منتخب یونٹ میں بھیجی جانے والی رقم</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less bitcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation type="unfinished">بھیجی جانے والی رقم سے فیس کاٹی جائے گی۔ وصول کنندہ کو اس سے کم بٹ کوائنز موصول ہوں گے جو آپ رقم کے خانے میں داخل کریں گے۔ اگر متعدد وصول کنندگان کو منتخب کیا جاتا ہے، تو فیس کو برابر تقسیم کیا جاتا ہے۔</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less kylacoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation type="unfinished">بھیجی جانے والی رقم سے فیس کاٹی جائے گی۔ وصول کنندہ کو اس سے کم کائیلا کوائنز موصول ہوں گے جو آپ رقم کے خانے میں داخل کریں گے۔ اگر متعدد وصول کنندگان کو منتخب کیا جاتا ہے، تو فیس کو برابر تقسیم کیا جاتا ہے۔</translation>
     </message>
     <message>
         <source>Use available balance</source>
@@ -2162,12 +2162,12 @@ If you are receiving this error you should request the merchant provide a BIP21 
         <translation type="unfinished">دستخط - ایک پیغام پر دستخط / تصدیق کریں۔</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive bitcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation type="unfinished">آپ یہ ثابت کرنے کے لیے اپنے پتوں کے ساتھ پیغامات/معاہدوں پر دستخط کر سکتے ہیں کہ آپ ان پر بھیجے گئے بٹ کوائنز وصول کر سکتے ہیں۔ ہوشیار رہیں کہ کسی بھی مبہم یا بے ترتیب پر دستخط نہ کریں، کیونکہ فریب دہی کے حملے آپ کو اپنی شناخت پر دستخط کرنے کے لیے دھوکہ دینے کی کوشش کر سکتے ہیں۔ صرف مکمل تفصیلی بیانات پر دستخط کریں جن سے آپ اتفاق کرتے ہیں۔</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive kylacoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation type="unfinished">آپ یہ ثابت کرنے کے لیے اپنے پتوں کے ساتھ پیغامات/معاہدوں پر دستخط کر سکتے ہیں کہ آپ ان پر بھیجے گئے کائیلا کوائنز وصول کر سکتے ہیں۔ ہوشیار رہیں کہ کسی بھی مبہم یا بے ترتیب پر دستخط نہ کریں، کیونکہ فریب دہی کے حملے آپ کو اپنی شناخت پر دستخط کرنے کے لیے دھوکہ دینے کی کوشش کر سکتے ہیں۔ صرف مکمل تفصیلی بیانات پر دستخط کریں جن سے آپ اتفاق کرتے ہیں۔</translation>
     </message>
     <message>
-        <source>The Bitcoin address to sign the message with</source>
-        <translation type="unfinished">پیغام پر دستخط کرنے کے لیے بٹ کوائن کا پتہ</translation>
+        <source>The Kylacoin address to sign the message with</source>
+        <translation type="unfinished">پیغام پر دستخط کرنے کے لیے کائیلا کوائن کا پتہ</translation>
     </message>
     <message>
         <source>Choose previously used address</source>

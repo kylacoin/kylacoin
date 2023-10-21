@@ -1,0 +1,3 @@
+- Difficulty Algorithm changes after block 548200
+- Block size increased from 400KB to 8MB
+- Chain parameters updated

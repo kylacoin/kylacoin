@@ -1,0 +1,3 @@
+- Chain params updated
+- Changed client name to "Kylacoin Core"
+- Max supply fixed

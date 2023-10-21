@@ -66,13 +66,13 @@
         <translation type="unfinished">Kupokea anuani</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">Hizi ndizo anwani zako za kutuma malipo ya sarafu ya Bitcoin. Hakikisha kila wakati kiwango na anwani ya kupokea kabla ya kutuma sarafu.</translation>
+        <source>These are your Kylacoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">Hizi ndizo anwani zako za kutuma malipo ya sarafu ya Kylacoin. Hakikisha kila wakati kiwango na anwani ya kupokea kabla ya kutuma sarafu.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your Kylacoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
-        <translation type="unfinished">Hizi ndizo anwani zako za Bitcoin za kupokea malipo. Tumia kitufe cha 'Unda anwani mpya ya kupokea' kwenye kichupo cha kupokea ili kuunda anwani mpya.
+        <translation type="unfinished">Hizi ndizo anwani zako za Kylacoin za kupokea malipo. Tumia kitufe cha 'Unda anwani mpya ya kupokea' kwenye kichupo cha kupokea ili kuunda anwani mpya.
 Kutia sahihi kunawezekana tu kwa anwani za aina ya 'urithi'.</translation>
     </message>
     <message>
@@ -147,8 +147,8 @@ Kutia sahihi kunawezekana tu kwa anwani za aina ya 'urithi'.</translation>
         <translation type="unfinished">Badilisha nenosiri </translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation type="unfinished">Ilani: Ikiwa utasimba pochi yako na ukapoteza nenosiri lako, &lt;b&gt; UTAPOTEZA BITCOIN ZAKO ZOTE &lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYLACOINS&lt;/b&gt;!</source>
+        <translation type="unfinished">Ilani: Ikiwa utasimba pochi yako na ukapoteza nenosiri lako, &lt;b&gt; UTAPOTEZA KYLACOIN ZAKO ZOTE &lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Enter the new passphrase for the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;ten or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
@@ -271,7 +271,7 @@ Kutia sahihi kunawezekana tu kwa anwani za aina ya 'urithi'.</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Bitcoin network.</source>
+        <source>%n active connection(s) to Kylacoin network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />

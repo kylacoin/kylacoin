@@ -145,7 +145,7 @@ static const char* DEFAULT_ASMAP_FILENAME="ip_asn.map";
 /**
  * The PID file facilities.
  */
-static const char* BITCOIN_PID_FILENAME = "bitcoind.pid";
+static const char* BITCOIN_PID_FILENAME = "kylacoind.pid";
 
 static fs::path GetPidFile(const ArgsManager& args)
 {
@@ -623,7 +623,7 @@ void SetupServerArgs(ArgsManager& argsman)
 #endif
 
 #if defined(USE_SYSCALL_SANDBOX)
-    argsman.AddArg("-sandbox=<mode>", "Use the experimental syscall sandbox in the specified mode (-sandbox=log-and-abort or -sandbox=abort). Allow only expected syscalls to be used by bitcoind. Note that this is an experimental new feature that may cause bitcoind to exit or crash unexpectedly: use with caution. In the \"log-and-abort\" mode the invocation of an unexpected syscall results in a debug handler being invoked which will log the incident and terminate the program (without executing the unexpected syscall). In the \"abort\" mode the invocation of an unexpected syscall results in the entire process being killed immediately by the kernel without executing the unexpected syscall.", ArgsManager::ALLOW_ANY, OptionsCategory::OPTIONS);
+    argsman.AddArg("-sandbox=<mode>", "Use the experimental syscall sandbox in the specified mode (-sandbox=log-and-abort or -sandbox=abort). Allow only expected syscalls to be used by kylacoind. Note that this is an experimental new feature that may cause kylacoind to exit or crash unexpectedly: use with caution. In the \"log-and-abort\" mode the invocation of an unexpected syscall results in a debug handler being invoked which will log the incident and terminate the program (without executing the unexpected syscall). In the \"abort\" mode the invocation of an unexpected syscall results in the entire process being killed immediately by the kernel without executing the unexpected syscall.", ArgsManager::ALLOW_ANY, OptionsCategory::OPTIONS);
 #endif // USE_SYSCALL_SANDBOX
 
     // Add the hidden options
@@ -1024,7 +1024,7 @@ bool AppInitParameterInteraction(const ArgsManager& args, bool use_syscall_sandb
         if (use_syscall_sandbox) {
             SetSyscallSandboxPolicy(SyscallSandboxPolicy::INITIALIZATION);
         }
-        LogPrintf("Experimental syscall sandbox enabled (-sandbox=%s): bitcoind will terminate if an unexpected (not allowlisted) syscall is invoked.\n", sandbox_arg);
+        LogPrintf("Experimental syscall sandbox enabled (-sandbox=%s): kylacoind will terminate if an unexpected (not allowlisted) syscall is invoked.\n", sandbox_arg);
     }
 #endif // USE_SYSCALL_SANDBOX
 
@@ -1116,9 +1116,9 @@ bool AppInitMain(NodeContext& node, interfaces::BlockAndHeaderTipInfo* tip_info)
     // Warn about relative -datadir path.
     if (args.IsArgSet("-datadir") && !args.GetPathArg("-datadir").is_absolute()) {
         LogPrintf("Warning: relative datadir option '%s' specified, which will be interpreted relative to the " /* Continued */
-                  "current working directory '%s'. This is fragile, because if bitcoin is started in the future "
+                  "current working directory '%s'. This is fragile, because if kylacoin is started in the future "
                   "from a different location, it will be unable to locate the current data files. There could "
-                  "also be data loss if bitcoin is started while in a temporary directory.\n",
+                  "also be data loss if kylacoin is started while in a temporary directory.\n",
                   args.GetArg("-datadir", ""), fs::PathToString(fs::current_path()));
     }
 
@@ -1295,7 +1295,7 @@ bool AppInitMain(NodeContext& node, interfaces::BlockAndHeaderTipInfo* tip_info)
         for (const std::string& socket_addr : args.GetArgs(port_option)) {
             std::string host_out;
             uint16_t port_out{0};
-            if (!SplitHostPort(socket_addr, port_out, host_out)) {
+            if (socket_addr.rfind("ipc:", 0) != 0 && !SplitHostPort(socket_addr, port_out, host_out)) {
                 return InitError(InvalidPortErrMsg(port_option, socket_addr));
             }
         }

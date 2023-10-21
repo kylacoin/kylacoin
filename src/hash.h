@@ -10,6 +10,7 @@
 #include <crypto/common.h>
 #include <crypto/ripemd160.h>
 #include <crypto/sha256.h>
+#include <crypto/sha3iuf.h>
 #include <prevector.h>
 #include <serialize.h>
 #include <span.h>
@@ -146,6 +147,53 @@ public:
     }
 };
 
+class CHash3Writer : public HashWriter
+{
+private:
+    sha3_context ctx;
+
+    const int nType;
+    const int nVersion;
+public:
+
+    CHash3Writer(int nTypeIn, int nVersionIn) : nType(nTypeIn), nVersion(nVersionIn) {
+        sha3_Init256(&ctx);
+    }
+
+    int GetType() const { return nType; }
+    int GetVersion() const { return nVersion; }
+
+    void write(Span<const std::byte> src)
+    {
+		sha3_Update(&ctx, UCharCast(src.data()), src.size());
+    }
+
+    uint256 GetHash() {
+        uint8_t *result;
+        result = sha3_Finalize(&ctx);
+
+        uint8_t *result2;
+        sha3_context ctx2;
+        sha3_Init256(&ctx2);
+        sha3_Update(&ctx2, result, 32);
+        result2 = sha3_Finalize(&ctx2);
+
+        char result3[65];
+        result3[64] = 0;
+        for (int i=0; i<32; i++) {
+            sprintf(result3+i*2, "%02x", result2[31-i]);
+        }
+        return uint256S(result3);
+    }
+
+    template<typename T>
+    CHash3Writer& operator<<(const T& obj) {
+        // Serialize to this stream
+        ::Serialize(*this, obj);
+        return (*this);
+    }
+};
+
 class CHashWriter : public HashWriter
 {
 private:
@@ -257,6 +305,14 @@ public:
         return *this;
     }
 };
+
+template<typename T>
+uint256 SerializeHash3(const T& obj, int nType=SER_GETHASH, int nVersion=PROTOCOL_VERSION)
+{
+    CHash3Writer ss(nType, nVersion);
+    ss << obj;
+    return ss.GetHash();
+}
 
 /** Compute the 256-bit hash of an object's serialization. */
 template<typename T>

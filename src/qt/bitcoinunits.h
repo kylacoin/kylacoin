@@ -41,9 +41,12 @@ public:
      */
     enum class Unit {
         BTC,
+        dBTC,
+        cBTC,
         mBTC,
         uBTC,
-        SAT
+        nBTC,
+        pBTC
     };
     Q_ENUM(Unit)
 

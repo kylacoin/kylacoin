@@ -1,0 +1,2 @@
+- Chain params updated
+- DevReward added

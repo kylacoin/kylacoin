@@ -1,0 +1,2 @@
+- Difficulty Algorithm parameter changes after block 590000 to match the block time of 60 seconds
+- Chain parameters updated to secure the chain
