@@ -111,8 +111,6 @@ public:
         consensus.n2023DiffAlgoHeight2 = 590000;
         consensus.n2023DiffAlgoHeight3 = 685800;
         consensus.n2023DiffAlgoHeight4 = 831200;
-        consensus.n2023DiffAlgoWindow2 = 1;
-        consensus.n2023DiffAlgoTimespan2 = 1 * 60;
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -236,8 +234,6 @@ public:
         consensus.n2023DiffAlgoHeight2 = 0;
         consensus.n2023DiffAlgoHeight3 = 0;
         consensus.n2023DiffAlgoHeight4 = 0;
-        consensus.n2023DiffAlgoWindow2 = 1;
-        consensus.n2023DiffAlgoTimespan2 = 1 * 60;
 
         pchMessageStart[0] = 0x92;
         pchMessageStart[1] = 0x1a;
@@ -390,8 +386,6 @@ public:
         consensus.n2023DiffAlgoHeight2 = 0;
         consensus.n2023DiffAlgoHeight3 = 0;
         consensus.n2023DiffAlgoHeight4 = 0;
-        consensus.n2023DiffAlgoWindow2 = 1;
-        consensus.n2023DiffAlgoTimespan2 = 1 * 60;
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,38);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,33);
@@ -457,8 +451,6 @@ public:
         consensus.n2023DiffAlgoHeight2 = 0;
         consensus.n2023DiffAlgoHeight3 = 0;
         consensus.n2023DiffAlgoHeight4 = 0;
-        consensus.n2023DiffAlgoWindow2 = 1;
-        consensus.n2023DiffAlgoTimespan2 = 1 * 60;
 
         pchMessageStart[0] = 0xd2;
         pchMessageStart[1] = 0x13;

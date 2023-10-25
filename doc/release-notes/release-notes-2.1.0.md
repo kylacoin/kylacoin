@@ -1,5 +1,5 @@
 ### Network Rules
-- Difficulty algorithm adjustment changed from 10 blocks to 1 block by 0.5% (activation after block height 831200, in 14 days)
+- Difficulty adjustment algorithm changed from 10 blocks to 1 block by 0.5% (activation after block height 831200, in 14 days)
 
 ### P2P
 

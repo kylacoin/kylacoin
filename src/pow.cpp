@@ -60,27 +60,17 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
             return pindexLast->nBits;
         }
     } else {
-        // Only change once per difficulty adjustment interval
-        if ((pindexLast->nHeight+1) % params.n2023DiffAlgoWindow2 != 0)
-        {
-            if (params.fPowAllowMinDifficultyBlocks)
-            {
-                // Special difficulty rule for testnet:
-                // If the new block's timestamp is more than 2* 10 minutes
-                // then allow mining of a min-difficulty block.
-                if (pblock->GetBlockTime() > pindexLast->GetBlockTime() + params.nPowTargetSpacing*2)
-                    return nProofOfWorkLimit;
-                else
-                {
-                    // Return the last non-special-min-difficulty-rules-block
-                    const CBlockIndex* pindex = pindexLast;
-                    while (pindex->pprev && pindex->nHeight % params.n2023DiffAlgoWindow2 != 0 && pindex->nBits == nProofOfWorkLimit)
-                        pindex = pindex->pprev;
-                    return pindex->nBits;
-                }
-            }
-            return pindexLast->nBits;
-        }
+		if (params.fPowAllowMinDifficultyBlocks)
+		{
+			if (pblock->GetBlockTime() > pindexLast->GetBlockTime() + params.nPowTargetSpacing*2)
+				return nProofOfWorkLimit;
+			else
+			{
+				const CBlockIndex* pindex = pindexLast;
+				pindex = pindex->pprev;
+				return pindex->nBits;
+			}
+		}
     }
     int nHeightFirst;
     if((pindexLast->nHeight+1) < params.n2023DiffAlgoHeight) {
@@ -89,7 +79,7 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
     } else if((pindexLast->nHeight+1) < params.n2023DiffAlgoHeight4) {
         nHeightFirst = pindexLast->nHeight - (params.n2023DiffAlgoWindow-1);
     } else {
-        nHeightFirst = pindexLast->nHeight - (params.n2023DiffAlgoWindow2-1);
+        nHeightFirst = pindexLast->nHeight - 1;
     }
 
     assert(nHeightFirst >= 0);
@@ -106,7 +96,7 @@ unsigned int CalculateNextWorkRequired(const CBlockIndex* pindexLast, int64_t nF
 
     // Limit adjustment step
     int64_t nActualTimespan = pindexLast->GetBlockTime() - nFirstBlockTime;
-    
+
     if((pindexLast->nHeight+1) < params.n2023DiffAlgoHeight) {
         if (nActualTimespan < params.nPowTargetTimespan/4)
             nActualTimespan = params.nPowTargetTimespan/4;
@@ -128,10 +118,10 @@ unsigned int CalculateNextWorkRequired(const CBlockIndex* pindexLast, int64_t nF
         if (nActualTimespan > params.n2023DiffAlgoTimespan*1.028)
             nActualTimespan = params.n2023DiffAlgoTimespan*1.028;
     } else {
-        if (nActualTimespan < params.n2023DiffAlgoTimespan2/1.005)
-            nActualTimespan = params.n2023DiffAlgoTimespan2/1.005;
-        if (nActualTimespan > params.n2023DiffAlgoTimespan2*1.005)
-            nActualTimespan = params.n2023DiffAlgoTimespan2*1.005;
+        if (nActualTimespan < 59)
+            nActualTimespan = 59;
+        if (nActualTimespan > 61)
+            nActualTimespan = 61;
     }
 
     // Retarget
@@ -144,7 +134,7 @@ unsigned int CalculateNextWorkRequired(const CBlockIndex* pindexLast, int64_t nF
     } else if((pindexLast->nHeight+1) < params.n2023DiffAlgoHeight4) {
         bnNew /= params.n2023DiffAlgoTimespan;
     } else {
-        bnNew /= params.n2023DiffAlgoTimespan2;
+        bnNew /= 60;
     }
 
     if (bnNew > bnPowLimit)
@@ -193,12 +183,10 @@ bool PermittedDifficultyTransition(const Consensus::Params& params, int64_t heig
 			largest_timespan = timespan*1.028;
 		}
 	} else {
-		if (height % params.n2023DiffAlgoWindow2 == 0) {
-			fDiffChange = true;
-			timespan = params.n2023DiffAlgoTimespan2;
-			smallest_timespan = timespan/1.005;
-			largest_timespan = timespan*1.005;
-		}
+		fDiffChange = true;
+		timespan = 60;
+		smallest_timespan = 59;
+		largest_timespan = 61;
 	}
 
     if (fDiffChange) {
