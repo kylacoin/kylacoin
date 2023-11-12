@@ -111,6 +111,7 @@ public:
         consensus.n2023DiffAlgoHeight2 = 590000;
         consensus.n2023DiffAlgoHeight3 = 685800;
         consensus.n2023DiffAlgoHeight4 = 831200;
+        consensus.n2023DiffAlgoHeight5 = 841500;
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.

@@ -117,11 +117,16 @@ unsigned int CalculateNextWorkRequired(const CBlockIndex* pindexLast, int64_t nF
             nActualTimespan = params.n2023DiffAlgoTimespan/1.028;
         if (nActualTimespan > params.n2023DiffAlgoTimespan*1.028)
             nActualTimespan = params.n2023DiffAlgoTimespan*1.028;
-    } else {
+    } else if((pindexLast->nHeight+1) < params.n2023DiffAlgoHeight5) {
         if (nActualTimespan < 59)
             nActualTimespan = 59;
         if (nActualTimespan > 61)
             nActualTimespan = 61;
+    } else {
+        if (nActualTimespan < 37)
+            nActualTimespan = 37;
+        if (nActualTimespan > 39)
+            nActualTimespan = 39;
     }
 
     // Retarget
@@ -133,8 +138,10 @@ unsigned int CalculateNextWorkRequired(const CBlockIndex* pindexLast, int64_t nF
         bnNew /= params.nPowTargetTimespan;
     } else if((pindexLast->nHeight+1) < params.n2023DiffAlgoHeight4) {
         bnNew /= params.n2023DiffAlgoTimespan;
-    } else {
+    } else if((pindexLast->nHeight+1) < params.n2023DiffAlgoHeight5) {
         bnNew /= 60;
+    } else {
+        bnNew /= 38;
     }
 
     if (bnNew > bnPowLimit)
@@ -182,11 +189,16 @@ bool PermittedDifficultyTransition(const Consensus::Params& params, int64_t heig
 			smallest_timespan = timespan/1.028;
 			largest_timespan = timespan*1.028;
 		}
-	} else {
+	} else if (height < params.n2023DiffAlgoHeight5) {
 		fDiffChange = true;
 		timespan = 60;
 		smallest_timespan = 59;
 		largest_timespan = 61;
+	} else {
+		fDiffChange = true;
+		timespan = 38;
+		smallest_timespan = 37;
+		largest_timespan = 39;
 	}
 
     if (fDiffChange) {
