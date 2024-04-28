@@ -6,189 +6,12 @@
         <translation type="unfinished">یک آدرس جدید ایجاد کنید</translation>
     </message>
     <message>
-        <source>&amp;New</source>
-        <translation type="unfinished">&amp;جدید</translation>
-    </message>
-    <message>
         <source>Copy the currently selected address to the system clipboard</source>
-        <translation type="unfinished">گپی آدرسی که اکنون انتخاب کردید در کلیپ بورد سیستم</translation>
+        <translation type="unfinished">کپی آدرسی که اکنون انتخاب کردید در کلیپ بورد سیستم</translation>
     </message>
-    <message>
-        <source>&amp;Copy</source>
-        <translation type="unfinished">و کپی</translation>
-    </message>
-    <message>
-        <source>C&amp;lose</source>
-        <translation type="unfinished">و بستن</translation>
-    </message>
-    <message>
-        <source>Delete the currently selected address from the list</source>
-        <translation type="unfinished">حذف آدرس ‌انتخاب شده کنونی از فهرست</translation>
-    </message>
-    <message>
-        <source>Enter address or label to search</source>
-        <translation type="unfinished">برای جستجو یک آدرس یا برچسب را وارد کنید</translation>
-    </message>
-    <message>
-        <source>Export the data in the current tab to a file</source>
-        <translation type="unfinished">خروجی گرفتن داده‌ها از صفحه کنونی در یک فایل</translation>
-    </message>
-    <message>
-        <source>&amp;Export</source>
-        <translation type="unfinished">و صدور</translation>
-    </message>
-    <message>
-        <source>&amp;Delete</source>
-        <translation type="unfinished">و حذف</translation>
-    </message>
-    <message>
-        <source>Choose the address to send coins to</source>
-        <translation type="unfinished">آدرسی که ارزها به آن ارسال میشود را انتخاب کنید</translation>
-    </message>
-    <message>
-        <source>Choose the address to receive coins with</source>
-        <translation type="unfinished">آدرسی که ارزها را دریافت میکند را انتخاب کنید</translation>
-    </message>
-    <message>
-        <source>C&amp;hoose</source>
-        <translation type="unfinished">و انتخاب</translation>
-    </message>
-    <message>
-        <source>Sending addresses</source>
-        <translation type="unfinished">آدرس‌های فرستنده</translation>
-    </message>
-    <message>
-        <source>Receiving addresses</source>
-        <translation type="unfinished">آدرس‌های گیرنده</translation>
-    </message>
-    <message>
-        <source>These are your Kylacoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">اینها آدرسهای ارسال پرداخت های کایلاکوین شماست. همیشه قبل از انجام تراکنش مقدار کایلاکوینی که قصد دارید ارسال کنید و آدرسی که برای آن کایلاکوین ارسال میکنید را دوباره بررسی کنید</translation>
-    </message>
-    <message>
-        <source>These are your Kylacoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
-Signing is only possible with addresses of the type 'legacy'.</source>
-        <translation type="unfinished">اینها آدرس های بیت کوین شما هستند که برای دریافت کایلاکوین از آنها استفاده می کنید. اگر میخواهید یک آدرس دریافت کایلاکوین جدید برای خود بسازید، میتوانید در صفحه "دریافت ها" از گزینه "ساخت یک آدرس جدید برای دریافت کایلاکوین" استفاده کنید
-امکان ساخت امضای تراکنش ها تنها با آدرس هایی که از نوع «legacy» هستند امکان‌پذیر است.</translation>
-    </message>
-    <message>
-        <source>&amp;Copy Address</source>
-        <translation type="unfinished">و کپی آدرس</translation>
-    </message>
-    <message>
-        <source>Copy &amp;Label</source>
-        <translation type="unfinished">و کپی برچسب</translation>
-    </message>
-    <message>
-        <source>&amp;Edit</source>
-        <translation type="unfinished">و ویرایش</translation>
-    </message>
-    <message>
-        <source>Export Address List</source>
-        <translation type="unfinished">خروجی گرفتن از لیست آدرس ها</translation>
-    </message>
-    <message>
-        <source>Comma separated file</source>
-        <extracomment>Expanded name of the CSV file format. See: https://en.wikipedia.org/wiki/Comma-separated_values.</extracomment>
-        <translation type="unfinished">فایل جدا شده با ویرگول</translation>
-    </message>
-    <message>
-        <source>There was an error trying to save the address list to %1. Please try again.</source>
-        <extracomment>An error message. %1 is a stand-in argument for the name of the file we attempted to save to.</extracomment>
-        <translation type="unfinished">هنگام ذخیره کردن فهرست آدرس ها در فایل %1 خطایی پیش آمد. لطفاً دوباره تلاش کنید.</translation>
-    </message>
-    <message>
-        <source>Exporting Failed</source>
-        <translation type="unfinished">اجرای خروجی ناموفق بود</translation>
-    </message>
-</context>
-<context>
-    <name>AddressTableModel</name>
-    <message>
-        <source>Label</source>
-        <translation type="unfinished">لیبل</translation>
-    </message>
-    <message>
-        <source>Address</source>
-        <translation type="unfinished">آدرس</translation>
-    </message>
-    <message>
-        <source>(no label)</source>
-        <translation type="unfinished">(بدون لیبل)</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>AskPassphraseDialog</name>
-    <message>
-        <source>Passphrase Dialog</source>
-        <translation type="unfinished">دیالوگ رمزعبور</translation>
-    </message>
-    <message>
-        <source>Enter passphrase</source>
-        <translation type="unfinished">جملۀ عبور را وارد کنید</translation>
-    </message>
-    <message>
-        <source>New passphrase</source>
-        <translation type="unfinished">جمله عبور تازه را وارد کنید</translation>
-    </message>
-    <message>
-        <source>Repeat new passphrase</source>
-        <translation type="unfinished">جملۀ عبور تازه را دوباره وارد کنید</translation>
-    </message>
-    <message>
-        <source>Show passphrase</source>
-        <translation type="unfinished">نمایش جملۀ عبور</translation>
-    </message>
-    <message>
-        <source>Encrypt wallet</source>
-        <translation type="unfinished">رمزگذاری کیف پول</translation>
-    </message>
-    <message>
-        <source>This operation needs your wallet passphrase to unlock the wallet.</source>
-        <translation type="unfinished">این عملیات برای باز کردن قفل کیف پول شما به رمزعبور کیف پول نیاز دارد.
- </translation>
-    </message>
-    <message>
-        <source>Unlock wallet</source>
-        <translation type="unfinished">قفل کیف پول را باز کنید
- </translation>
-    </message>
-    <message>
-        <source>Change passphrase</source>
-        <translation type="unfinished">تغییر رمزعبور</translation>
-    </message>
-    <message>
-        <source>Confirm wallet encryption</source>
-        <translation type="unfinished">تایید رمزگذاری کیف پول</translation>
-    </message>
-    <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYLACOINS&lt;/b&gt;!</source>
-        <translation type="unfinished">هشدار: اگر کیف پول خود را رمزگذاری کرده و رمز خود را گم کنید ، &lt;b&gt;تمام کایلاکوین های خود را از دست خواهید داد&lt;/b&gt;!</translation>
-    </message>
-    <message>
-        <source>Are you sure you wish to encrypt your wallet?</source>
-        <translation type="unfinished">مطمئن هستید که می خواهید کیف پول خود را رمزگذاری کنید؟</translation>
-    </message>
-    <message>
-        <source>Wallet encrypted</source>
-        <translation type="unfinished">کیف پول رمزگذاری شد</translation>
-    </message>
-    <message>
-        <source>Enter the new passphrase for the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;ten or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
-        <translation type="unfinished">رمز جدید را برای کیف پول خود وارد کنید. &lt;br/&gt;لطفاً از رمزی استفاده کنید که&lt;b&gt;ده یا بیشتر از ده حرف که بصورت تصادفی انتخاب شده اند&lt;/b&gt;، یا &lt;b&gt; حداقل هشت کلمه باشند&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>Enter the old passphrase and new passphrase for the wallet.</source>
-        <translation type="unfinished">رمز عبور قدیمی و رمز عبور جدید کیف پول خود را وارد کنید.</translation>
-    </message>
-    <message>
-        <source>Remember that encrypting your wallet cannot fully protect your kylacoins from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished">به یاد داشته باشید که رمزگذاری کیف پول شما نمی تواند به طور کامل از سرقت بیت کوین شما در اثر آلوده شدن رایانه به بدافزار محافظت کند.</translation>
-    </message>
-    <message>
-        <source>Wallet to be encrypted</source>
-        <translation type="unfinished">کیف پول رمز نگاری شده است</translation>
-    </message>
     <message>
         <source>Your wallet is about to be encrypted. </source>
         <translation type="unfinished">کیف پول شما در حال رمزگذاری ست.</translation>
@@ -229,19 +52,6 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     <message>
         <source>The passphrase entered for the wallet decryption is incorrect. It contains a null character (ie - a zero byte). If the passphrase was set with a version of this software prior to 25.0, please try again with only the characters up to — but not including — the first null character. If this is successful, please set a new passphrase to avoid this issue in the future.</source>
         <translation type="unfinished">عبارت عبور وارد شده برای رمزگشایی کیف پول نادرست است. این شامل یک کاراکتر تهی (به معنی صفر بایت) است.  اگر عبارت عبور را در نسخه ای از این نرم افزار که قدیمی تر نسخه 25.0 است تنظیم کرده اید ، لطفا عبارت را تا آنجایی که اولین کاراکتر تهی قرار دارد امتحان کنید ( خود کاراکتر تهی را درج نکنید ) و دوباره امتحان کنید. اگر این کار موفقیت آمیز بود ، لطفا یک عبارت عبور جدید تنظیم کنید تا دوباره به این مشکل بر نخورید.</translation>
-    </message>
-    <message>
-        <source>Wallet passphrase was successfully changed.</source>
-        <translation type="unfinished">عبارت عبور کیف پول با موفقیت تغییر کرد.
- </translation>
-    </message>
-    <message>
-        <source>Passphrase change failed</source>
-        <translation type="unfinished">تغییر عبارت عبور ناموفق بود.</translation>
-    </message>
-    <message>
-        <source>The old passphrase entered for the wallet decryption is incorrect. It contains a null character (ie - a zero byte). If the passphrase was set with a version of this software prior to 25.0, please try again with only the characters up to — but not including — the first null character.</source>
-        <translation type="unfinished">عبارت عبور قدیمی وارد شده برای رمزگشایی کیف پول نادرست است. این عبارت عبور شامل یک کاراکتر تهی (به عنوان مثال - کاراکتری با حجم صفر بایت) است . اگر عبارت عبور خود را در نسخه ای از این نرم افزار تا قبل از نسخه  25.0 تنظیم کرده اید ،لطفا دوباره عبارت عبور را تا قبل از کاراکتر تهی یا NULL امتحان کنید ( خود کاراکتر تهی را درج نکنید ).</translation>
     </message>
     <message>
         <source>Warning: The Caps Lock key is on!</source>
@@ -304,12 +114,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">ناشناس</translation>
     </message>
     <message>
-        <source>Amount</source>
-        <translation type="unfinished">میزان وجه:</translation>
-    </message>
-    <message>
         <source>Enter a Kylacoin address (e.g. %1)</source>
-        <translation type="unfinished">آدرس بیت کوین را وارد کنید (به طور مثال %1)</translation>
+        <translation type="unfinished">آدرس کایلاکوین را وارد کنید (به طور مثال %1)</translation>
     </message>
     <message>
         <source>Unroutable</source>
@@ -498,7 +304,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Send coins to a Kylacoin address</source>
-        <translation type="unfinished">ارسال کوین به آدرس بیت کوین</translation>
+        <translation type="unfinished">ارسال کوین به آدرس کایلاکوین</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -544,7 +350,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Sign messages with your Kylacoin addresses to prove you own them</source>
-        <translation type="unfinished">پیام‌ها را با آدرس بیت‌کوین خود امضا کنید تا مالکیت آن‌ها را اثبات کنید</translation>
+        <translation type="unfinished">پیام‌ها را با آدرس کایلاکوین خود امضا کنید تا مالکیت آن‌ها را اثبات کنید</translation>
     </message>
     <message>
         <source>&amp;Verify message…</source>
@@ -608,7 +414,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Request payments (generates QR codes and kylacoin: URIs)</source>
-        <translation type="unfinished">درخواست پرداخت (ساخت کد QR و بیت‌کوین: URIs)</translation>
+        <translation type="unfinished">درخواست پرداخت (ساخت کد QR و کایلاکوین: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -682,7 +488,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Open a kylacoin: URI</source>
-        <translation type="unfinished">بارک کردن یک بیت‌کوین: URI</translation>
+        <translation type="unfinished">بارک کردن یک کایلاکوین: URI</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -765,7 +571,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <source>%n active connection(s) to Kylacoin network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
-            <numerusform>%n اتصال(های) فعال به شبکه بیت کوین.</numerusform>
+            <numerusform>%n active connection(s) to Kylacoin network.</numerusform>
         </translation>
     </message>
     <message>
@@ -895,10 +701,6 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">هزینه</translation>
     </message>
     <message>
-        <source>Dust:</source>
-        <translation type="unfinished">گرد و غبار یا داست:</translation>
-    </message>
-    <message>
         <source>After Fee:</source>
         <translation type="unfinished">بعد از احتساب کارمزد</translation>
     </message>
@@ -907,44 +709,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">تغییر</translation>
     </message>
     <message>
-        <source>(un)select all</source>
-        <translation type="unfinished">(عدم)انتخاب همه</translation>
-    </message>
-    <message>
-        <source>Tree mode</source>
-        <translation type="unfinished">حالت درختی</translation>
-    </message>
-    <message>
         <source>List mode</source>
         <translation type="unfinished">حالت لیستی</translation>
-    </message>
-    <message>
-        <source>Amount</source>
-        <translation type="unfinished">میزان وجه:</translation>
-    </message>
-    <message>
-        <source>Received with label</source>
-        <translation type="unfinished">دریافت شده با برچسب</translation>
-    </message>
-    <message>
-        <source>Received with address</source>
-        <translation type="unfinished">دریافت شده با آدرس</translation>
-    </message>
-    <message>
-        <source>Date</source>
-        <translation type="unfinished">تاریخ</translation>
-    </message>
-    <message>
-        <source>Confirmations</source>
-        <translation type="unfinished">تاییدیه</translation>
-    </message>
-    <message>
-        <source>Confirmed</source>
-        <translation type="unfinished">تایید شده</translation>
-    </message>
-    <message>
-        <source>Copy amount</source>
-        <translation type="unfinished">کپی مقدار</translation>
     </message>
     <message>
         <source>&amp;Copy address</source>
@@ -987,32 +753,12 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">کپی کردن بایت ها</translation>
     </message>
     <message>
-        <source>Copy dust</source>
-        <translation type="unfinished">کپی کردن داست:</translation>
-    </message>
-    <message>
         <source>Copy change</source>
         <translation type="unfinished">کپی کردن تغییر</translation>
     </message>
     <message>
         <source>(%1 locked)</source>
         <translation type="unfinished">(قفل شده است %1)</translation>
-    </message>
-    <message>
-        <source>yes</source>
-        <translation type="unfinished">بله</translation>
-    </message>
-    <message>
-        <source>no</source>
-        <translation type="unfinished">خیر</translation>
-    </message>
-    <message>
-        <source>This label turns red if any recipient receives an amount smaller than the current dust threshold.</source>
-        <translation type="unfinished">اگر هر گیرنده مقداری کمتر آستانه فعلی دریافت کند از این لیبل قرمز می‌شود.</translation>
-    </message>
-    <message>
-        <source>(no label)</source>
-        <translation type="unfinished">(بدون لیبل)</translation>
     </message>
     <message>
         <source>change from %1 (%2)</source>
@@ -1235,7 +981,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>The entered address "%1" is not a valid Kylacoin address.</source>
-        <translation type="unfinished">آدرس وارد شده "%1" آدرس معتبر بیت کوین نیست.</translation>
+        <translation type="unfinished">آدرس وارد شده "%1" آدرس معتبر کایلاکوین نیست.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book with label "%2".</source>
@@ -1274,7 +1020,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     <name>Intro</name>
     <message>
         <source>Kylacoin</source>
-        <translation type="unfinished">بیت کوین</translation>
+        <translation type="unfinished">کایلاکوین</translation>
     </message>
     <message numerus="yes">
         <source>%n GB of space available</source>
@@ -1398,7 +1144,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the kylacoin network, as detailed below.</source>
-        <translation type="unfinished">معاملات اخیر ممکن است هنوز قابل مشاهده نباشند ، بنابراین ممکن است موجودی کیف پول شما نادرست باشد. به محض اینکه همگام سازی کیف پول شما با شبکه بیت کوین به پایان رسید ، این اطلاعات درست خواهد بود ، همانطور که در زیر توضیح داده شده است.
+        <translation type="unfinished">معاملات اخیر ممکن است هنوز قابل مشاهده نباشند ، بنابراین ممکن است موجودی کیف پول شما نادرست باشد. به محض اینکه همگام سازی کیف پول شما با شبکه کایلاکوین به پایان رسید ، این اطلاعات درست خواهد بود ، همانطور که در زیر توضیح داده شده است.
  </translation>
     </message>
     <message>
@@ -1575,7 +1321,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Automatically open the Kylacoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation type="unfinished">باز کردن خودکار درگاه شبکهٔ بیت‌کوین روی روترها. تنها زمانی کار می‌کند که روتر از پروتکل UPnP پشتیبانی کند و این پروتکل فعال باشد.</translation>
+        <translation type="unfinished">باز کردن خودکار درگاه شبکهٔ کایلاکوین روی روترها. تنها زمانی کار می‌کند که روتر از پروتکل UPnP پشتیبانی کند و این پروتکل فعال باشد.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1583,7 +1329,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Automatically open the Kylacoin client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
-        <translation type="unfinished">باز کردن خودکار درگاه شبکهٔ بیت‌کوین روی روتر. این پروسه تنها زمانی کار می‌کند که روتر از پروتکل NAT-PMP  پشتیبانی کند و این پروتکل فعال باشد. پورت خارجی میتواند تصادفی باشد </translation>
+        <translation type="unfinished">باز کردن خودکار درگاه شبکهٔ کایلاکوین روی روتر. این پروسه تنها زمانی کار می‌کند که روتر از پروتکل NAT-PMP  پشتیبانی کند و این پروتکل فعال باشد. پورت خارجی میتواند تصادفی باشد </translation>
     </message>
     <message>
         <source>Map port using NA&amp;T-PMP</source>
@@ -1599,7 +1345,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Connect to the Kylacoin network through a SOCKS5 proxy.</source>
-        <translation type="unfinished">از طریق یک پروکسی SOCKS5 به شبکه بیت کوین متصل شوید.</translation>
+        <translation type="unfinished">از طریق یک پروکسی SOCKS5 به شبکه کایلاکوین متصل شوید.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -1676,18 +1422,6 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <source>Whether to show coin control features or not.</source>
         <translation type="unfinished">آیا ویژگی های کنترل سکه را نشان می دهد یا خیر.
  </translation>
-    </message>
-    <message>
-        <source>Monospaced font in the Overview tab:</source>
-        <translation type="unfinished">فونت تک فضا(منو اسپیس) در برگه مرور کلی </translation>
-    </message>
-    <message>
-        <source>embedded "%1"</source>
-        <translation type="unfinished">تعبیه شده%1</translation>
-    </message>
-    <message>
-        <source>closest matching "%1"</source>
-        <translation type="unfinished">%1نزدیک ترین تطابق</translation>
     </message>
     <message>
         <source>&amp;OK</source>
@@ -1879,6 +1613,10 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">تراکنش نسبتا امضا شده (باینری)</translation>
     </message>
     <message>
+        <source>own address</source>
+        <translation type="unfinished">آدرس خود</translation>
+    </message>
+    <message>
         <source>Total Amount</source>
         <translation type="unfinished">میزان کل</translation>
     </message>
@@ -1916,7 +1654,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Cannot start kylacoin: click-to-pay handler</source>
-        <translation type="unfinished">نمی توان بیت کوین را شروع کرد: کنترل کننده کلیک برای پرداخت
+        <translation type="unfinished">نمی توان کایلاکوین را شروع کرد: کنترل کننده کلیک برای پرداخت
  </translation>
     </message>
     <message>
@@ -1970,11 +1708,6 @@ If you are receiving this error you should request the merchant provide a BIP21 
         <source>Received</source>
         <extracomment>Title of Peers Table column which indicates the total amount of network information we have received from the peer.</extracomment>
         <translation type="unfinished">دریافت شد</translation>
-    </message>
-    <message>
-        <source>Address</source>
-        <extracomment>Title of Peers Table column which contains the IP/Onion/I2P address of the connected peer.</extracomment>
-        <translation type="unfinished">آدرس</translation>
     </message>
     <message>
         <source>Type</source>
@@ -2430,7 +2163,7 @@ If you are receiving this error you should request the merchant provide a BIP21 
     </message>
     <message>
         <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Kylacoin network.</source>
-        <translation type="unfinished">یک پیام اختیاری برای پیوست به درخواست پرداخت ، که با باز شدن درخواست نمایش داده می شود. توجه: پیام با پرداخت از طریق شبکه بیت کوین ارسال نمی شود.
+        <translation type="unfinished">یک پیام اختیاری برای پیوست به درخواست پرداخت ، که با باز شدن درخواست نمایش داده می شود. توجه: پیام با پرداخت از طریق شبکه کایلاکوین ارسال نمی شود.
  </translation>
     </message>
     <message>
@@ -2592,20 +2325,8 @@ If you are receiving this error you should request the merchant provide a BIP21 
 <context>
     <name>RecentRequestsTableModel</name>
     <message>
-        <source>Date</source>
-        <translation type="unfinished">تاریخ</translation>
-    </message>
-    <message>
-        <source>Label</source>
-        <translation type="unfinished">لیبل</translation>
-    </message>
-    <message>
         <source>Message</source>
         <translation type="unfinished">پیام</translation>
-    </message>
-    <message>
-        <source>(no label)</source>
-        <translation type="unfinished">(بدون لیبل)</translation>
     </message>
     <message>
         <source>(no message)</source>
@@ -2712,10 +2433,6 @@ If you are receiving this error you should request the merchant provide a BIP21 
         <translation type="unfinished">ورودی ها</translation>
     </message>
     <message>
-        <source>Dust:</source>
-        <translation type="unfinished">گرد و غبار یا داست:</translation>
-    </message>
-    <message>
         <source>Choose…</source>
         <translation type="unfinished">انتخاب کنید...</translation>
     </message>
@@ -2769,10 +2486,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">کپی مقدار</translation>
     </message>
     <message>
-        <source>Copy amount</source>
-        <translation type="unfinished">کپی مقدار</translation>
-    </message>
-    <message>
         <source>Copy fee</source>
         <translation type="unfinished">کپی هزینه</translation>
     </message>
@@ -2783,10 +2496,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     <message>
         <source>Copy bytes</source>
         <translation type="unfinished">کپی کردن بایت ها</translation>
-    </message>
-    <message>
-        <source>Copy dust</source>
-        <translation type="unfinished">کپی کردن داست:</translation>
     </message>
     <message>
         <source>Copy change</source>
@@ -2861,7 +2570,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     <message>
         <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Kylacoin Transaction (PSBT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
         <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSBT. This string is displayed when both private keys and PSBT controls are enabled.</extracomment>
-        <translation type="unfinished">لطفا معامله خود را بررسی کنید  می توانید این تراکنش را ایجاد و ارسال کنید یا یک تراکنش بیت کوین با امضای جزئی (PSBT) ایجاد کنید، که می توانید آن را ذخیره یا کپی کنید و سپس با آن امضا کنید، به عنوان مثال، یک کیف پول آفلاین %1، یا یک کیف پول سخت افزاری سازگار با PSBT.</translation>
+        <translation type="unfinished">لطفا معامله خود را بررسی کنید  می توانید این تراکنش را ایجاد و ارسال کنید یا یک تراکنش کایلاکوین با امضای جزئی (PSBT) ایجاد کنید، که می توانید آن را ذخیره یا کپی کنید و سپس با آن امضا کنید، به عنوان مثال، یک کیف پول آفلاین %1، یا یک کیف پول سخت افزاری سازگار با PSBT.</translation>
     </message>
     <message>
         <source>Please, review your transaction.</source>
@@ -2884,7 +2593,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     </message>
     <message>
         <source>The PSBT has been copied to the clipboard. You can also save it.</source>
-        <translation type="unfinished">تراکنش بیت کوین با امضای جزئی (PSBT) در کلیپ بورد کپی شده است. همچنین شما می‌توانید آن را ذخیره کنید.</translation>
+        <translation type="unfinished">تراکنش کایلاکوین با امضای جزئی (PSBT) در کلیپ بورد کپی شده است. همچنین شما می‌توانید آن را ذخیره کنید.</translation>
     </message>
     <message>
         <source>PSBT saved to disk</source>
@@ -2935,7 +2644,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     </message>
     <message>
         <source>Warning: Invalid Kylacoin address</source>
-        <translation type="unfinished">هشدار: آدرس بیت کوین نامعتبر</translation>
+        <translation type="unfinished">هشدار: آدرس کایلاکوین نامعتبر</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2949,11 +2658,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <source>The address you selected for change is not part of this wallet. Any or all funds in your wallet may be sent to this address. Are you sure?</source>
         <translation type="unfinished">این آدرس که شما انتخاب کرده اید بخشی از کیف پول شما نیست.هر یا همه دارایی های شما در این کیف پول به این آدرس ارسال خواهد شد.آیا مطمئن هستید؟</translation>
     </message>
-    <message>
-        <source>(no label)</source>
-        <translation type="unfinished">(بدون لیبل)</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>SendCoinsEntry</name>
     <message>
@@ -3014,7 +2719,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     </message>
     <message>
         <source>The Kylacoin address to sign the message with</source>
-        <translation type="unfinished">نشانی بیت‌کوین برای امضاء پیغام با آن</translation>
+        <translation type="unfinished">نشانی کایلاکوین برای امضاء پیغام با آن</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -3038,7 +2743,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     </message>
     <message>
         <source>Sign the message to prove you own this Kylacoin address</source>
-        <translation type="unfinished">پیام را امضا کنید تا ثابت کنید این آدرس بیت‌کوین متعلق به شماست</translation>
+        <translation type="unfinished">پیام را امضا کنید تا ثابت کنید این آدرس کایلاکوین متعلق به شماست</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -3058,7 +2763,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     </message>
     <message>
         <source>The Kylacoin address the message was signed with</source>
-        <translation type="unfinished">نشانی بیت‌کوین که پیغام با آن امضاء شده</translation>
+        <translation type="unfinished">نشانی کایلاکوین که پیغام با آن امضاء شده</translation>
     </message>
     <message>
         <source>The signed message to verify</source>
@@ -3177,10 +2882,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">وضعیت</translation>
     </message>
     <message>
-        <source>Date</source>
-        <translation type="unfinished">تاریخ</translation>
-    </message>
-    <message>
         <source>Source</source>
         <translation type="unfinished">منبع</translation>
     </message>
@@ -3280,10 +2981,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">ورودی ها</translation>
     </message>
     <message>
-        <source>Amount</source>
-        <translation type="unfinished">میزان وجه:</translation>
-    </message>
-    <message>
         <source>true</source>
         <translation type="unfinished">درست</translation>
     </message>
@@ -3306,16 +3003,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
 <context>
     <name>TransactionTableModel</name>
     <message>
-        <source>Date</source>
-        <translation type="unfinished">تاریخ</translation>
-    </message>
-    <message>
         <source>Type</source>
         <translation type="unfinished">نوع</translation>
-    </message>
-    <message>
-        <source>Label</source>
-        <translation type="unfinished">لیبل</translation>
     </message>
     <message>
         <source>Unconfirmed</source>
@@ -3346,10 +3035,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">ارسال شده به</translation>
     </message>
     <message>
-        <source>Payment to yourself</source>
-        <translation type="unfinished">پرداخت به خود</translation>
-    </message>
-    <message>
         <source>Mined</source>
         <translation type="unfinished">استخراج شده</translation>
     </message>
@@ -3360,10 +3045,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     <message>
         <source>(n/a)</source>
         <translation type="unfinished">(موجود نیست)</translation>
-    </message>
-    <message>
-        <source>(no label)</source>
-        <translation type="unfinished">(بدون لیبل)</translation>
     </message>
     <message>
         <source>Transaction status. Hover over this field to show number of confirmations.</source>
@@ -3415,10 +3096,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     <message>
         <source>Sent to</source>
         <translation type="unfinished">ارسال شده به</translation>
-    </message>
-    <message>
-        <source>To yourself</source>
-        <translation type="unfinished">به خودت</translation>
     </message>
     <message>
         <source>Mined</source>
@@ -3486,41 +3163,16 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">خارج کردن یا بالا بردن سابقه تراکنش ها</translation>
     </message>
     <message>
-        <source>Comma separated file</source>
-        <extracomment>Expanded name of the CSV file format. See: https://en.wikipedia.org/wiki/Comma-separated_values.</extracomment>
-        <translation type="unfinished">فایل جدا شده با ویرگول</translation>
-    </message>
-    <message>
-        <source>Confirmed</source>
-        <translation type="unfinished">تایید شده</translation>
-    </message>
-    <message>
         <source>Watch-only</source>
         <translation type="unfinished">فقط برای تماشا</translation>
-    </message>
-    <message>
-        <source>Date</source>
-        <translation type="unfinished">تاریخ</translation>
     </message>
     <message>
         <source>Type</source>
         <translation type="unfinished">نوع</translation>
     </message>
     <message>
-        <source>Label</source>
-        <translation type="unfinished">لیبل</translation>
-    </message>
-    <message>
-        <source>Address</source>
-        <translation type="unfinished">آدرس</translation>
-    </message>
-    <message>
         <source>ID</source>
         <translation type="unfinished">شناسه</translation>
-    </message>
-    <message>
-        <source>Exporting Failed</source>
-        <translation type="unfinished">اجرای خروجی ناموفق بود</translation>
     </message>
     <message>
         <source>Exporting Successful</source>
@@ -3604,14 +3256,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
 <context>
     <name>WalletView</name>
     <message>
-        <source>&amp;Export</source>
-        <translation type="unfinished">و صدور</translation>
-    </message>
-    <message>
-        <source>Export the data in the current tab to a file</source>
-        <translation type="unfinished">خروجی گرفتن داده‌ها از صفحه کنونی در یک فایل</translation>
-    </message>
-    <message>
         <source>Backup Wallet</source>
         <translation type="unfinished">کیف پول پشتیبان
  </translation>
@@ -3676,7 +3320,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     </message>
     <message>
         <source>Error: Dumpfile version is not supported. This version of kylacoin-wallet only supports version 1 dumpfiles. Got dumpfile with version %s</source>
-        <translation type="unfinished">خطا: نسخه Dumpfile پشتیبانی نمی شود.  این نسخه کیف پول بیت کوین فقط از فایل های dumpfiles نسخه 1 پشتیبانی می کند.  Dumpfile با نسخه %s دریافت شد</translation>
+        <translation type="unfinished">خطا: نسخه Dumpfile پشتیبانی نمی شود.  این نسخه کیف پول کایلاکوین فقط از فایل های dumpfiles نسخه 1 پشتیبانی می کند.  Dumpfile با نسخه %s دریافت شد</translation>
     </message>
     <message>
         <source>Error: Legacy wallets only support the "legacy", "p2sh-segwit", and "bech32" address types</source>
@@ -3710,10 +3354,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <source>Prune: last wallet synchronisation goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
         <translation type="unfinished">هرس: آخرین هماهنگی کیف پول فراتر از داده های هرس شده است. شما باید دوباره -exe کنید (در صورت گره هرس شده دوباره کل بلاکچین را بارگیری کنید)
  </translation>
-    </message>
-    <message>
-        <source>The block index db contains a legacy 'txindex'. To clear the occupied disk space, run a full -reindex, otherwise ignore this error. This error message will not be displayed again.</source>
-        <translation type="unfinished">نمایه بلوک db حاوی یک «txindex» است.  برای پاک کردن فضای اشغال شده دیسک، یک -reindex کامل را اجرا کنید، در غیر این صورت این خطا را نادیده بگیرید.  این پیغام خطا دیگر نمایش داده نخواهد شد.</translation>
     </message>
     <message>
         <source>The transaction amount is too small to send after the fee has been deducted</source>
@@ -4018,11 +3658,6 @@ The wallet might have been tampered with or created with malicious intent.
     <message>
         <source>Transaction amounts must not be negative</source>
         <translation type="unfinished">مقدار تراکنش نمی‌تواند منفی باشد.</translation>
-    </message>
-    <message>
-        <source>Transaction has too long of a mempool chain</source>
-        <translation type="unfinished">معاملات بسیار طولانی از یک زنجیره ممپول است
- </translation>
     </message>
     <message>
         <source>Transaction must have at least one recipient</source>

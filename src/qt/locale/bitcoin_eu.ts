@@ -58,14 +58,6 @@
         <translation type="unfinished">&amp;Aukeratu</translation>
     </message>
     <message>
-        <source>Sending addresses</source>
-        <translation type="unfinished">Helbideak bidaltzen</translation>
-    </message>
-    <message>
-        <source>Receiving addresses</source>
-        <translation type="unfinished">Helbideak jasotzen</translation>
-    </message>
-    <message>
         <source>These are your Kylacoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished">Hauek dira zuk dirua jaso dezaketen Kylacoin helbideak. Egiaztatu beti diru-kopurua eta dirua jasoko duen helbidea zuzen egon daitezen, txanponak bidali baino lehen.</translation>
     </message>
@@ -279,43 +271,43 @@ Sinatzea 'legacy' motako helbideekin soilik da posible</translation>
     <message numerus="yes">
         <source>%n second(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n minute(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n hour(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n day(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n week(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n year(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     </context>
@@ -509,8 +501,8 @@ Sinatzea 'legacy' motako helbideekin soilik da posible</translation>
     <message numerus="yes">
         <source>Processed %n block(s) of transaction history.</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -630,8 +622,8 @@ Sinatzea 'legacy' motako helbideekin soilik da posible</translation>
         <source>%n active connection(s) to Kylacoin network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -739,10 +731,6 @@ Sinatzea 'legacy' motako helbideekin soilik da posible</translation>
         <translation type="unfinished">Ordainketa:</translation>
     </message>
     <message>
-        <source>Dust:</source>
-        <translation type="unfinished">Hautsa:</translation>
-    </message>
-    <message>
         <source>After Fee:</source>
         <translation type="unfinished">Ordaindu ondoren:</translation>
     </message>
@@ -807,24 +795,12 @@ Sinatzea 'legacy' motako helbideekin soilik da posible</translation>
         <translation type="unfinished">Kopiatu byte-ak</translation>
     </message>
     <message>
-        <source>Copy dust</source>
-        <translation type="unfinished">Kopiatu hautsa</translation>
-    </message>
-    <message>
         <source>Copy change</source>
         <translation type="unfinished">Kopiatu aldaketa</translation>
     </message>
     <message>
         <source>(%1 locked)</source>
         <translation type="unfinished">(%1 blokeatuta)</translation>
-    </message>
-    <message>
-        <source>yes</source>
-        <translation type="unfinished">bai</translation>
-    </message>
-    <message>
-        <source>no</source>
-        <translation type="unfinished">ez</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -944,10 +920,6 @@ Sinatzea 'legacy' motako helbideekin soilik da posible</translation>
         <translation type="unfinished">Egin diruzorro hutsa...</translation>
     </message>
     <message>
-        <source>Descriptor Wallet</source>
-        <translation type="unfinished">Deskriptorearen zorroa</translation>
-    </message>
-    <message>
         <source>External signer</source>
         <translation type="unfinished">Kanpo sinatzailea</translation>
     </message>
@@ -1015,30 +987,30 @@ Sinatzea 'legacy' motako helbideekin soilik da posible</translation>
     <message numerus="yes">
         <source>%n GB of space available</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>(of %n GB needed)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>(%n GB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
         <extracomment>Explanatory text on the capability of the current prune target.</extracomment>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -1329,6 +1301,10 @@ Sinatzea 'legacy' motako helbideekin soilik da posible</translation>
     <message>
         <source>PSBT saved to disk.</source>
         <translation type="unfinished">PSBT diskoan gorde da.</translation>
+    </message>
+    <message>
+        <source>own address</source>
+        <translation type="unfinished">zure helbidea</translation>
     </message>
     <message>
         <source>Total Amount</source>
@@ -1712,10 +1688,6 @@ Sinatzea 'legacy' motako helbideekin soilik da posible</translation>
         <translation type="unfinished">Garbitu formularioko eremu guztiak.</translation>
     </message>
     <message>
-        <source>Dust:</source>
-        <translation type="unfinished">Hautsa:</translation>
-    </message>
-    <message>
         <source>Choose…</source>
         <translation type="unfinished">Aukeratu...</translation>
     </message>
@@ -1750,10 +1722,6 @@ Sinatzea 'legacy' motako helbideekin soilik da posible</translation>
     <message>
         <source>Copy bytes</source>
         <translation type="unfinished">Kopiatu byte-ak</translation>
-    </message>
-    <message>
-        <source>Copy dust</source>
-        <translation type="unfinished">Kopiatu hautsa</translation>
     </message>
     <message>
         <source>Copy change</source>
@@ -1814,8 +1782,8 @@ Sinatzea 'legacy' motako helbideekin soilik da posible</translation>
     <message numerus="yes">
         <source>Estimated to begin confirmation within %n block(s).</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -1969,8 +1937,8 @@ Sinatzea 'legacy' motako helbideekin soilik da posible</translation>
     <message numerus="yes">
         <source>matures in %n more block(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -2052,10 +2020,6 @@ Sinatzea 'legacy' motako helbideekin soilik da posible</translation>
         <translation type="unfinished">Hona bidalia</translation>
     </message>
     <message>
-        <source>Payment to yourself</source>
-        <translation type="unfinished">Zure buruarentzat ordainketa</translation>
-    </message>
-    <message>
         <source>Mined</source>
         <translation type="unfinished">Meatua</translation>
     </message>
@@ -2117,10 +2081,6 @@ Sinatzea 'legacy' motako helbideekin soilik da posible</translation>
     <message>
         <source>Sent to</source>
         <translation type="unfinished">Hona bidalia</translation>
-    </message>
-    <message>
-        <source>To yourself</source>
-        <translation type="unfinished">Zeure buruari</translation>
     </message>
     <message>
         <source>Mined</source>

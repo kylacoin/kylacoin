@@ -8,19 +8,21 @@
 #include <chain.h>
 #include <chainparams.h>
 #include <coins.h>
+#include <common/args.h>
 #include <consensus/amount.h>
 #include <consensus/consensus.h>
 #include <consensus/merkle.h>
 #include <consensus/tx_verify.h>
 #include <consensus/validation.h>
 #include <deploymentstatus.h>
+#include <logging.h>
 #include <policy/feerate.h>
 #include <policy/policy.h>
 #include <pow.h>
 #include <primitives/transaction.h>
-#include <timedata.h>
 #include <util/moneystr.h>
-#include <util/system.h>
+#include <util/strencodings.h>
+#include <util/time.h>
 #include <validation.h>
 
 #include <algorithm>
@@ -30,7 +32,7 @@ namespace node {
 int64_t UpdateTime(CBlockHeader* pblock, const Consensus::Params& consensusParams, const CBlockIndex* pindexPrev)
 {
     int64_t nOldTime = pblock->nTime;
-    int64_t nNewTime{std::max<int64_t>(pindexPrev->GetMedianTimePast() + 1, TicksSinceEpoch<std::chrono::seconds>(GetAdjustedTime()))};
+    int64_t nNewTime{std::max<int64_t>(pindexPrev->GetMedianTimePast() + 1, TicksSinceEpoch<std::chrono::seconds>(NodeClock::now()))};
 
     if (nOldTime < nNewTime) {
         pblock->nTime = nNewTime;
@@ -105,6 +107,7 @@ void BlockAssembler::resetBlock()
 std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock(const CScript& scriptPubKeyIn)
 {
     const auto time_start{SteadyClock::now()};
+    const Consensus::Params &consensusParams = chainparams.GetConsensus();
 
     resetBlock();
 
@@ -131,8 +134,10 @@ std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock(const CScript& sc
     if (chainparams.MineBlocksOnDemand()) {
         pblock->nVersion = gArgs.GetIntArg("-blockversion", pblock->nVersion);
     }
+    
+    if(nHeight >= consensusParams.nFlexhashHeight) pblock->nVersion |= 0x8000;
 
-    pblock->nTime = TicksSinceEpoch<std::chrono::seconds>(GetAdjustedTime());
+    pblock->nTime = TicksSinceEpoch<std::chrono::seconds>(NodeClock::now());
     m_lock_time_cutoff = pindexPrev->GetMedianTimePast();
 
     int nPackagesSelected = 0;
@@ -148,22 +153,28 @@ std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock(const CScript& sc
     m_last_block_weight = nBlockWeight;
     CAmount blockreward = nFees + GetBlockSubsidy(nHeight, chainparams.GetConsensus());
 
-    uint64_t nDevRewardHeight2 = 685800;
-
     // Create coinbase transaction.
     CMutableTransaction coinbaseTx;
     coinbaseTx.vin.resize(1);
     coinbaseTx.vin[0].prevout.SetNull();
     coinbaseTx.vout.resize(2);
-	if ( nHeight < nDevRewardHeight2 ) {
+	if ( nHeight < consensusParams.nDevRewardHeight2 ) {
 		coinbaseTx.vout[0].scriptPubKey = scriptPubKeyIn;
 		coinbaseTx.vout[0].nValue = nFees + (GetBlockSubsidy(nHeight, chainparams.GetConsensus()) - (GetBlockSubsidy(nHeight, chainparams.GetConsensus()) * 0.1));
-		coinbaseTx.vout[1].scriptPubKey = CScript() << OP_0 << ParseHex("3635552e61f1c1e2b5e7f86e25ecf921f0fff973");
+        if(chainparams.GetChainType() == ChainType::TESTNET) {
+            coinbaseTx.vout[1].scriptPubKey = CScript() << OP_0 << ParseHex("cf4148c2c67ab72ab9d8cf385509d78702f672a3");
+        } else {
+            coinbaseTx.vout[1].scriptPubKey = CScript() << OP_0 << ParseHex("3635552e61f1c1e2b5e7f86e25ecf921f0fff973");
+        }
 		coinbaseTx.vout[1].nValue = GetBlockSubsidy(nHeight, chainparams.GetConsensus()) * 0.1;
 	} else {
 		coinbaseTx.vout[0].scriptPubKey = scriptPubKeyIn;
 		coinbaseTx.vout[0].nValue = (blockreward - (blockreward * 0.1));
-		coinbaseTx.vout[1].scriptPubKey = CScript() << OP_0 << ParseHex("3635552e61f1c1e2b5e7f86e25ecf921f0fff973");
+        if(chainparams.GetChainType() == ChainType::TESTNET) {
+            coinbaseTx.vout[1].scriptPubKey = CScript() << OP_0 << ParseHex("cf4148c2c67ab72ab9d8cf385509d78702f672a3");
+        } else {
+            coinbaseTx.vout[1].scriptPubKey = CScript() << OP_0 << ParseHex("3635552e61f1c1e2b5e7f86e25ecf921f0fff973");
+        }
 		coinbaseTx.vout[1].nValue = blockreward * 0.1;
 	}
     coinbaseTx.vin[0].scriptSig = CScript() << nHeight << OP_0;
@@ -182,7 +193,7 @@ std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock(const CScript& sc
 
     BlockValidationState state;
     if (m_options.test_block_validity && !TestBlockValidity(state, chainparams, m_chainstate, *pblock, pindexPrev,
-                                                  GetAdjustedTime, /*fCheckPOW=*/false, /*fCheckMerkleRoot=*/false)) {
+                                                            /*fCheckPOW=*/false, /*fCheckMerkleRoot=*/false)) {
         throw std::runtime_error(strprintf("%s: TestBlockValidity failed: %s", __func__, state.ToString()));
     }
     const auto time_2{SteadyClock::now()};
@@ -199,7 +210,7 @@ void BlockAssembler::onlyUnconfirmed(CTxMemPool::setEntries& testSet)
 {
     for (CTxMemPool::setEntries::iterator iit = testSet.begin(); iit != testSet.end(); ) {
         // Only test txs not already in the block
-        if (inBlock.count(*iit)) {
+        if (inBlock.count((*iit)->GetSharedTx()->GetHash())) {
             testSet.erase(iit++);
         } else {
             iit++;
@@ -240,7 +251,7 @@ void BlockAssembler::AddToBlock(CTxMemPool::txiter iter)
     ++nBlockTx;
     nBlockSigOpsCost += iter->GetSigOpCost();
     nFees += iter->GetFee();
-    inBlock.insert(iter);
+    inBlock.insert(iter->GetSharedTx()->GetHash());
 
     bool fPrintPriority = gArgs.GetBoolArg("-printpriority", DEFAULT_PRINTPRIORITY);
     if (fPrintPriority) {
@@ -309,7 +320,7 @@ void BlockAssembler::addPackageTxs(const CTxMemPool& mempool, int& nPackagesSele
     // because some of their txs are already in the block
     indexed_modified_transaction_set mapModifiedTx;
     // Keep track of entries that failed inclusion, to avoid duplicate work
-    CTxMemPool::setEntries failedTx;
+    std::set<Txid> failedTx;
 
     CTxMemPool::indexed_transaction_set::index<ancestor_score>::type::iterator mi = mempool.mapTx.get<ancestor_score>().begin();
     CTxMemPool::txiter iter;
@@ -337,7 +348,7 @@ void BlockAssembler::addPackageTxs(const CTxMemPool& mempool, int& nPackagesSele
         if (mi != mempool.mapTx.get<ancestor_score>().end()) {
             auto it = mempool.mapTx.project<0>(mi);
             assert(it != mempool.mapTx.end());
-            if (mapModifiedTx.count(it) || inBlock.count(it) || failedTx.count(it)) {
+            if (mapModifiedTx.count(it) || inBlock.count(it->GetSharedTx()->GetHash()) || failedTx.count(it->GetSharedTx()->GetHash())) {
                 ++mi;
                 continue;
             }
@@ -371,7 +382,7 @@ void BlockAssembler::addPackageTxs(const CTxMemPool& mempool, int& nPackagesSele
 
         // We skip mapTx entries that are inBlock, and mapModifiedTx shouldn't
         // contain anything that is inBlock.
-        assert(!inBlock.count(iter));
+        assert(!inBlock.count(iter->GetSharedTx()->GetHash()));
 
         uint64_t packageSize = iter->GetSizeWithAncestors();
         CAmount packageFees = iter->GetModFeesWithAncestors();
@@ -393,7 +404,7 @@ void BlockAssembler::addPackageTxs(const CTxMemPool& mempool, int& nPackagesSele
                 // we must erase failed entries so that we can consider the
                 // next best entry on the next loop iteration
                 mapModifiedTx.get<ancestor_score>().erase(modit);
-                failedTx.insert(iter);
+                failedTx.insert(iter->GetSharedTx()->GetHash());
             }
 
             ++nConsecutiveFailed;
@@ -415,7 +426,7 @@ void BlockAssembler::addPackageTxs(const CTxMemPool& mempool, int& nPackagesSele
         if (!TestPackageTransactions(ancestors)) {
             if (fUsingModified) {
                 mapModifiedTx.get<ancestor_score>().erase(modit);
-                failedTx.insert(iter);
+                failedTx.insert(iter->GetSharedTx()->GetHash());
             }
             continue;
         }

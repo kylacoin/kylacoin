@@ -9,11 +9,15 @@
 #include <chain.h>
 #include <primitives/block.h>
 #include <uint256.h>
+#include <logging.h>
+#include <util/strencodings.h>
 
 unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock, const Consensus::Params& params)
 {
     assert(pindexLast != nullptr);
     unsigned int nProofOfWorkLimit = UintToArith256(params.powLimit).GetCompact();
+
+    if((pindexLast->nHeight+1) == params.nFlexhashHeight) return params.nFlexhashBits;
 
     if((pindexLast->nHeight+1) < params.n2023DiffAlgoHeight) {
         // Only change once per difficulty adjustment interval
@@ -152,9 +156,11 @@ unsigned int CalculateNextWorkRequired(const CBlockIndex* pindexLast, int64_t nF
 
 // Check that on difficulty adjustments, the new difficulty does not increase
 // or decrease beyond the permitted limits.
-bool PermittedDifficultyTransition(const Consensus::Params& params, int64_t height, uint32_t old_nbits, uint32_t new_nbits)
+bool PermittedDifficultyTransition(const Consensus::Params& params, int64_t height, uint32_t old_nbits, uint32_t new_nbits, uint32_t old_ntime, uint32_t new_ntime)
 {
     if (params.fPowAllowMinDifficultyBlocks) return true;
+
+    if(height == params.nFlexhashHeight) return params.nFlexhashBits == new_nbits;
 
 	int64_t smallest_timespan;
 	int64_t largest_timespan;
@@ -243,13 +249,16 @@ bool PermittedDifficultyTransition(const Consensus::Params& params, int64_t heig
     return true;
 }
 
-bool CheckProofOfWork(uint256 hash, unsigned int nBits, const Consensus::Params& params)
+bool CheckProofOfWork(const CBlockHeader &block, const Consensus::Params& params)
 {
+    uint256 hash;
     bool fNegative;
     bool fOverflow;
     arith_uint256 bnTarget;
 
-    bnTarget.SetCompact(nBits, &fNegative, &fOverflow);
+    hash = block.GetPoWHash();
+
+    bnTarget.SetCompact(block.nBits, &fNegative, &fOverflow);
 
     // Check range
     if (fNegative || bnTarget == 0 || fOverflow || bnTarget > UintToArith256(params.powLimit))

@@ -12,6 +12,8 @@
 #include <index/base.h>
 #include <util/hasher.h>
 
+#include <unordered_map>
+
 static const char* const DEFAULT_BLOCKFILTERINDEX = "1";
 
 /** Interval between compact filter checkpoints. See BIP 157. */

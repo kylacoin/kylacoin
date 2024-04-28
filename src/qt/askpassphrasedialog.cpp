@@ -2,10 +2,6 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#if defined(HAVE_CONFIG_H)
-#include <config/bitcoin-config.h>
-#endif
-
 #include <qt/askpassphrasedialog.h>
 #include <qt/forms/ui_askpassphrasedialog.h>
 
@@ -167,6 +163,9 @@ void AskPassphraseDialog::accept()
                                              "passphrase to avoid this issue in the future."));
                 }
             } else {
+                if (m_passphrase_out) {
+                    m_passphrase_out->assign(oldpass);
+                }
                 QDialog::accept(); // Success
             }
         } catch (const std::runtime_error& e) {

@@ -58,21 +58,13 @@
         <translation type="unfinished">&amp;Tanlash</translation>
     </message>
     <message>
-        <source>Sending addresses</source>
-        <translation type="unfinished">Manzillarni yuborish</translation>
-    </message>
-    <message>
-        <source>Receiving addresses</source>
-        <translation type="unfinished">Qabul qiluvchi manzillari</translation>
-    </message>
-    <message>
         <source>These are your Kylacoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished">Quyida to'lovlarni yuborish uchun Kylacoin manzillaringiz. Coinlarni yuborishdan oldin har doim miqdor va qabul qilish manzilini tekshiring.</translation>
     </message>
     <message>
         <source>These are your Kylacoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
-        <translation type="unfinished">Bular to'lovlarni qabul qilish uchun mo'ljallangan Kylacoin manzillar. Yangi manzillar yaratish uchun 'Yangi qabul qilish manzili yaratish' tugmasini ishlating.
+        <translation type="unfinished">Bular to'lovlarni qabul qilish uchun mo'ljallangan Kailakoin manzillar. Yangi manzillar yaratish uchun 'Yangi qabul qilish manzili yaratish' tugmasini ishlating.
 Kirish faqat 'legacy' turidagi manzillar uchun.</translation>
     </message>
     <message>
@@ -323,36 +315,36 @@ Kirish faqat 'legacy' turidagi manzillar uchun.</translation>
     <message numerus="yes">
         <source>%n second(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n minute(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n hour(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n day(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n week(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -362,8 +354,8 @@ Kirish faqat 'legacy' turidagi manzillar uchun.</translation>
     <message numerus="yes">
         <source>%n year(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -448,7 +440,7 @@ Kirish faqat 'legacy' turidagi manzillar uchun.</translation>
     </message>
     <message>
         <source>Send coins to a Kylacoin address</source>
-        <translation type="unfinished">Kylacoin manziliga coinlarni yuborish</translation>
+        <translation type="unfinished">Kailakoin manziliga coinlarni yuborish</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -492,7 +484,7 @@ Kirish faqat 'legacy' turidagi manzillar uchun.</translation>
     </message>
     <message>
         <source>Sign messages with your Kylacoin addresses to prove you own them</source>
-        <translation type="unfinished">Kylacoin manzillarga ega ekaningizni tasdiqlash uchun xabarni signlang</translation>
+        <translation type="unfinished">Kailakoin manzillarga ega ekaningizni tasdiqlash uchun xabarni signlang</translation>
     </message>
     <message>
         <source>&amp;Verify message…</source>
@@ -500,7 +492,7 @@ Kirish faqat 'legacy' turidagi manzillar uchun.</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Kylacoin addresses</source>
-        <translation type="unfinished">Xabar belgilangan Kylacoin manzillari bilan imzolanganligiga ishonch hosil qilish uchun ularni tasdiqlang</translation>
+        <translation type="unfinished">Xabar belgilangan Kailakoin manzillari bilan imzolanganligiga ishonch hosil qilish uchun ularni tasdiqlang</translation>
     </message>
     <message>
         <source>&amp;Load PSBT from file…</source>
@@ -578,7 +570,7 @@ Kirish faqat 'legacy' turidagi manzillar uchun.</translation>
         <source>Processed %n block(s) of transaction history.</source>
         <translation type="unfinished">
             <numerusform>Tranzaksiya tarixining %n blok(lar)i qayta ishlandi.</numerusform>
-            <numerusform />
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -615,7 +607,7 @@ Kirish faqat 'legacy' turidagi manzillar uchun.</translation>
     </message>
     <message>
         <source>Load Partially Signed Kylacoin Transaction</source>
-        <translation type="unfinished">Qisman signlangan Kylacoin tranzaksiyasini yuklash</translation>
+        <translation type="unfinished">Qisman signlangan Kailakoin tranzaksiyasini yuklash</translation>
     </message>
     <message>
         <source>Load PSBT from &amp;clipboard…</source>
@@ -623,7 +615,7 @@ Kirish faqat 'legacy' turidagi manzillar uchun.</translation>
     </message>
     <message>
         <source>Load Partially Signed Kylacoin Transaction from clipboard</source>
-        <translation type="unfinished">Nusxalanganlar qisman signlangan Kylacoin tranzaksiyalarini yuklash</translation>
+        <translation type="unfinished">Nusxalanganlar qisman signlangan Kailakoin tranzaksiyalarini yuklash</translation>
     </message>
     <message>
         <source>Node window</source>
@@ -643,7 +635,7 @@ Kirish faqat 'legacy' turidagi manzillar uchun.</translation>
     </message>
     <message>
         <source>Open a kylacoin: URI</source>
-        <translation type="unfinished">Kylacoinni ochish: URI</translation>
+        <translation type="unfinished">Kailakoinni ochish: URI</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -710,8 +702,8 @@ Kirish faqat 'legacy' turidagi manzillar uchun.</translation>
         <source>%n active connection(s) to Kylacoin network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
-            <numerusform>Kylacoin tarmog'iga %n aktiv ulanishlar.</numerusform>
-            <numerusform />
+            <numerusform>Kailakoin tarmog'iga %n aktiv ulanishlar.</numerusform>
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -929,28 +921,12 @@ Kirish faqat 'legacy' turidagi manzillar uchun.</translation>
         <translation type="unfinished">Baytlarni nusxalash</translation>
     </message>
     <message>
-        <source>Copy dust</source>
-        <translation type="unfinished">'Dust' larni nusxalash</translation>
-    </message>
-    <message>
         <source>Copy change</source>
         <translation type="unfinished">O'zgarishni nusxalash</translation>
     </message>
     <message>
         <source>(%1 locked)</source>
         <translation type="unfinished">(%1 qulflangan)</translation>
-    </message>
-    <message>
-        <source>yes</source>
-        <translation type="unfinished">ha</translation>
-    </message>
-    <message>
-        <source>no</source>
-        <translation type="unfinished">yo'q</translation>
-    </message>
-    <message>
-        <source>This label turns red if any recipient receives an amount smaller than the current dust threshold.</source>
-        <translation type="unfinished">Agar qabul qiluvchi joriy 'dust' chegarasidan kichikroq miqdor olsa, bu yorliq qizil rangga aylanadi</translation>
     </message>
     <message>
         <source>Can vary +/- %1 satoshi(s) per input.</source>
@@ -1098,14 +1074,6 @@ Kirish faqat 'legacy' turidagi manzillar uchun.</translation>
         <translation type="unfinished">Bo'sh hamyon yaratish</translation>
     </message>
     <message>
-        <source>Use descriptors for scriptPubKey management</source>
-        <translation type="unfinished">scriptPubKey yaratishda izohlovchidan foydalanish</translation>
-    </message>
-    <message>
-        <source>Descriptor Wallet</source>
-        <translation type="unfinished">Deskriptor hamyon</translation>
-    </message>
-    <message>
         <source>Use an external signing device such as a hardware wallet. Configure the external signer script in wallet preferences first.</source>
         <translation type="unfinished">Uskuna hamyoni kabi tashqi signing qurilmasidan foydalaning. Avval hamyon sozlamalarida tashqi signer skriptini sozlang.</translation>
     </message>
@@ -1116,10 +1084,6 @@ Kirish faqat 'legacy' turidagi manzillar uchun.</translation>
     <message>
         <source>Create</source>
         <translation type="unfinished">Yaratmoq</translation>
-    </message>
-    <message>
-        <source>Compiled without sqlite support (required for descriptor wallets)</source>
-        <translation type="unfinished">Sqlite yordamisiz tuzilgan (deskriptor hamyonlari uchun talab qilinadi)</translation>
     </message>
     <message>
         <source>Compiled without external signing support (required for external signing)</source>
@@ -1210,22 +1174,22 @@ Kirish faqat 'legacy' turidagi manzillar uchun.</translation>
     <message numerus="yes">
         <source>%n GB of space available</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>(of %n GB needed)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>(%n GB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -1241,7 +1205,7 @@ Kirish faqat 'legacy' turidagi manzillar uchun.</translation>
         <extracomment>Explanatory text on the capability of the current prune target.</extracomment>
         <translation type="unfinished">
             <numerusform>(%n kun oldingi zaxira nusxalarini tiklash uchun etarli)</numerusform>
-            <numerusform />
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -1335,11 +1299,11 @@ Kirish faqat 'legacy' turidagi manzillar uchun.</translation>
     </message>
     <message>
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the kylacoin network, as detailed below.</source>
-        <translation type="unfinished">So'nggi tranzaksiyalar hali ko'rinmasligi mumkin, shuning uchun hamyoningiz balansi noto'g'ri ko'rinishi mumkin. Sizning hamyoningiz kylacoin tarmog'i bilan sinxronlashni tugatgandan so'ng, quyida batafsil tavsiflanganidek, bu ma'lumot to'g'rilanadi.</translation>
+        <translation type="unfinished">So'nggi tranzaksiyalar hali ko'rinmasligi mumkin, shuning uchun hamyoningiz balansi noto'g'ri ko'rinishi mumkin. Sizning hamyoningiz kailakoin tarmog'i bilan sinxronlashni tugatgandan so'ng, quyida batafsil tavsiflanganidek, bu ma'lumot to'g'rilanadi.</translation>
     </message>
     <message>
         <source>Attempting to spend kylacoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation type="unfinished">Hali ko'rsatilmagan tranzaksiyalarga kylacoinlarni sarflashga urinish tarmoq tomonidan qabul qilinmaydi.</translation>
+        <translation type="unfinished">Hali ko'rsatilmagan tranzaksiyalarga kailakoinlarni sarflashga urinish tarmoq tomonidan qabul qilinmaydi.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1386,7 +1350,7 @@ Kirish faqat 'legacy' turidagi manzillar uchun.</translation>
     <name>OpenURIDialog</name>
     <message>
         <source>Open kylacoin URI</source>
-        <translation type="unfinished">Kylacoin URI sini ochish</translation>
+        <translation type="unfinished">Kailakoin URI sini ochish</translation>
     </message>
     <message>
         <source>Paste address from clipboard</source>
@@ -1597,7 +1561,7 @@ Kirish faqat 'legacy' turidagi manzillar uchun.</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation type="unfinished">Xatolik</translation>
+        <translation type="unfinished">Хатолик</translation>
     </message>
     <message>
         <source>This change would require a client restart.</source>
@@ -1681,6 +1645,10 @@ Kirish faqat 'legacy' turidagi manzillar uchun.</translation>
     </context>
 <context>
     <name>PSBTOperationsDialog</name>
+    <message>
+        <source>own address</source>
+        <translation type="unfinished">ўз манзили</translation>
+    </message>
     <message>
         <source>or</source>
         <translation type="unfinished">ёки</translation>
@@ -1818,7 +1786,7 @@ Kirish faqat 'legacy' turidagi manzillar uchun.</translation>
     </message>
     <message>
         <source>Last block time</source>
-        <translation type="unfinished">Oxirgi bloklash vaqti</translation>
+        <translation type="unfinished">Сўнгги блок вақти</translation>
     </message>
     <message>
         <source>&amp;Open</source>
@@ -1950,7 +1918,7 @@ Kirish faqat 'legacy' turidagi manzillar uchun.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
-        <translation type="unfinished">Hamyonni ochish imkonsiz.</translation>
+        <translation type="unfinished">Ҳамён қулфдан чиқмади.</translation>
     </message>
     </context>
 <context>
@@ -2114,10 +2082,6 @@ Kirish faqat 'legacy' turidagi manzillar uchun.</translation>
         <translation type="unfinished">Baytlarni nusxalash</translation>
     </message>
     <message>
-        <source>Copy dust</source>
-        <translation type="unfinished">'Dust' larni nusxalash</translation>
-    </message>
-    <message>
         <source>Copy change</source>
         <translation type="unfinished">O'zgarishni nusxalash</translation>
     </message>
@@ -2144,8 +2108,8 @@ Kirish faqat 'legacy' turidagi manzillar uchun.</translation>
     <message numerus="yes">
         <source>Estimated to begin confirmation within %n block(s).</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -2262,8 +2226,8 @@ Kirish faqat 'legacy' turidagi manzillar uchun.</translation>
     <message numerus="yes">
         <source>matures in %n more block(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -2357,10 +2321,6 @@ Kirish faqat 'legacy' turidagi manzillar uchun.</translation>
         <translation type="unfinished">Жўнатиш</translation>
     </message>
     <message>
-        <source>Payment to yourself</source>
-        <translation type="unfinished">Ўзингизга тўлов</translation>
-    </message>
-    <message>
         <source>Mined</source>
         <translation type="unfinished">Фойда</translation>
     </message>
@@ -2422,10 +2382,6 @@ Kirish faqat 'legacy' turidagi manzillar uchun.</translation>
     <message>
         <source>Sent to</source>
         <translation type="unfinished">Жўнатиш</translation>
-    </message>
-    <message>
-        <source>To yourself</source>
-        <translation type="unfinished">Ўзингизга</translation>
     </message>
     <message>
         <source>Mined</source>
@@ -2509,7 +2465,7 @@ Kirish faqat 'legacy' turidagi manzillar uchun.</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation type="unfinished">Xatolik</translation>
+        <translation type="unfinished">Хатолик</translation>
     </message>
     </context>
 <context>

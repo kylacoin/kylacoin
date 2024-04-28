@@ -8,11 +8,12 @@
 
 #include <timedata.h>
 
+#include <common/args.h>
+#include <logging.h>
 #include <netaddress.h>
 #include <node/interface_ui.h>
 #include <sync.h>
 #include <tinyformat.h>
-#include <util/system.h>
 #include <util/translation.h>
 #include <warnings.h>
 
@@ -30,11 +31,6 @@ int64_t GetTimeOffset()
 {
     LOCK(g_timeoffset_mutex);
     return nTimeOffset;
-}
-
-NodeClock::time_point GetAdjustedTime()
-{
-    return NodeClock::now() + std::chrono::seconds{GetTimeOffset()};
 }
 
 #define BITCOIN_TIMEDATA_MAX_SAMPLES 200

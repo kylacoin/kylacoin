@@ -58,21 +58,13 @@
         <translation type="unfinished">&amp;בחירה</translation>
     </message>
     <message>
-        <source>Sending addresses</source>
-        <translation type="unfinished">כתובת לשליחה</translation>
-    </message>
-    <message>
-        <source>Receiving addresses</source>
-        <translation type="unfinished">כתובות לקבלה</translation>
-    </message>
-    <message>
         <source>These are your Kylacoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">אלה כתובות הקיילאקוין שלך לשליחת תשלומים. חשוב לבדוק את הסכום ואת הכתובת המקבלת לפני שליחת מטבעות.</translation>
+        <translation type="unfinished">אלה כתובות הביטקוין שלך לשליחת תשלומים. חשוב לבדוק את הסכום ואת הכתובת המקבלת לפני שליחת מטבעות.</translation>
     </message>
     <message>
         <source>These are your Kylacoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
-        <translation type="unfinished">אלה כתובת הקיילאקוין שלך לקבלת תשלומים. ניתן להשתמש בכפתור „יצירת כתובת קבלה חדשה” בלשונית הקבלה ליצירת כתובות חדשות.
+        <translation type="unfinished">אלה כתובת הביטקוין שלך לקבלת תשלומים. ניתן להשתמש בכפתור „יצירת כתובת קבלה חדשה” בלשונית הקבלה ליצירת כתובות חדשות.
 חתימה אפשרית רק עבור כתובות מסוג „legacy”.</translation>
     </message>
     <message>
@@ -100,6 +92,14 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <source>There was an error trying to save the address list to %1. Please try again.</source>
         <extracomment>An error message. %1 is a stand-in argument for the name of the file we attempted to save to.</extracomment>
         <translation type="unfinished">אירעה שגיאה בעת הניסיון לשמור את רשימת הכתובת אל %1. נא לנסות שוב.</translation>
+    </message>
+    <message>
+        <source>Sending addresses - %1</source>
+        <translation type="unfinished">כתובות שליחה - %1</translation>
+    </message>
+    <message>
+        <source>Receiving addresses - %1</source>
+        <translation type="unfinished">כתובות קבלה - %1</translation>
     </message>
     <message>
         <source>Exporting Failed</source>
@@ -296,7 +296,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Enter a Kylacoin address (e.g. %1)</source>
-        <translation type="unfinished">נא לספק כתובת קיילאקוין (למשל: %1)</translation>
+        <translation type="unfinished">נא לספק כתובת ביטקוין (למשל: %1)</translation>
     </message>
     <message>
         <source>Inbound</source>
@@ -339,36 +339,36 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     <message numerus="yes">
         <source>%n second(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n minute(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n hour(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n day(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n week(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -378,8 +378,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     <message numerus="yes">
         <source>%n year(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -468,7 +468,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Send coins to a Kylacoin address</source>
-        <translation type="unfinished">שליחת מטבעות לכתובת קיילאקוין</translation>
+        <translation type="unfinished">שליחת מטבעות לכתובת ביטקוין</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -512,7 +512,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Sign messages with your Kylacoin addresses to prove you own them</source>
-        <translation type="unfinished">חתום על הודעות עם כתובות קיילאקוין שלך כדי להוכיח שהן בבעלותך</translation>
+        <translation type="unfinished">חתום על הודעות עם כתובות הביטקוין שלך כדי להוכיח שהן בבעלותך</translation>
     </message>
     <message>
         <source>&amp;Verify message…</source>
@@ -520,7 +520,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Kylacoin addresses</source>
-        <translation type="unfinished">אמת הודעות כדי להבטיח שהן נחתמו עם כתובת קיילאקוין מסוימות</translation>
+        <translation type="unfinished">אמת הודעות כדי להבטיח שהן נחתמו עם כתובת ביטקוין מסוימות</translation>
     </message>
     <message>
         <source>&amp;Load PSBT from file…</source>
@@ -568,13 +568,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Indexing blocks on disk…</source>
-        <translation type="unfinished">מעביר לאינדקס בלוקים בדיסק...
-</translation>
+        <translation type="unfinished">מעביר לאינדקס בלוקים בדיסק...</translation>
     </message>
     <message>
         <source>Processing blocks on disk…</source>
-        <translation type="unfinished">מעבד בלוקים בדיסק...
-</translation>
+        <translation type="unfinished">מעבד בלוקים בדיסק...</translation>
     </message>
     <message>
         <source>Connecting to peers…</source>
@@ -599,8 +597,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     <message numerus="yes">
         <source>Processed %n block(s) of transaction history.</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -637,7 +635,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Load Partially Signed Kylacoin Transaction</source>
-        <translation type="unfinished">העלה עיסקת קיילאקוין חתומה חלקית</translation>
+        <translation type="unfinished">העלה עיסקת ביטקוין חתומה חלקית</translation>
     </message>
     <message>
         <source>Load PSBT from &amp;clipboard…</source>
@@ -645,7 +643,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Load Partially Signed Kylacoin Transaction from clipboard</source>
-        <translation type="unfinished">טעינת עסקת קיילאקוין חתומה חלקית מלוח הגזירים</translation>
+        <translation type="unfinished">טעינת עסקת ביטקוין חתומה חלקית מלוח הגזירים</translation>
     </message>
     <message>
         <source>Node window</source>
@@ -665,7 +663,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Open a kylacoin: URI</source>
-        <translation type="unfinished">פתיחת קיילאקוין: כתובת משאב</translation>
+        <translation type="unfinished">פתיחת ביטקוין: כתובת משאב</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -695,7 +693,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Show the %1 help message to get a list with possible Kylacoin command-line options</source>
-        <translation type="unfinished">יש להציג את הודעת העזרה של %1 כדי להציג רשימה עם אפשרויות שורת פקודה לקיילאקוין</translation>
+        <translation type="unfinished">יש להציג את הודעת העזרה של %1 כדי להציג רשימה עם אפשרויות שורת פקודה לביטקוין</translation>
     </message>
     <message>
         <source>&amp;Mask values</source>
@@ -762,8 +760,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <source>%n active connection(s) to Kylacoin network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -784,7 +782,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     <message>
         <source>Enable network activity</source>
         <extracomment>A context menu item. The network activity was disabled previously.</extracomment>
-        <translation type="unfinished">הפעלת הרשת</translation>
+        <translation type="unfinished">הפעלת פעילות רשת</translation>
     </message>
     <message>
         <source>Pre-syncing Headers (%1%)…</source>
@@ -893,10 +891,6 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">עמלה:</translation>
     </message>
     <message>
-        <source>Dust:</source>
-        <translation type="unfinished">אבק:</translation>
-    </message>
-    <message>
         <source>After Fee:</source>
         <translation type="unfinished">לאחר עמלה:</translation>
     </message>
@@ -973,28 +967,12 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">העתקת בתים</translation>
     </message>
     <message>
-        <source>Copy dust</source>
-        <translation type="unfinished">העתקת אבק</translation>
-    </message>
-    <message>
         <source>Copy change</source>
         <translation type="unfinished">העתקת השינוי</translation>
     </message>
     <message>
         <source>(%1 locked)</source>
         <translation type="unfinished">(%1 נעולים)</translation>
-    </message>
-    <message>
-        <source>yes</source>
-        <translation type="unfinished">כן</translation>
-    </message>
-    <message>
-        <source>no</source>
-        <translation type="unfinished">לא</translation>
-    </message>
-    <message>
-        <source>This label turns red if any recipient receives an amount smaller than the current dust threshold.</source>
-        <translation type="unfinished">תווית זו הופכת לאדומה אם מישהו מהנמענים מקבל סכום נמוך יותר מסף האבק הנוכחי.</translation>
     </message>
     <message>
         <source>Can vary +/- %1 satoshi(s) per input.</source>
@@ -1128,20 +1106,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">יצירת ארנק ריק</translation>
     </message>
     <message>
-        <source>Use descriptors for scriptPubKey management</source>
-        <translation type="unfinished">השתמש ב descriptors לניהול scriptPubKey </translation>
-    </message>
-    <message>
-        <source>Descriptor Wallet</source>
-        <translation type="unfinished">ארנק Descriptor </translation>
-    </message>
-    <message>
         <source>Create</source>
         <translation type="unfinished">יצירה</translation>
-    </message>
-    <message>
-        <source>Compiled without sqlite support (required for descriptor wallets)</source>
-        <translation type="unfinished">מהודר ללא תמיכת sqlite (נחוץ לארנקי דסקריפטור)</translation>
     </message>
     </context>
 <context>
@@ -1180,7 +1146,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>The entered address "%1" is not a valid Kylacoin address.</source>
-        <translation type="unfinished">הכתובת שסיפקת "%1" אינה כתובת קיילאקוין תקנית.</translation>
+        <translation type="unfinished">הכתובת שסיפקת "%1" אינה כתובת ביטקוין תקנית.</translation>
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -1226,13 +1192,13 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     <name>Intro</name>
     <message>
         <source>Kylacoin</source>
-        <translation type="unfinished">קיילאקוין</translation>
+        <translation type="unfinished">ביטקוין</translation>
     </message>
     <message numerus="yes">
         <source>%n GB of space available</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
@@ -1261,13 +1227,13 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <source>(sufficient to restore backups %n day(s) old)</source>
         <extracomment>Explanatory text on the capability of the current prune target.</extracomment>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message>
         <source>%1 will download and store a copy of the Kylacoin block chain.</source>
-        <translation type="unfinished">%1 תוריד ותאחסן עותק של שרשרת הבלוקים של קיילאקוין.</translation>
+        <translation type="unfinished">%1 תוריד ותאחסן עותק של שרשרת הבלוקים של ביטקוין.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1352,7 +1318,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the kylacoin network, as detailed below.</source>
-        <translation type="unfinished">ייתכן שהעברות שבוצעו לאחרונה לא יופיעו עדיין, ולכן המאזן בארנק שלך יהיה שגוי. המידע הנכון יוצג במלואו כאשר הארנק שלך יסיים להסתנכרן עם רשת הקיילאקוין, כמפורט למטה.</translation>
+        <translation type="unfinished">ייתכן שהעברות שבוצעו לאחרונה לא יופיעו עדיין, ולכן המאזן בארנק שלך יהיה שגוי. המידע הנכון יוצג במלואו כאשר הארנק שלך יסיים להסתנכרן עם רשת הביטקוין, כמפורט למטה.</translation>
     </message>
     <message>
         <source>Attempting to spend kylacoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
@@ -1395,7 +1361,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     <name>OpenURIDialog</name>
     <message>
         <source>Open kylacoin URI</source>
-        <translation type="unfinished">פתיחת כתובת משאב קיילאקוין</translation>
+        <translation type="unfinished">פתיחת כתובת משאב ביטקוין</translation>
     </message>
     <message>
         <source>URI:</source>
@@ -1503,7 +1469,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Automatically open the Kylacoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation type="unfinished">פתיחת הפתחה של קיילאקוין בנתב באופן אוטומטי. עובד רק אם UPnP מופעל ונתמך בנתב.</translation>
+        <translation type="unfinished">פתיחת הפתחה של ביטקוין בנתב באופן אוטומטי. עובד רק אם UPnP מופעל ונתמך בנתב.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1519,7 +1485,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Connect to the Kylacoin network through a SOCKS5 proxy.</source>
-        <translation type="unfinished">התחבר לרשת הקיילאקוין דרך פרוקסי SOCKS5.</translation>
+        <translation type="unfinished">התחבר לרשת הביטקוין דרך פרוקסי SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1583,7 +1549,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Connect to the Kylacoin network through a separate SOCKS5 proxy for Tor onion services.</source>
-        <translation type="unfinished">התחבר לרשת קיילאקוין דרך פרוקסי נפרד SOCKS5 proxy לשרותי שכבות בצל (onion services).</translation>
+        <translation type="unfinished">התחבר לרשת ביטקוין דרך פרוקסי נפרד SOCKS5 proxy לשרותי שכבות בצל (onion services).</translation>
     </message>
     <message>
         <source>Use separate SOCKS&amp;5 proxy to reach peers via Tor onion services:</source>
@@ -1659,7 +1625,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Kylacoin network after a connection is established, but this process has not completed yet.</source>
-        <translation type="unfinished">המידע המוצג עשוי להיות מיושן. הארנק שלך מסתנכרן באופן אוטומטי עם רשת הקיילאקוין לאחר יצירת החיבור, אך התהליך טרם הסתיים.</translation>
+        <translation type="unfinished">המידע המוצג עשוי להיות מיושן. הארנק שלך מסתנכרן באופן אוטומטי עם רשת הביטקוין לאחר יצירת החיבור, אך התהליך טרם הסתיים.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1797,8 +1763,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">PSBT נשמרה לדיסק.</translation>
     </message>
     <message>
-        <source> * Sends %1 to %2</source>
-        <translation type="unfinished"> * שליחת %1 אל %2</translation>
+        <source>own address</source>
+        <translation type="unfinished">כתובת עצמית</translation>
     </message>
     <message>
         <source>Unable to calculate transaction fee or total transaction amount.</source>
@@ -1865,7 +1831,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid Kylacoin address or malformed URI parameters.</source>
-        <translation type="unfinished">לא ניתן לנתח את כתובת המשאב! מצב זה יכול לקרות עקב כתובת קיילאקוין שגויה או פרמטרים שגויים בכתובת המשאב.</translation>
+        <translation type="unfinished">לא ניתן לנתח את כתובת המשאב! מצב זה יכול לקרות עקב כתובת ביטקוין שגויה או פרמטרים שגויים בכתובת המשאב.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -2244,7 +2210,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Kylacoin network.</source>
-        <translation type="unfinished">הודעת רשות לצירוף לבקשת התשלום שתוצג בעת פתיחת הבקשה. לתשומת לבך: ההודעה לא תישלח עם התשלום ברשת קיילאקוין.</translation>
+        <translation type="unfinished">הודעת רשות לצירוף לבקשת התשלום שתוצג בעת פתיחת הבקשה. לתשומת לבך: ההודעה לא תישלח עם התשלום ברשת ביטקוין.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2484,16 +2450,12 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">ניקוי של כל השדות בטופס.</translation>
     </message>
     <message>
-        <source>Dust:</source>
-        <translation type="unfinished">אבק:</translation>
-    </message>
-    <message>
         <source>Hide transaction fee settings</source>
         <translation type="unfinished">הסתרת הגדרות עמלת עסקה</translation>
     </message>
     <message>
         <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for kylacoin transactions than the network can process.</source>
-        <translation type="unfinished">כאשר יש פחות נפח עסקאות מאשר מקום בבלוק, כורים וכן צמתות מקשרות יכולות להכתיב עמלות מינימום. התשלום של עמלת מינימום הנו תקין, אך יש לקחת בחשבון שהדבר יכול לגרום לעסקה שלא תאושר ברגע שיש יותר ביקוש לעסקאות קיילאקוין מאשר הרשת יכולה לעבד.</translation>
+        <translation type="unfinished">כאשר יש פחות נפח עסקאות מאשר מקום בבלוק, כורים וכן צמתות מקשרות יכולות להכתיב עמלות מינימום. התשלום של עמלת מינימום הנו תקין, אך יש לקחת בחשבון שהדבר יכול לגרום לעסקה שלא תאושר ברגע שיש יותר ביקוש לעסקאות ביטקוין מאשר הרשת יכולה לעבד.</translation>
     </message>
     <message>
         <source>A too low fee might result in a never confirming transaction (read the tooltip)</source>
@@ -2548,10 +2510,6 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">העתקת בתים</translation>
     </message>
     <message>
-        <source>Copy dust</source>
-        <translation type="unfinished">העתקת אבק</translation>
-    </message>
-    <message>
         <source>Copy change</source>
         <translation type="unfinished">העתקת השינוי</translation>
     </message>
@@ -2565,11 +2523,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Creates a Partially Signed Kylacoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <translation type="unfinished">יוצר עסקת קיילאקוין חתומה חלקית (PSBT) לשימוש עם ארנק %1 לא מחובר למשל, או עם PSBT ארנק חומרה תואם.</translation>
-    </message>
-    <message>
-        <source> from wallet '%1'</source>
-        <translation type="unfinished">מתוך ארנק "%1"</translation>
+        <translation type="unfinished">יוצר עסקת ביטקוין חתומה חלקית (PSBT) לשימוש עם ארנק %1 לא מחובר למשל, או עם PSBT ארנק חומרה תואם.</translation>
     </message>
     <message>
         <source>%1 to '%2'</source>
@@ -2603,7 +2557,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     <message>
         <source>Please, review your transaction proposal. This will produce a Partially Signed Kylacoin Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
         <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSBT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
-        <translation type="unfinished">בבקשה לסקור את העיסקה המוצעת. הדבר יצור עיסקת קיילאקוין חתומה חלקית (PSBT) אשר ניתן לשמור או להעתיק ואז לחתום עם למשל ארנק לא מקוון %1, או עם ארנק חומרה תואם-PSBT.</translation>
+        <translation type="unfinished">בבקשה לסקור את העיסקה המוצעת. הדבר יצור עיסקת ביטקוין חתומה חלקית (PSBT) אשר ניתן לשמור או להעתיק ואז לחתום עם למשל ארנק לא מקוון %1, או עם ארנק חומרה תואם-PSBT.</translation>
     </message>
     <message>
         <source>Please, review your transaction.</source>
@@ -2661,8 +2615,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     <message numerus="yes">
         <source>Estimated to begin confirmation within %n block(s).</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -2706,7 +2660,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>The Kylacoin address to send the payment to</source>
-        <translation type="unfinished">כתובת הקיילאקוין של המוטב</translation>
+        <translation type="unfinished">כתובת הביטקוין של המוטב</translation>
     </message>
     <message>
         <source>Paste address from clipboard</source>
@@ -2741,8 +2695,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">יש לתת תווית לכתובת זו כדי להוסיף אותה לרשימת הכתובות בשימוש</translation>
     </message>
     <message>
-        <source>A message that was attached to the kylacoin: URI which will be stored with the transaction for your reference\. Note: This message will not be sent over the Kylacoin network.</source>
-        <translation type="unfinished">הודעה שצורפה לקיילאקוין: כתובת שתאוחסן בהעברה לצורך מעקב מצדך. לתשומת לבך: הודעה זו לא תישלח ברשת הקיילאקוין.</translation>
+        <source>A message that was attached to the kylacoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Kylacoin network.</source>
+        <translation type="unfinished">הודעה שצורפה לביטקוין: כתובת שתאוחסן בהעברה לצורך מעקב מצדך. לתשומת לבך: הודעה זו לא תישלח ברשת הביטקוין.</translation>
     </message>
 </context>
 <context>
@@ -2772,7 +2726,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>The Kylacoin address to sign the message with</source>
-        <translation type="unfinished">כתובת הקיילאקוין איתה לחתום את ההודעה</translation>
+        <translation type="unfinished">כתובת הביטקוין איתה לחתום את ההודעה</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2796,7 +2750,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Sign the message to prove you own this Kylacoin address</source>
-        <translation type="unfinished">ניתן לחתום על ההודעה כדי להוכיח שכתובת קיילאקוין זו בבעלותך</translation>
+        <translation type="unfinished">ניתן לחתום על ההודעה כדי להוכיח שכתובת ביטקוין זו בבעלותך</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2820,7 +2774,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>The Kylacoin address the message was signed with</source>
-        <translation type="unfinished">כתובת הקיילאקוין שאיתה נחתמה ההודעה</translation>
+        <translation type="unfinished">כתובת הביטקוין שאיתה נחתמה ההודעה</translation>
     </message>
     <message>
         <source>The signed message to verify</source>
@@ -2832,7 +2786,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Verify the message to ensure it was signed with the specified Kylacoin address</source>
-        <translation type="unfinished">ניתן לאמת את ההודעה כדי להבטיח שהיא נחתמה עם כתובת הקיילאקוין הנתונה</translation>
+        <translation type="unfinished">ניתן לאמת את ההודעה כדי להבטיח שהיא נחתמה עם כתובת הביטקוין הנתונה</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2968,8 +2922,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     <message numerus="yes">
         <source>matures in %n more block(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -3019,10 +2973,6 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     <message>
         <source>Output index</source>
         <translation type="unfinished">מפתח פלט</translation>
-    </message>
-    <message>
-        <source> (Certificate was not verified)</source>
-        <translation type="unfinished">(האישור לא אומת)</translation>
     </message>
     <message>
         <source>Merchant</source>
@@ -3123,10 +3073,6 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">נשלח אל</translation>
     </message>
     <message>
-        <source>Payment to yourself</source>
-        <translation type="unfinished">תשלום לעצמך</translation>
-    </message>
-    <message>
         <source>Mined</source>
         <translation type="unfinished">נכרו</translation>
     </message>
@@ -3200,10 +3146,6 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     <message>
         <source>Sent to</source>
         <translation type="unfinished">נשלח אל</translation>
-    </message>
-    <message>
-        <source>To yourself</source>
-        <translation type="unfinished">לעצמך</translation>
     </message>
     <message>
         <source>Mined</source>
@@ -3443,10 +3385,6 @@ Go to File &gt; Open Wallet to load a wallet.
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
         <translation type="unfinished">מופץ תחת רשיון התוכנה של MIT, ראה קובץ מלווה  %s או %s</translation>
-    </message>
-    <message>
-        <source>Error reading %s! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
-        <translation type="unfinished">שגיאה בנסיון לקרוא את %s! כל המפתחות נקראו נכונה, אך נתוני העסקה או הכתובות יתכן שחסרו או שגויים.</translation>
     </message>
     <message>
         <source>Please check that your computer's date and time are correct! If your clock is wrong, %s will not work properly.</source>
@@ -3735,10 +3673,6 @@ Go to File &gt; Open Wallet to load a wallet.
     <message>
         <source>Transaction amounts must not be negative</source>
         <translation type="unfinished">סכומי ההעברה לא יכולים להיות שליליים</translation>
-    </message>
-    <message>
-        <source>Transaction has too long of a mempool chain</source>
-        <translation type="unfinished">לעסקה יש שרשרת ארוכה מדי של mempool </translation>
     </message>
     <message>
         <source>Transaction must have at least one recipient</source>

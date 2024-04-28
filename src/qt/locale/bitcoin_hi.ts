@@ -58,21 +58,13 @@
         <translation type="unfinished">&amp;चुज़</translation>
     </message>
     <message>
-        <source>Sending addresses</source>
-        <translation type="unfinished">पते भेजे जा रहे हैं</translation>
-    </message>
-    <message>
-        <source>Receiving addresses</source>
-        <translation type="unfinished">पते प्राप्त किए जा रहे हैं</translation>
-    </message>
-    <message>
         <source>These are your Kylacoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">भुगतान भेजने के लिए ये आपके बिटकॉइन पते हैं। कॉइन्स भेजने से पहले हमेशा राशि और प्राप्त करने वाले पते की जांच करें।</translation>
+        <translation type="unfinished">भुगतान भेजने के लिए ये आपके काइलाकॉइन पते हैं। कॉइन्स भेजने से पहले हमेशा राशि और प्राप्त करने वाले पते की जांच करें।</translation>
     </message>
     <message>
         <source>These are your Kylacoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
-        <translation type="unfinished">भुगतान प्राप्त करने के लिए ये आपके बिटकॉइन पते हैं। नए पते बनाने के लिए रिसिव टैब में 'नया प्राप्तकर्ता पता बनाएं' बटन का उपयोग करें।
+        <translation type="unfinished">भुगतान प्राप्त करने के लिए ये आपके काइलाकॉइन पते हैं। नए पते बनाने के लिए रिसिव टैब में 'नया प्राप्तकर्ता पता बनाएं' बटन का उपयोग करें।
 हस्ताक्षर केवल 'लेगसी' प्रकार के पते के साथ ही संभव है।</translation>
     </message>
     <message>
@@ -165,7 +157,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYLACOINS&lt;/b&gt;!</source>
-        <translation type="unfinished">चेतावनी: यदि आप अपना वॉलेट एन्क्रिप्ट करते हैं और अपना पासफ़्रेज़ खो देते हैं, तो आपअपने सभी बिटकॉइन &lt;b&gt; खो देंगे&lt;/b&gt; !</translation>
+        <translation type="unfinished">चेतावनी: यदि आप अपना वॉलेट एन्क्रिप्ट करते हैं और अपना पासफ़्रेज़ खो देते हैं, तो आपअपने सभी काइलाकॉइन &lt;b&gt; खो देंगे&lt;/b&gt; !</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -185,7 +177,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Remember that encrypting your wallet cannot fully protect your kylacoins from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished">याद रखें कि आपके वॉलेट को एन्क्रिप्ट करने से आपके बिटकॉइन को आपके कंप्यूटर को संक्रमित करने वाले मैलवेयर द्वारा चोरी होने से पूरी तरह से सुरक्षित नहीं किया जा सकता है।</translation>
+        <translation type="unfinished">याद रखें कि आपके वॉलेट को एन्क्रिप्ट करने से आपके काइलाकॉइन को आपके कंप्यूटर को संक्रमित करने वाले मैलवेयर द्वारा चोरी होने से पूरी तरह से सुरक्षित नहीं किया जा सकता है।</translation>
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -406,7 +398,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Send coins to a Kylacoin address</source>
-        <translation type="unfinished">बिटकॉइन पते पर कॉइन्स भेजें</translation>
+        <translation type="unfinished">काइलाकॉइन पते पर कॉइन्स भेजें</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -451,7 +443,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Sign messages with your Kylacoin addresses to prove you own them</source>
-        <translation type="unfinished">अपने बिटकॉइन पतों के साथ संदेशों पर हस्ताक्षर करके साबित करें कि वे आपके हैं |</translation>
+        <translation type="unfinished">अपने काइलाकॉइन पतों के साथ संदेशों पर हस्ताक्षर करके साबित करें कि वे आपके हैं |</translation>
     </message>
     <message>
         <source>&amp;Verify message…</source>
@@ -459,7 +451,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Kylacoin addresses</source>
-        <translation type="unfinished">यह सुनिश्चित करने के लिए संदेशों को सत्यापित करें कि वे निर्दिष्ट बिटकॉइन पते के साथ हस्ताक्षरित थे |</translation>
+        <translation type="unfinished">यह सुनिश्चित करने के लिए संदेशों को सत्यापित करें कि वे निर्दिष्ट काइलाकॉइन पते के साथ हस्ताक्षरित थे |</translation>
     </message>
     <message>
         <source>&amp;Load PSBT from file…</source>
@@ -524,6 +516,14 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <source>Load PSBT from &amp;clipboard…</source>
         <translation type="unfinished">पीएसबीटी को &amp;क्लिपबोर्ड से लोड करें…</translation>
     </message>
+    <message>
+        <source>Migrate Wallet</source>
+        <translation type="unfinished">वॉलेट माइग्रेट करें</translation>
+    </message>
+    <message>
+        <source>Migrate a wallet</source>
+        <translation type="unfinished">कोई वॉलेट माइग्रेट करें</translation>
+    </message>
     <message numerus="yes">
         <source>%n active connection(s) to Kylacoin network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
@@ -531,26 +531,6 @@ Signing is only possible with addresses of the type 'legacy'.</source>
             <numerusform>%n active connection(s) to Kylacoin network.</numerusform>
             <numerusform>%n active connection(s) to Kylacoin network.</numerusform>
         </translation>
-    </message>
-    <message>
-        <source>Click for more actions.</source>
-        <extracomment>A substring of the tooltip. "More actions" are available via the context menu.</extracomment>
-        <translation type="unfinished">अधिक विकल्पों के लिए क्लिक करें</translation>
-    </message>
-    <message>
-        <source>Show Peers tab</source>
-        <extracomment>A context menu item. The "Peers tab" is an element of the "Node window".</extracomment>
-        <translation type="unfinished">पीयर्स टैब दिखाएं</translation>
-    </message>
-    <message>
-        <source>Disable network activity</source>
-        <extracomment>A context menu item.</extracomment>
-        <translation type="unfinished">नेटवर्क गतिविधि अक्षम करें</translation>
-    </message>
-    <message>
-        <source>Enable network activity</source>
-        <extracomment>A context menu item. The network activity was disabled previously.</extracomment>
-        <translation type="unfinished">नेटवर्क गतिविधि सक्षम करें</translation>
     </message>
     <message>
         <source>Error: %1</source>
@@ -595,10 +575,6 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">फी:</translation>
     </message>
     <message>
-        <source>Dust:</source>
-        <translation type="unfinished">डस्ट:</translation>
-    </message>
-    <message>
         <source>After Fee:</source>
         <translation type="unfinished">आफ़्टर फी:</translation>
     </message>
@@ -632,7 +608,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Date</source>
-        <translation type="unfinished">डेट</translation>
+        <translation type="unfinished">तारीख़</translation>
     </message>
     <message>
         <source>Confirmations</source>
@@ -675,37 +651,12 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">कॉपी बाइट्स</translation>
     </message>
     <message>
-        <source>Copy dust</source>
-        <translation type="unfinished">कॉपी डस्ट</translation>
-    </message>
-    <message>
-        <source>Copy change</source>
-        <translation type="unfinished">कॉपी चैंज</translation>
-    </message>
-    <message>
-        <source>yes</source>
-        <translation type="unfinished">हां</translation>
-    </message>
-    <message>
-        <source>no</source>
-        <translation type="unfinished">ना</translation>
-    </message>
-    <message>
-        <source>This label turns red if any recipient receives an amount smaller than the current dust threshold.</source>
-        <translation type="unfinished">यदि किसी प्राप्तकर्ता को वर्तमान शेष सीमा से कम राशि प्राप्त होती है तो यह लेबल लाल हो जाता है।</translation>
-    </message>
-    <message>
         <source>(no label)</source>
-        <translation type="unfinished">(नो लेबल)</translation>
+        <translation type="unfinished">(कोई लेबल नहीं)</translation>
     </message>
     </context>
 <context>
     <name>CreateWalletActivity</name>
-    <message>
-        <source>Create Wallet</source>
-        <extracomment>Title of window indicating the progress of creation of a new wallet.</extracomment>
-        <translation type="unfinished">वॉलेट बनाएं</translation>
-    </message>
     <message>
         <source>Create wallet failed</source>
         <translation type="unfinished">वॉलेट बनाना विफल</translation>
@@ -726,6 +677,21 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <source>Loading wallets…</source>
         <extracomment>Descriptive text of the load wallets progress window which indicates to the user that wallets are currently being loaded.</extracomment>
         <translation type="unfinished">वॉलेट लोड हो रहा है...</translation>
+    </message>
+</context>
+<context>
+    <name>MigrateWalletActivity</name>
+    <message>
+        <source>Migrate Wallet</source>
+        <translation type="unfinished">वॉलेट माइग्रेट करें</translation>
+    </message>
+    <message>
+        <source>Migration failed</source>
+        <translation type="unfinished">माइग्रेशन नहीं हो पाया</translation>
+    </message>
+    <message>
+        <source>Migration Successful</source>
+        <translation type="unfinished">माइग्रेशन हो गया</translation>
     </message>
 </context>
 <context>
@@ -792,6 +758,10 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">आंशिक रूप से हस्ताक्षरित लेनदेन (बाइनरी)</translation>
     </message>
     <message>
+        <source>own address</source>
+        <translation type="unfinished">खुद का पता</translation>
+    </message>
+    <message>
         <source>Total Amount</source>
         <translation type="unfinished">कुल राशि</translation>
     </message>
@@ -825,7 +795,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     <message>
         <source>Type</source>
         <extracomment>Title of Peers Table column which describes the type of peer connection. The "type" describes why the connection exists.</extracomment>
-        <translation type="unfinished">टाइप</translation>
+        <translation type="unfinished">प्रकार</translation>
     </message>
     <message>
         <source>Network</source>
@@ -1068,10 +1038,6 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">समय का निर्धारण</translation>
     </message>
     <message>
-        <source>Last block time</source>
-        <translation type="unfinished">अंतिम ब्लॉक समय</translation>
-    </message>
-    <message>
         <source>&amp;Open</source>
         <translation type="unfinished">खुला हुआ</translation>
     </message>
@@ -1258,7 +1224,7 @@ For more information on using this console, type %6.
     </message>
     <message>
         <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Kylacoin network.</source>
-        <translation type="unfinished">भुगतान अनुरोध के साथ संलग्न करने के लिए एक वैकल्पिक संदेश, जिसे अनुरोध खोले जाने पर प्रदर्शित किया जाएगा। नोट: बिटकॉइन नेटवर्क पर भुगतान के साथ संदेश नहीं भेजा जाएगा।</translation>
+        <translation type="unfinished">भुगतान अनुरोध के साथ संलग्न करने के लिए एक वैकल्पिक संदेश, जिसे अनुरोध खोले जाने पर प्रदर्शित किया जाएगा। नोट: काइलाकॉइन नेटवर्क पर भुगतान के साथ संदेश नहीं भेजा जाएगा।</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1333,10 +1299,6 @@ For more information on using this console, type %6.
         <translation type="unfinished">कॉपी &amp;अमाउंट</translation>
     </message>
     <message>
-        <source>Could not unlock wallet.</source>
-        <translation type="unfinished">वॉलेट अनलॉक नहीं किया जा सकता |</translation>
-    </message>
-    <message>
         <source>Could not generate new %1 address</source>
         <translation type="unfinished">नया पता उत्पन्न नहीं कर सका %1 </translation>
     </message>
@@ -1400,7 +1362,7 @@ For more information on using this console, type %6.
     <name>RecentRequestsTableModel</name>
     <message>
         <source>Date</source>
-        <translation type="unfinished">डेट</translation>
+        <translation type="unfinished">तारीख़</translation>
     </message>
     <message>
         <source>Label</source>
@@ -1412,7 +1374,7 @@ For more information on using this console, type %6.
     </message>
     <message>
         <source>(no label)</source>
-        <translation type="unfinished">(नो लेबल)</translation>
+        <translation type="unfinished">(कोई लेबल नहीं)</translation>
     </message>
     <message>
         <source>(no message)</source>
@@ -1518,10 +1480,6 @@ For more information on using this console, type %6.
         <translation type="unfinished">इनपुट्स…</translation>
     </message>
     <message>
-        <source>Dust:</source>
-        <translation type="unfinished">डस्ट:</translation>
-    </message>
-    <message>
         <source>Choose…</source>
         <translation type="unfinished">चुज…</translation>
     </message>
@@ -1539,7 +1497,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     </message>
     <message>
         <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for kylacoin transactions than the network can process.</source>
-        <translation type="unfinished">जब ब्लॉक में स्थान की तुलना में कम लेन-देन की मात्रा होती है, तो खनिकों के साथ-साथ रिलेइंग नोड्स न्यूनतम शुल्क लागू कर सकते हैं। केवल इस न्यूनतम शुल्क का भुगतान करना ठीक है, लेकिन ध्यान रखें कि नेटवर्क की प्रक्रिया की तुलना में बिटकॉइन लेनदेन की अधिक मांग होने पर इसका परिणाम कभी भी पुष्टिकरण लेनदेन में नहीं हो सकता है।</translation>
+        <translation type="unfinished">जब ब्लॉक में स्थान की तुलना में कम लेन-देन की मात्रा होती है, तो खनिकों के साथ-साथ रिलेइंग नोड्स न्यूनतम शुल्क लागू कर सकते हैं। केवल इस न्यूनतम शुल्क का भुगतान करना ठीक है, लेकिन ध्यान रखें कि नेटवर्क की प्रक्रिया की तुलना में काइलाकॉइन लेनदेन की अधिक मांग होने पर इसका परिणाम कभी भी पुष्टिकरण लेनदेन में नहीं हो सकता है।</translation>
     </message>
     <message>
         <source>A too low fee might result in a never confirming transaction (read the tooltip)</source>
@@ -1598,14 +1556,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">कॉपी बाइट्स</translation>
     </message>
     <message>
-        <source>Copy dust</source>
-        <translation type="unfinished">कॉपी डस्ट</translation>
-    </message>
-    <message>
-        <source>Copy change</source>
-        <translation type="unfinished">कॉपी चैंज</translation>
-    </message>
-    <message>
         <source>%1 (%2 blocks)</source>
         <translation type="unfinished">%1 (%2 ब्लाकस)</translation>
     </message>
@@ -1629,11 +1579,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     </message>
     <message>
         <source>Creates a Partially Signed Kylacoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <translation type="unfinished">उदाहरण के लिए उपयोग के लिए आंशिक रूप से हस्ताक्षरित बिटकॉइन लेनदेन (PSBT) बनाता है। एक ऑफ़लाइन% 1 %1  वॉलेट, या एक PSBT-संगत हार्डवेयर वॉलेट।</translation>
-    </message>
-    <message>
-        <source> from wallet '%1'</source>
-        <translation type="unfinished">वॉलिट से '%1'</translation>
+        <translation type="unfinished">उदाहरण के लिए उपयोग के लिए आंशिक रूप से हस्ताक्षरित काइलाकॉइन लेनदेन (PSBT) बनाता है। एक ऑफ़लाइन% 1 %1  वॉलेट, या एक PSBT-संगत हार्डवेयर वॉलेट।</translation>
     </message>
     <message>
         <source>%1 to '%2'</source>
@@ -1691,7 +1637,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     <message>
         <source>Please, review your transaction proposal. This will produce a Partially Signed Kylacoin Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
         <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSBT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
-        <translation type="unfinished">कृपया, अपने लेनदेन प्रस्ताव की समीक्षा करें। यह एक आंशिक रूप से हस्ताक्षरित बिटकॉइन लेनदेन (PSBT) का उत्पादन करेगा जिसे आप सहेज सकते हैं या कॉपी कर सकते हैं और फिर उदा। एक ऑफ़लाइन %1  वॉलेट, या एक PSBT-संगत हार्डवेयर वॉलेट।</translation>
+        <translation type="unfinished">कृपया, अपने लेनदेन प्रस्ताव की समीक्षा करें। यह एक आंशिक रूप से हस्ताक्षरित काइलाकॉइन लेनदेन (PSBT) का उत्पादन करेगा जिसे आप सहेज सकते हैं या कॉपी कर सकते हैं और फिर उदा। एक ऑफ़लाइन %1  वॉलेट, या एक PSBT-संगत हार्डवेयर वॉलेट।</translation>
     </message>
     <message>
         <source>Do you want to create this transaction?</source>
@@ -1701,7 +1647,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     <message>
         <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Kylacoin Transaction (PSBT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
         <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSBT. This string is displayed when both private keys and PSBT controls are enabled.</extracomment>
-        <translation type="unfinished">कृपया, अपने लेन-देन की समीक्षा करें। आप इस लेन-देन को बना और भेज सकते हैं या आंशिक रूप से हस्ताक्षरित बिटकॉइन लेनदेन (पीएसबीटी) बना सकते हैं, जिसे आप सहेज सकते हैं या कॉपी कर सकते हैं और फिर हस्ताक्षर कर सकते हैं, उदाहरण के लिए, ऑफ़लाइन %1 वॉलेट, या पीएसबीटी-संगत हार्डवेयर वॉलेट।</translation>
+        <translation type="unfinished">कृपया, अपने लेन-देन की समीक्षा करें। आप इस लेन-देन को बना और भेज सकते हैं या आंशिक रूप से हस्ताक्षरित काइलाकॉइन लेनदेन (पीएसबीटी) बना सकते हैं, जिसे आप सहेज सकते हैं या कॉपी कर सकते हैं और फिर हस्ताक्षर कर सकते हैं, उदाहरण के लिए, ऑफ़लाइन %1 वॉलेट, या पीएसबीटी-संगत हार्डवेयर वॉलेट।</translation>
     </message>
     <message>
         <source>Please, review your transaction.</source>
@@ -1772,7 +1718,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     </message>
     <message>
         <source>Warning: Invalid Kylacoin address</source>
-        <translation type="unfinished">चेतावनी: अमान्य बिटकॉइन पता</translation>
+        <translation type="unfinished">चेतावनी: अमान्य काइलाकॉइन पता</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -1788,7 +1734,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     </message>
     <message>
         <source>(no label)</source>
-        <translation type="unfinished">(नो लेबल)</translation>
+        <translation type="unfinished">(कोई लेबल नहीं)</translation>
     </message>
 </context>
 <context>
@@ -1811,7 +1757,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     </message>
     <message>
         <source>The Kylacoin address to send the payment to</source>
-        <translation type="unfinished">भुगतान भेजने के लिए बिटकॉइन पता</translation>
+        <translation type="unfinished">भुगतान भेजने के लिए काइलाकॉइन पता</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -1835,7 +1781,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     </message>
     <message>
         <source>The fee will be deducted from the amount being sent. The recipient will receive less kylacoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation type="unfinished">भेजी जाने वाली राशि से शुल्क की कटौती की जाएगी। प्राप्तकर्ता को आपके द्वारा राशि फ़ील्ड में दर्ज किए जाने से कम बिटकॉइन प्राप्त होंगे। यदि कई प्राप्तकर्ताओं का चयन किया जाता है, तो शुल्क समान रूप से विभाजित किया जाता है।</translation>
+        <translation type="unfinished">भेजी जाने वाली राशि से शुल्क की कटौती की जाएगी। प्राप्तकर्ता को आपके द्वारा राशि फ़ील्ड में दर्ज किए जाने से कम काइलाकॉइन प्राप्त होंगे। यदि कई प्राप्तकर्ताओं का चयन किया जाता है, तो शुल्क समान रूप से विभाजित किया जाता है।</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -1854,8 +1800,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">इस पते के लिए उपयोग किए गए पतों की सूची में जोड़ने के लिए एक लेबल दर्ज करें</translation>
     </message>
     <message>
-        <source>A message that was attached to the kylacoin: URI which will be stored with the transaction for your reference\. Note: This message will not be sent over the Kylacoin network.</source>
-        <translation type="unfinished">एक संदेश जो बिटकॉइन से जुड़ा था: यूआरआई जो आपके संदर्भ के लिए लेनदेन के साथ संग्रहीत किया जाएगा। नोट: यह संदेश बिटकॉइन नेटवर्क पर नहीं भेजा जाएगा।</translation>
+        <source>A message that was attached to the kylacoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Kylacoin network.</source>
+        <translation type="unfinished">एक संदेश जो काइलाकॉइन से जुड़ा था: यूआरआई जो आपके संदर्भ के लिए लेनदेन के साथ संग्रहीत किया जाएगा। नोट: यह संदेश काइलाकॉइन नेटवर्क पर नहीं भेजा जाएगा।</translation>
     </message>
 </context>
 <context>
@@ -1881,11 +1827,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     </message>
     <message>
         <source>You can sign messages/agreements with your addresses to prove you can receive kylacoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation type="unfinished">आप अपने पते के साथ संदेशों/समझौतों पर हस्ताक्षर करके यह साबित कर सकते हैं कि आप उन्हें भेजे गए बिटकॉइन प्राप्त कर सकते हैं। सावधान रहें कि कुछ भी अस्पष्ट या यादृच्छिक पर हस्ताक्षर न करें, क्योंकि फ़िशिंग हमले आपको अपनी पहचान पर हस्ताक्षर करने के लिए छल करने का प्रयास कर सकते हैं। केवल पूरी तरह से विस्तृत बयानों पर हस्ताक्षर करें जिनसे आप सहमत हैं।</translation>
+        <translation type="unfinished">आप अपने पते के साथ संदेशों/समझौतों पर हस्ताक्षर करके यह साबित कर सकते हैं कि आप उन्हें भेजे गए काइलाकॉइन प्राप्त कर सकते हैं। सावधान रहें कि कुछ भी अस्पष्ट या यादृच्छिक पर हस्ताक्षर न करें, क्योंकि फ़िशिंग हमले आपको अपनी पहचान पर हस्ताक्षर करने के लिए छल करने का प्रयास कर सकते हैं। केवल पूरी तरह से विस्तृत बयानों पर हस्ताक्षर करें जिनसे आप सहमत हैं।</translation>
     </message>
     <message>
         <source>The Kylacoin address to sign the message with</source>
-        <translation type="unfinished">संदेश पर हस्ताक्षर करने के लिए बिटकॉइन पता</translation>
+        <translation type="unfinished">संदेश पर हस्ताक्षर करने के लिए काइलाकॉइन पता</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1917,7 +1863,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     </message>
     <message>
         <source>Sign the message to prove you own this Kylacoin address</source>
-        <translation type="unfinished">यह साबित करने के लिए संदेश पर हस्ताक्षर करें कि आप इस बिटकॉइन पते के स्वामी हैं</translation>
+        <translation type="unfinished">यह साबित करने के लिए संदेश पर हस्ताक्षर करें कि आप इस काइलाकॉइन पते के स्वामी हैं</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1941,7 +1887,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     </message>
     <message>
         <source>The Kylacoin address the message was signed with</source>
-        <translation type="unfinished">संदेश के साथ हस्ताक्षर किए गए बिटकॉइन पते</translation>
+        <translation type="unfinished">संदेश के साथ हस्ताक्षर किए गए काइलाकॉइन पते</translation>
     </message>
     <message>
         <source>The signed message to verify</source>
@@ -1953,7 +1899,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     </message>
     <message>
         <source>Verify the message to ensure it was signed with the specified Kylacoin address</source>
-        <translation type="unfinished">यह सुनिश्चित करने के लिए संदेश सत्यापित करें कि यह निर्दिष्ट बिटकॉइन पते के साथ हस्ताक्षरित था</translation>
+        <translation type="unfinished">यह सुनिश्चित करने के लिए संदेश सत्यापित करें कि यह निर्दिष्ट काइलाकॉइन पते के साथ हस्ताक्षरित था</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2067,7 +2013,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     </message>
     <message>
         <source>Date</source>
-        <translation type="unfinished">डेट</translation>
+        <translation type="unfinished">तारीख़</translation>
     </message>
     <message>
         <source>Source</source>
@@ -2095,7 +2041,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     </message>
     <message>
         <source>watch-only</source>
-        <translation type="unfinished">निगरानी-केवल</translation>
+        <translation type="unfinished">केवल निगरानी</translation>
     </message>
     <message>
         <source>label</source>
@@ -2159,10 +2105,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     <message>
         <source>Output index</source>
         <translation type="unfinished">आउटपुट इंडेक्स</translation>
-    </message>
-    <message>
-        <source> (Certificate was not verified)</source>
-        <translation type="unfinished">(प्रमाणपत्र सत्यापित नहीं किया गया था)</translation>
     </message>
     <message>
         <source>Merchant</source>
@@ -2252,7 +2194,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     </message>
     <message>
         <source>Received with</source>
-        <translation type="unfinished">के साथ मिला</translation>
+        <translation type="unfinished">के साथ प्राप्त हुए</translation>
     </message>
     <message>
         <source>Received from</source>
@@ -2263,12 +2205,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">को भेजा</translation>
     </message>
     <message>
-        <source>Payment to yourself</source>
-        <translation type="unfinished">स्वयं को भुगतान</translation>
-    </message>
-    <message>
         <source>Mined</source>
-        <translation type="unfinished">माइन किया गया</translation>
+        <translation type="unfinished">माइन किया</translation>
     </message>
     <message>
         <source>watch-only</source>
@@ -2334,10 +2272,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">को भेजा</translation>
     </message>
     <message>
-        <source>To yourself</source>
-        <translation type="unfinished">खुद को </translation>
-    </message>
-    <message>
         <source>Mined</source>
         <translation type="unfinished">माइन किया</translation>
     </message>
@@ -2380,11 +2314,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     </message>
     <message>
         <source>Date</source>
-        <translation type="unfinished">डेट</translation>
+        <translation type="unfinished">तारीख़</translation>
     </message>
     <message>
         <source>Type</source>
-        <translation type="unfinished">टाइप</translation>
+        <translation type="unfinished">प्रकार</translation>
     </message>
     <message>
         <source>Label</source>
@@ -2396,7 +2330,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     </message>
     <message>
         <source>Exporting Failed</source>
-        <translation type="unfinished">निर्यात विफल हो गया है</translation>
+        <translation type="unfinished">एक्सपोर्ट नहीं हो पाया</translation>
     </message>
     </context>
 <context>
@@ -2422,11 +2356,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     <name>WalletView</name>
     <message>
         <source>&amp;Export</source>
-        <translation type="unfinished">&amp;एक्सपोर्ट</translation>
+        <translation type="unfinished">निर्यात</translation>
     </message>
     <message>
         <source>Export the data in the current tab to a file</source>
-        <translation type="unfinished">मौजूदा टैब में डेटा को फ़ाइल में निर्यात करें</translation>
+        <translation type="unfinished">मौजूदा टैब में डेटा को फ़ाइल में एक्सपोर्ट करें</translation>
     </message>
     </context>
 <context>

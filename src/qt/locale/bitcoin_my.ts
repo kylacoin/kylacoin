@@ -58,14 +58,6 @@
         <translation type="unfinished">​ရွေးပါ</translation>
     </message>
     <message>
-        <source>Sending addresses</source>
-        <translation type="unfinished">လိပ်စာပေးပို့နေသည်</translation>
-    </message>
-    <message>
-        <source>Receiving addresses</source>
-        <translation type="unfinished">လိပ်စာလက်ခံရရှိသည်</translation>
-    </message>
-    <message>
         <source>&amp;Edit</source>
         <translation type="unfinished">&amp;ပြင်ဆင်</translation>
     </message>
@@ -94,37 +86,37 @@
     <message numerus="yes">
         <source>%n second(s)</source>
         <translation type="unfinished">
-            <numerusform />
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n minute(s)</source>
         <translation type="unfinished">
-            <numerusform />
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n hour(s)</source>
         <translation type="unfinished">
-            <numerusform />
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n day(s)</source>
         <translation type="unfinished">
-            <numerusform />
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n week(s)</source>
         <translation type="unfinished">
-            <numerusform />
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n year(s)</source>
         <translation type="unfinished">
-            <numerusform />
+            <numerusform/>
         </translation>
     </message>
     </context>
@@ -133,7 +125,7 @@
     <message numerus="yes">
         <source>Processed %n block(s) of transaction history.</source>
         <translation type="unfinished">
-            <numerusform />
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -160,7 +152,7 @@
         <source>%n active connection(s) to Kylacoin network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
-            <numerusform />
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -174,40 +166,32 @@
         <source>Date</source>
         <translation type="unfinished">နေ့စွဲ</translation>
     </message>
-    <message>
-        <source>yes</source>
-        <translation type="unfinished">ဟုတ်တယ်</translation>
-    </message>
-    <message>
-        <source>no</source>
-        <translation type="unfinished">မဟုတ်ဘူး</translation>
-    </message>
     </context>
 <context>
     <name>Intro</name>
     <message numerus="yes">
         <source>%n GB of space available</source>
         <translation type="unfinished">
-            <numerusform />
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>(of %n GB needed)</source>
         <translation type="unfinished">
-            <numerusform />
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>(%n GB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform />
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
         <extracomment>Explanatory text on the capability of the current prune target.</extracomment>
         <translation type="unfinished">
-            <numerusform />
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -246,7 +230,7 @@
     <message numerus="yes">
         <source>Estimated to begin confirmation within %n block(s).</source>
         <translation type="unfinished">
-            <numerusform />
+            <numerusform/>
         </translation>
     </message>
     </context>
@@ -259,7 +243,7 @@
     <message numerus="yes">
         <source>matures in %n more block(s)</source>
         <translation type="unfinished">
-            <numerusform />
+            <numerusform/>
         </translation>
     </message>
     </context>

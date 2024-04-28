@@ -58,14 +58,6 @@
         <translation type="unfinished">P&amp;asirinkti</translation>
     </message>
     <message>
-        <source>Sending addresses</source>
-        <translation type="unfinished">Išsiuntimo adresai</translation>
-    </message>
-    <message>
-        <source>Receiving addresses</source>
-        <translation type="unfinished">Gavimo adresai</translation>
-    </message>
-    <message>
         <source>These are your Kylacoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished">Tai yra jūsų Kylacoin adresai išeinantiems mokėjimams. Visada pasitikrinkite sumą ir gavėjo adresą prieš siunčiant lėšas.</translation>
     </message>
@@ -294,41 +286,41 @@ Pasirašymas galimas tik su 'legacy' tipo adresais.</translation>
     <message numerus="yes">
         <source>%n second(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n minute(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n hour(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n day(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n week(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -338,9 +330,9 @@ Pasirašymas galimas tik su 'legacy' tipo adresais.</translation>
     <message numerus="yes">
         <source>%n year(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     </context>
@@ -482,9 +474,9 @@ Pasirašymas galimas tik su 'legacy' tipo adresais.</translation>
     <message numerus="yes">
         <source>Processed %n block(s) of transaction history.</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -588,9 +580,9 @@ Pasirašymas galimas tik su 'legacy' tipo adresais.</translation>
         <source>%n active connection(s) to Kylacoin network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -710,10 +702,6 @@ Pasirašymas galimas tik su 'legacy' tipo adresais.</translation>
         <translation type="unfinished">Mokestis:</translation>
     </message>
     <message>
-        <source>Dust:</source>
-        <translation type="unfinished">Dulkės:</translation>
-    </message>
-    <message>
         <source>After Fee:</source>
         <translation type="unfinished">Po mokesčio:</translation>
     </message>
@@ -778,28 +766,12 @@ Pasirašymas galimas tik su 'legacy' tipo adresais.</translation>
         <translation type="unfinished">Kopijuoti baitus</translation>
     </message>
     <message>
-        <source>Copy dust</source>
-        <translation type="unfinished">Kopijuoti dulkę</translation>
-    </message>
-    <message>
         <source>Copy change</source>
         <translation type="unfinished">Kopijuoti keisti</translation>
     </message>
     <message>
         <source>(%1 locked)</source>
         <translation type="unfinished">(%1 užrakinta)</translation>
-    </message>
-    <message>
-        <source>yes</source>
-        <translation type="unfinished">taip</translation>
-    </message>
-    <message>
-        <source>no</source>
-        <translation type="unfinished">ne</translation>
-    </message>
-    <message>
-        <source>This label turns red if any recipient receives an amount smaller than the current dust threshold.</source>
-        <translation type="unfinished">Ši etiketė tampa raudona, jei bet kuris gavėjas gauna mažesnę sumą nei dabartinė dulkių slenkstis.</translation>
     </message>
     <message>
         <source>Can vary +/- %1 satoshi(s) per input.</source>
@@ -1001,9 +973,9 @@ Pasirašymas galimas tik su 'legacy' tipo adresais.</translation>
     <message numerus="yes">
         <source>%n GB of space available</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
@@ -1017,9 +989,9 @@ Pasirašymas galimas tik su 'legacy' tipo adresais.</translation>
     <message numerus="yes">
         <source>(%n GB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -1034,9 +1006,9 @@ Pasirašymas galimas tik su 'legacy' tipo adresais.</translation>
         <source>(sufficient to restore backups %n day(s) old)</source>
         <extracomment>Explanatory text on the capability of the current prune target.</extracomment>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -1481,6 +1453,10 @@ Pasirašymas galimas tik su 'legacy' tipo adresais.</translation>
     <message>
         <source>Close</source>
         <translation type="unfinished">Uždaryti</translation>
+    </message>
+    <message>
+        <source>own address</source>
+        <translation type="unfinished">savo adresas</translation>
     </message>
     <message>
         <source>Total Amount</source>
@@ -2077,10 +2053,6 @@ Pasirašymas galimas tik su 'legacy' tipo adresais.</translation>
         <translation type="unfinished">Išvalykite visus formos laukus.</translation>
     </message>
     <message>
-        <source>Dust:</source>
-        <translation type="unfinished">Dulkės:</translation>
-    </message>
-    <message>
         <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for kylacoin transactions than the network can process.</source>
         <translation type="unfinished">Kai sandorių apimtis yra mažesnė nei erdvės blokuose, kasėjai ir perduodantys mazgai gali užtikrinti minimalų mokestį. Mokėti tik šį minimalų mokestį yra galima, tačiau atkreipkite dėmesį, kad dėl to gali atsirasti niekada nepatvirtinamas sandoris, kai bus daugiau paklausos kylacoin operacijoms, nei tinklas gali apdoroti.</translation>
     </message>
@@ -2137,20 +2109,12 @@ Pasirašymas galimas tik su 'legacy' tipo adresais.</translation>
         <translation type="unfinished">Kopijuoti baitus</translation>
     </message>
     <message>
-        <source>Copy dust</source>
-        <translation type="unfinished">Kopijuoti dulkę</translation>
-    </message>
-    <message>
         <source>Copy change</source>
         <translation type="unfinished">Kopijuoti keisti</translation>
     </message>
     <message>
         <source>%1 (%2 blocks)</source>
         <translation type="unfinished">%1 (%2 blokai)</translation>
-    </message>
-    <message>
-        <source> from wallet '%1'</source>
-        <translation type="unfinished">iš piniginės '%1'</translation>
     </message>
     <message>
         <source>%1 to '%2'</source>
@@ -2220,9 +2184,9 @@ Pasirašymas galimas tik su 'legacy' tipo adresais.</translation>
     <message numerus="yes">
         <source>Estimated to begin confirmation within %n block(s).</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -2297,7 +2261,7 @@ Pasirašymas galimas tik su 'legacy' tipo adresais.</translation>
         <translation type="unfinished">Įveskite šio adreso etiketę, kad ją pridėtumėte prie naudojamų adresų sąrašo</translation>
     </message>
     <message>
-        <source>A message that was attached to the kylacoin: URI which will be stored with the transaction for your reference\. Note: This message will not be sent over the Kylacoin network.</source>
+        <source>A message that was attached to the kylacoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Kylacoin network.</source>
         <translation type="unfinished">Pranešimas, kuris buvo pridėtas prie kylacoin: URI, kuris bus saugomas kartu su sandoriu jūsų nuoroda. Pastaba: šis pranešimas nebus išsiųstas per „Kylacoin“ tinklą.</translation>
     </message>
 </context>
@@ -2500,9 +2464,9 @@ Pasirašymas galimas tik su 'legacy' tipo adresais.</translation>
     <message numerus="yes">
         <source>matures in %n more block(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -2640,10 +2604,6 @@ Pasirašymas galimas tik su 'legacy' tipo adresais.</translation>
         <translation type="unfinished">Išsiųsta</translation>
     </message>
     <message>
-        <source>Payment to yourself</source>
-        <translation type="unfinished">Mokėjimas sau</translation>
-    </message>
-    <message>
         <source>Mined</source>
         <translation type="unfinished">Išgauta</translation>
     </message>
@@ -2713,10 +2673,6 @@ Pasirašymas galimas tik su 'legacy' tipo adresais.</translation>
     <message>
         <source>Sent to</source>
         <translation type="unfinished">Išsiųsta</translation>
-    </message>
-    <message>
-        <source>To yourself</source>
-        <translation type="unfinished">Skirta sau</translation>
     </message>
     <message>
         <source>Mined</source>
@@ -2995,10 +2951,6 @@ Pasirašymas galimas tik su 'legacy' tipo adresais.</translation>
     <message>
         <source>Transaction amounts must not be negative</source>
         <translation type="unfinished">Transakcijos suma negali buti neigiama</translation>
-    </message>
-    <message>
-        <source>Transaction has too long of a mempool chain</source>
-        <translation type="unfinished">Sandoris turi per ilgą mempool grandinę</translation>
     </message>
     <message>
         <source>Transaction must have at least one recipient</source>

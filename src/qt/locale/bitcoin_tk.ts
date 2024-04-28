@@ -58,21 +58,13 @@
         <translation type="unfinished">S&amp;aýla</translation>
     </message>
     <message>
-        <source>Sending addresses</source>
-        <translation type="unfinished">Iberýän salgylar</translation>
-    </message>
-    <message>
-        <source>Receiving addresses</source>
-        <translation type="unfinished">Kabul edýän salgylar</translation>
-    </message>
-    <message>
         <source>These are your Kylacoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">Tölegleri ibermek üçin siziň Kylacoin salgylaryňyz şulardyr. Teňňeleri ibermezden ozal hemişe möçberi we kabul edýän salgyny barlaň.</translation>
+        <translation type="unfinished">Tölegleri ibermek üçin siziň Kailakoin salgylaryňyz şulardyr. Teňňeleri ibermezden ozal hemişe möçberi we kabul edýän salgyny barlaň.</translation>
     </message>
     <message>
         <source>These are your Kylacoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
-        <translation type="unfinished">Tölegleri kabul etmek üçin siziň Kylacoin salgylaryňyz şulardyr. Täze salgylary döretmek üçin kabul etmek bölüminde "Täze kabul ediji salgyny döret" düwmesini ulan.
+        <translation type="unfinished">Tölegleri kabul etmek üçin siziň Kailakoin salgylaryňyz şulardyr. Täze salgylary döretmek üçin kabul etmek bölüminde "Täze kabul ediji salgyny döret" düwmesini ulan.
 Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
     </message>
     <message>
@@ -165,7 +157,7 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
     </message>
     <message>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYLACOINS&lt;/b&gt;!</source>
-        <translation type="unfinished">Duýduryş: Eger gapjygyňy şifrleseň we parol sözlemiňi ýitirseň, sen &lt;b&gt;ÄHLI KYLAKOINLERIŇI ÝITIRERSIŇ&lt;/b&gt;!</translation>
+        <translation type="unfinished">Duýduryş: Eger gapjygyňy şifrleseň we parol sözlemiňi ýitirseň, sen &lt;b&gt;ÄHLI KAILAKOINLERIŇI ÝITIRERSIŇ&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -185,7 +177,7 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
     </message>
     <message>
         <source>Remember that encrypting your wallet cannot fully protect your kylacoins from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished">Gapjygyňy şifrlemek kompýuteriňe zyýanly programma ýokuşmak arkaly kylacoinleriň ogurlanmagyndan doly gorap bilmejekdigini ýatdan çykarma.</translation>
+        <translation type="unfinished">Gapjygyňy şifrlemek kompýuteriňe zyýanly programma ýokuşmak arkaly kailakoinleriň ogurlanmagyndan doly gorap bilmejekdigini ýatdan çykarma.</translation>
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -477,7 +469,7 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
     </message>
     <message>
         <source>Send coins to a Kylacoin address</source>
-        <translation type="unfinished">Kylacoin salgysyna teňňeleri iber</translation>
+        <translation type="unfinished">Kailakoin salgysyna teňňeleri iber</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -521,7 +513,7 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
     </message>
     <message>
         <source>Sign messages with your Kylacoin addresses to prove you own them</source>
-        <translation type="unfinished">Kylacoin salgylarynyň eýesidigini subut etmek üçin habarlara öz Kylacoin salgylaryň bilen gol çek</translation>
+        <translation type="unfinished">Kailakoin salgylarynyň eýesidigini subut etmek üçin habarlara öz Kailakoin salgylaryň bilen gol çek</translation>
     </message>
     <message>
         <source>&amp;Verify message…</source>
@@ -529,7 +521,7 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Kylacoin addresses</source>
-        <translation type="unfinished">Habarlaryň görkezilen Kylacoin salgylary bilen gol çekilendigini kepillendirmek üçin habarlary tassykla</translation>
+        <translation type="unfinished">Habarlaryň görkezilen Kailakoin salgylary bilen gol çekilendigini kepillendirmek üçin habarlary tassykla</translation>
     </message>
     <message>
         <source>&amp;Load PSBT from file…</source>
@@ -589,7 +581,7 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and kylacoin: URIs)</source>
-        <translation type="unfinished">Tölegleri sora (QR kodlary we kylacoin: URIleri döredýär)</translation>
+        <translation type="unfinished">Tölegleri sora (QR kodlary we kailakoin: URIleri döredýär)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -644,7 +636,7 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
     </message>
     <message>
         <source>Load Partially Signed Kylacoin Transaction</source>
-        <translation type="unfinished">Bölekleýýin gol çekilen kylacoin amalyny (BGÇBA) ýükle</translation>
+        <translation type="unfinished">Bölekleýýin gol çekilen kailakoin amalyny (BGÇBA) ýükle</translation>
     </message>
     <message>
         <source>Load PSBT from &amp;clipboard…</source>
@@ -652,7 +644,7 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
     </message>
     <message>
         <source>Load Partially Signed Kylacoin Transaction from clipboard</source>
-        <translation type="unfinished">Bölekleýin gol çekilen kylacoin amalyny alyş-çalyş panelinden ýükle</translation>
+        <translation type="unfinished">Bölekleýin gol çekilen kailakoin amalyny alyş-çalyş panelinden ýükle</translation>
     </message>
     <message>
         <source>Node window</source>
@@ -672,7 +664,7 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
     </message>
     <message>
         <source>Open a kylacoin: URI</source>
-        <translation type="unfinished">Kylacoin aç: URI</translation>
+        <translation type="unfinished">Kailakoin aç: URI</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -702,7 +694,7 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
     </message>
     <message>
         <source>Show the %1 help message to get a list with possible Kylacoin command-line options</source>
-        <translation type="unfinished">Mümkin bolan Kylacoin buýruk setiri opsiýalarynyň sanawyny görmek üçin %1 goldaw habaryny görkez</translation>
+        <translation type="unfinished">Mümkin bolan Kailakoin buýruk setiri opsiýalarynyň sanawyny görmek üçin %1 goldaw habaryny görkez</translation>
     </message>
     <message>
         <source>&amp;Mask values</source>
@@ -768,8 +760,8 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
         <source>%n active connection(s) to Kylacoin network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
-            <numerusform>Kylacoin toruna %n işjeň arabaglanyşyk.</numerusform>
-            <numerusform>Kylacoin ulgamyna %n işjeň arabaglanyşyk.</numerusform>
+            <numerusform>Kailakoin toruna %n işjeň arabaglanyşyk.</numerusform>
+            <numerusform>Kailakoin ulgamyna %n işjeň arabaglanyşyk.</numerusform>
         </translation>
     </message>
     <message>
@@ -903,10 +895,6 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
         <translation type="unfinished">Gatanç:</translation>
     </message>
     <message>
-        <source>Dust:</source>
-        <translation type="unfinished">Toz:</translation>
-    </message>
-    <message>
         <source>After Fee:</source>
         <translation type="unfinished">Soňundan gatanç:</translation>
     </message>
@@ -995,28 +983,12 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
         <translation type="unfinished">Baýtlary göçür</translation>
     </message>
     <message>
-        <source>Copy dust</source>
-        <translation type="unfinished">Tozy göçür</translation>
-    </message>
-    <message>
         <source>Copy change</source>
         <translation type="unfinished">Gaýtargyny göçür</translation>
     </message>
     <message>
         <source>(%1 locked)</source>
         <translation type="unfinished">(%1 gulply)</translation>
-    </message>
-    <message>
-        <source>yes</source>
-        <translation type="unfinished">hawa</translation>
-    </message>
-    <message>
-        <source>no</source>
-        <translation type="unfinished">ýok</translation>
-    </message>
-    <message>
-        <source>This label turns red if any recipient receives an amount smaller than the current dust threshold.</source>
-        <translation type="unfinished">Islendik kabul ediji häzirki toz çäginden has kiçi möçberi kabul edip alsa, bu bellik gyzyla öwrülýär.</translation>
     </message>
     <message>
         <source>Can vary +/- %1 satoshi(s) per input.</source>
@@ -1196,14 +1168,6 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
         <translation type="unfinished">Boş gapjyk emele getir</translation>
     </message>
     <message>
-        <source>Use descriptors for scriptPubKey management</source>
-        <translation type="unfinished">scriptPubKey dolandyryşy üçin beýan edijileri ulan</translation>
-    </message>
-    <message>
-        <source>Descriptor Wallet</source>
-        <translation type="unfinished">Beýan ediji gapjyk</translation>
-    </message>
-    <message>
         <source>Use an external signing device such as a hardware wallet. Configure the external signer script in wallet preferences first.</source>
         <translation type="unfinished">Enjam gapjygy ýaly daşyndan gol çekilýän enjamy ulan. Ilki bilen gapjygyň ileri tutmalarynda daşyndan gol çekiji skriptini sazla.</translation>
     </message>
@@ -1214,10 +1178,6 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
     <message>
         <source>Create</source>
         <translation type="unfinished">Döret</translation>
-    </message>
-    <message>
-        <source>Compiled without sqlite support (required for descriptor wallets)</source>
-        <translation type="unfinished">Sqlite goldawsyz (beýan ediji gapjyklar üçin gerek) düzüldi</translation>
     </message>
     <message>
         <source>Compiled without external signing support (required for external signing)</source>
@@ -1261,7 +1221,7 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
     </message>
     <message>
         <source>The entered address "%1" is not a valid Kylacoin address.</source>
-        <translation type="unfinished">Ýazylan salgy %1 ýaly Kylacoin salgysy ýok.</translation>
+        <translation type="unfinished">Ýazylan salgy %1 ýaly Kailakoin salgysy ýok.</translation>
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -1307,7 +1267,7 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
     <name>Intro</name>
     <message>
         <source>Kylacoin</source>
-        <translation type="unfinished">Kylacoin</translation>
+        <translation type="unfinished">Kailakoin</translation>
     </message>
     <message numerus="yes">
         <source>%n GB of space available</source>
@@ -1352,7 +1312,7 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
     </message>
     <message>
         <source>%1 will download and store a copy of the Kylacoin block chain.</source>
-        <translation type="unfinished">%1 Kylacoin blok zynjyrynyň nusgasyny ýükläp alar we göçürer.</translation>
+        <translation type="unfinished">%1 Kailakoin blok zynjyrynyň nusgasyny ýükläp alar we göçürer.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1445,11 +1405,11 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
     </message>
     <message>
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the kylacoin network, as detailed below.</source>
-        <translation type="unfinished">Soňky geleşikler entek görünmän biler, şonuň üçin gapjygyňyzdaky galyndy nädogry bolup biler. Bu maglumat aşakda beýan edilişi ýaly gapjygyňyz kylacoin tory bilen utgaşmagy tamamlanda dogry bolar.</translation>
+        <translation type="unfinished">Soňky geleşikler entek görünmän biler, şonuň üçin gapjygyňyzdaky galyndy nädogry bolup biler. Bu maglumat aşakda beýan edilişi ýaly gapjygyňyz kailakoin tory bilen utgaşmagy tamamlanda dogry bolar.</translation>
     </message>
     <message>
         <source>Attempting to spend kylacoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation type="unfinished">Entek görkezilmedik geleşikleriň täsirine düşen kylacoinleri sarp etmek synanyşygy ulgam tarapyndan kabul edilmez.</translation>
+        <translation type="unfinished">Entek görkezilmedik geleşikleriň täsirine düşen kailakoinleri sarp etmek synanyşygy ulgam tarapyndan kabul edilmez.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1500,7 +1460,7 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
     <name>OpenURIDialog</name>
     <message>
         <source>Open kylacoin URI</source>
-        <translation type="unfinished">Kylacoin URI aç</translation>
+        <translation type="unfinished">Kailakoin URI aç</translation>
     </message>
     <message>
         <source>Paste address from clipboard</source>
@@ -1771,18 +1731,6 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
         <translation type="unfinished">Tor onion hyzmatlary arkaly düwünlere aralaşmak üçin SOCKS&amp;5 proksisini ulan:</translation>
     </message>
     <message>
-        <source>Monospaced font in the Overview tab:</source>
-        <translation type="unfinished">Gözden geçir sahypasynda monoaralykly harp görnüşi:</translation>
-    </message>
-    <message>
-        <source>embedded "%1"</source>
-        <translation type="unfinished">içine gurnalan "%1"</translation>
-    </message>
-    <message>
-        <source>closest matching "%1"</source>
-        <translation type="unfinished">iň meňzeş gabat gelme "%1"</translation>
-    </message>
-    <message>
         <source>&amp;Cancel</source>
         <translation type="unfinished">&amp;Ýatyr</translation>
     </message>
@@ -2020,10 +1968,6 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
         <translation type="unfinished">PSBT diskde ýatda saklandy.</translation>
     </message>
     <message>
-        <source> * Sends %1 to %2</source>
-        <translation type="unfinished"> * %2-ä %1 iberilýär</translation>
-    </message>
-    <message>
         <source>Unable to calculate transaction fee or total transaction amount.</source>
         <translation type="unfinished">Amal pajyny ýa-da jemi amal bahasyny hasaplap bolanok.</translation>
     </message>
@@ -2100,7 +2044,7 @@ Size bu ýalňyşlyk gelýän bolsa, siz täjirden BIP21-e gabat gelýän URI-ni
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid Kylacoin address or malformed URI parameters.</source>
-        <translation type="unfinished">URI-ni işläp bolmady! Munuň sebäbi nädogry Bitkoin salgysy ýa-da ýalňyş emele getirilen URI parametrleri bolup biler.</translation>
+        <translation type="unfinished">URI-ni işläp bolmady! Munuň sebäbi nädogry Kailakoin salgysy ýa-da ýalňyş emele getirilen URI parametrleri bolup biler.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -2463,10 +2407,6 @@ Size bu ýalňyşlyk gelýän bolsa, siz täjirden BIP21-e gabat gelýän URI-ni
         <translation type="unfinished">Gizle</translation>
     </message>
     <message>
-        <source>Dust:</source>
-        <translation type="unfinished">Toz:</translation>
-    </message>
-    <message>
         <source>Copy quantity</source>
         <translation type="unfinished">Sany göçür</translation>
     </message>
@@ -2485,10 +2425,6 @@ Size bu ýalňyşlyk gelýän bolsa, siz täjirden BIP21-e gabat gelýän URI-ni
     <message>
         <source>Copy bytes</source>
         <translation type="unfinished">Baýtlary göçür</translation>
-    </message>
-    <message>
-        <source>Copy dust</source>
-        <translation type="unfinished">Tozy göçür</translation>
     </message>
     <message>
         <source>Copy change</source>
@@ -2514,8 +2450,8 @@ Size bu ýalňyşlyk gelýän bolsa, siz täjirden BIP21-e gabat gelýän URI-ni
     <message numerus="yes">
         <source>Estimated to begin confirmation within %n block(s).</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -2558,8 +2494,8 @@ Size bu ýalňyşlyk gelýän bolsa, siz täjirden BIP21-e gabat gelýän URI-ni
     <message numerus="yes">
         <source>matures in %n more block(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -2674,10 +2610,6 @@ Size bu ýalňyşlyk gelýän bolsa, siz täjirden BIP21-e gabat gelýän URI-ni
 </context>
 <context>
     <name>bitcoin-core</name>
-    <message>
-        <source>%s failed to validate the -assumeutxo snapshot state. This indicates a hardware problem, or a bug in the software, or a bad software modification that allowed an invalid snapshot to be loaded. As a result of this, the node will shut down and stop using any state that was built on the snapshot, resetting the chain height from %d to %d. On the next restart, the node will resume syncing from %d without using any snapshot data. Please report this incident to %s, including how you obtained the snapshot. The invalid snapshot chainstate has been left on disk in case it is helpful in diagnosing the issue that caused this error.</source>
-        <translation type="unfinished">%s -assumeutxo çalt suratyň ýagdaýyny barlap bilmedi. Bu nädogry çalt suratyň ýüklenmegine getiren enjamlaýyn meseläniň ýa-da programma üpjünçiliginde näsazlyk ýa-da programma üpjünçiliginiň erbet üýtgetmesiniň bardygyny görkezýär. Munuň netijesinde düwün ýapylar we çalt surata esaslanan islendik ýagdaýy ulanmagy bes edip, zynjyryň boýuny %d-den %d-e çenli getirer. Indiki gezek gaýtadan işledilende düwün hiçhili çalt surat maglumatyny ulanmazdan %d-den başlap sinhronlaşmagy dowam eder. Bu waka, şol sanda çalt suraty nädip alandygyňyz barada %s-a habar beriň. Bu ýalňyşlyga sebäp bolan meseläni derňemekde peýdaly bolar diýip, nädogry çalt suratly zynjyr ýagdaçy diskde galdyryldy.</translation>
-    </message>
     <message>
         <source>Settings file could not be read</source>
         <translation type="unfinished">Sazlamalar faýlyny okap bolanok</translation>

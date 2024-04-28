@@ -29,7 +29,7 @@ def check_package_limits(func):
         testres_error_expected = node.testmempoolaccept(rawtxs=package_hex)
         assert_equal(len(testres_error_expected), len(package_hex))
         for txres in testres_error_expected:
-            assert_equal(txres["package-error"], "package-mempool-limits")
+            assert "package-mempool-limits" in txres["package-error"]
 
         # Clear mempool and check that the package passes now
         self.generate(node, 1)
@@ -46,8 +46,7 @@ class MempoolPackageLimitsTest(BitcoinTestFramework):
     def run_test(self):
         self.wallet = MiniWallet(self.nodes[0])
         # Add enough mature utxos to the wallet so that all txs spend confirmed coins.
-        self.generate(self.wallet, 35)
-        self.generate(self.nodes[0], COINBASE_MATURITY)
+        self.generate(self.wallet, COINBASE_MATURITY + 35)
 
         self.test_chain_limits()
         self.test_desc_count_limits()

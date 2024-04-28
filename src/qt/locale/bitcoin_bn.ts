@@ -50,14 +50,6 @@
         <translation type="unfinished">কয়েন গ্রহণ করার ঠিকানা বাছাই করুন।</translation>
     </message>
     <message>
-        <source>Sending addresses</source>
-        <translation type="unfinished">ঠিকানাগুলো পাঠানো হচ্ছে।</translation>
-    </message>
-    <message>
-        <source>Receiving addresses</source>
-        <translation type="unfinished">ঠিকানাগুলো গ্রহণ করা হচ্ছে।</translation>
-    </message>
-    <message>
         <source>These are your Kylacoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">পেমেন্ট পাওয়ার জন্য এটি আপনার বিটকয়েন ঠিকানা। নতুন ঠিকানা তৈরী করতে "নতুন গ্রহণের ঠিকানা তৈরী করুন" বোতাম ব্যবহার করুন। সাইন ইন করা শুধুমাত্র "উত্তরাধিকার" ঠিকানার মাধ্যমেই সম্ভব।</translation>
@@ -67,7 +59,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <extracomment>Expanded name of the CSV file format. See: https://en.wikipedia.org/wiki/Comma-separated_values.</extracomment>
         <translation type="unfinished">কমা দিয়ে আলাদা করা ফাইল</translation>
     </message>
-    </context>
+    <message>
+        <source>Exporting Failed</source>
+        <translation type="unfinished">রপ্তানি ব্যর্থ হয়েছে৷</translation>
+    </message>
+</context>
 <context>
     <name>AddressTableModel</name>
     <message>
@@ -77,6 +73,25 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     <message>
         <source>Address</source>
         <translation type="unfinished">ঠিকানা</translation>
+    </message>
+    <message>
+        <source>(no label)</source>
+        <translation type="unfinished">(কোন লেবেল নেই)</translation>
+    </message>
+</context>
+<context>
+    <name>AskPassphraseDialog</name>
+    <message>
+        <source>The passphrase entered for the wallet decryption is incorrect. It contains a null character (ie - a zero byte). If the passphrase was set with a version of this software prior to 25.0, please try again with only the characters up to — but not including — the first null character. If this is successful, please set a new passphrase to avoid this issue in the future.</source>
+        <translation type="unfinished">ওয়ালেট ডিক্রিপশনের জন্য প্রবেশ করা পাসফ্রেজটি ভুল। এটিতে একটি শূন্য অক্ষর রয়েছে (যেমন - একটি শূন্য বাইট)। যদি পাসফ্রেজটি 25.0 এর আগে এই সফ্টওয়্যারটির একটি সংস্করণের সাথে সেট করা থাকে, অনুগ্রহ করে শুধুমাত্র প্রথম শূন্য অক্ষর পর্যন্ত — কিন্তু অন্তর্ভুক্ত নয় — পর্যন্ত অক্ষর দিয়ে আবার চেষ্টা করুন। এটি সফল হলে, ভবিষ্যতে এই সমস্যাটি এড়াতে অনুগ্রহ করে একটি নতুন পাসফ্রেজ সেট করুন৷</translation>
+    </message>
+    <message>
+        <source>Passphrase change failed</source>
+        <translation type="unfinished">পাসফ্রেজ পরিবর্তন ব্যর্থ হয়েছে৷</translation>
+    </message>
+    <message>
+        <source>The old passphrase entered for the wallet decryption is incorrect. It contains a null character (ie - a zero byte). If the passphrase was set with a version of this software prior to 25.0, please try again with only the characters up to — but not including — the first null character.</source>
+        <translation type="unfinished">ওয়ালেট ডিক্রিপশনের জন্য পুরানো পাসফ্রেজটি ভুল। এটিতে একটি শূন্য অক্ষর রয়েছে (যেমন - একটি শূন্য বাইট)। যদি পাসফ্রেজটি 25.0 এর আগে এই সফ্টওয়্যারটির একটি সংস্করণের সাথে সেট করা থাকে, অনুগ্রহ করে শুধুমাত্র প্রথম শূন্য অক্ষর পর্যন্ত — কিন্তু অন্তর্ভুক্ত নয় — পর্যন্ত অক্ষর দিয়ে আবার চেষ্টা করুন।</translation>
     </message>
     </context>
 <context>
@@ -131,43 +146,43 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     <message numerus="yes">
         <source>%n second(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n minute(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n hour(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n day(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n week(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n year(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     </context>
@@ -188,6 +203,30 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     <message>
         <source>&amp;Encrypt Wallet…</source>
         <translation type="unfinished">&amp;ওয়ালেট এনক্রিপ্ট করুন...</translation>
+    </message>
+    <message>
+        <source>&amp;Backup Wallet…</source>
+        <translation type="unfinished">ব্যাকআপ ওয়ালেট…</translation>
+    </message>
+    <message>
+        <source>&amp;Change Passphrase…</source>
+        <translation type="unfinished">&amp;পাসফ্রেজ পরিবর্তন করুন...</translation>
+    </message>
+    <message>
+        <source>Sign &amp;message…</source>
+        <translation type="unfinished">সাইন এবং বার্তা...</translation>
+    </message>
+    <message>
+        <source>&amp;Verify message…</source>
+        <translation type="unfinished">বার্তা যাচাই করুন...</translation>
+    </message>
+    <message>
+        <source>&amp;Load PSBT from file…</source>
+        <translation type="unfinished">ফাইল থেকে PSBT লোড করুন...</translation>
+    </message>
+    <message>
+        <source>Open &amp;URI…</source>
+        <translation type="unfinished">URI খুলুন...</translation>
     </message>
     <message>
         <source>Close Wallet…</source>
@@ -224,17 +263,21 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     <message numerus="yes">
         <source>Processed %n block(s) of transaction history.</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message>
+        <source>Catching up…</source>
+        <translation type="unfinished">ধরা…</translation>
+    </message>
+    <message>
         <source>Load Partially Signed Kylacoin Transaction</source>
-        <translation type="unfinished">আংশিক স্বাক্ষরিত বিটকয়েন লেনদেন লোড করুন</translation>
+        <translation type="unfinished">আংশিক স্বাক্ষরিত কাইলাকয়েন লেনদেন লোড করুন</translation>
     </message>
     <message>
         <source>Load Partially Signed Kylacoin Transaction from clipboard</source>
-        <translation type="unfinished">ক্লিপবোর্ড থেকে আংশিক স্বাক্ষরিত বিটকয়েন লেনদেন লোড করুন</translation>
+        <translation type="unfinished">ক্লিপবোর্ড থেকে আংশিক স্বাক্ষরিত কাইলাকয়েন লেনদেন লোড করুন</translation>
     </message>
     <message>
         <source>Close all wallets</source>
@@ -252,8 +295,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <source>%n active connection(s) to Kylacoin network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message>
@@ -359,27 +402,14 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <source>Advanced Options</source>
         <translation type="unfinished">উন্নত বিকল্প </translation>
     </message>
-    <message>
-        <source>Use descriptors for scriptPubKey management</source>
-        <translation type="unfinished">ScriptPub-এর জন্য বর্ণনাকারীর ব্যবস্থা করুন 
- </translation>
-    </message>
-    <message>
-        <source>Descriptor Wallet</source>
-        <translation type="unfinished">বর্ণনাকারী ওয়ালেট </translation>
-    </message>
-    <message>
-        <source>Compiled without sqlite support (required for descriptor wallets)</source>
-        <translation type="unfinished">sqlite সমর্থন ছাড়াই সংকলিত (বরণাকারী  ওয়ালেটের জন্য প্রয়োজনীয়)</translation>
-    </message>
     </context>
 <context>
     <name>Intro</name>
     <message numerus="yes">
         <source>%n GB of space available</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     <message numerus="yes">
@@ -400,8 +430,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <source>(sufficient to restore backups %n day(s) old)</source>
         <extracomment>Explanatory text on the capability of the current prune target.</extracomment>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     </context>
@@ -495,8 +525,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     <message numerus="yes">
         <source>Estimated to begin confirmation within %n block(s).</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     </context>
@@ -516,8 +546,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     <message numerus="yes">
         <source>matures in %n more block(s)</source>
         <translation type="unfinished">
-            <numerusform />
-            <numerusform />
+            <numerusform/>
+            <numerusform/>
         </translation>
     </message>
     </context>
@@ -582,6 +612,10 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     <message>
         <source>ID</source>
         <translation type="unfinished">আইডি</translation>
+    </message>
+    <message>
+        <source>Exporting Failed</source>
+        <translation type="unfinished">রপ্তানি ব্যর্থ হয়েছে৷</translation>
     </message>
     <message>
         <source>Exporting Successful</source>

@@ -136,6 +136,10 @@ public Q_SLOTS:
     void unbanSelectedNode();
     /** set which tab has the focus (is visible) */
     void setTabFocus(enum TabTypes tabType);
+#ifdef ENABLE_WALLET
+    /** Set the current (ie - active) wallet */
+    void setCurrentWallet(WalletModel* const wallet_model);
+#endif // ENABLE_WALLET
 
 private:
     struct TranslatedStrings {
@@ -184,6 +188,8 @@ private:
     {
         return time_at_event.count() ? GUIUtil::formatDurationStr(time_now - time_at_event) : tr("Never");
     }
+
+    void updateWindowTitle();
 
 private Q_SLOTS:
     void updateAlerts(const QString& warnings);

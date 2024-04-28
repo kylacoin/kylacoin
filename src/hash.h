@@ -15,10 +15,19 @@
 #include <serialize.h>
 #include <span.h>
 #include <uint256.h>
-#include <version.h>
 
 #include <string>
 #include <vector>
+
+#if defined (__cplusplus)
+extern "C" {
+#endif
+
+#include <crypto/flex/flex.h>
+
+#if defined (__cplusplus)
+}
+#endif
 
 typedef uint256 ChainCode;
 
@@ -147,27 +156,27 @@ public:
     }
 };
 
-class CHash3Writer : public HashWriter
+/** A writer stream (for serialization) that computes a 256-bit hash. */
+class Hash3Writer
 {
 private:
     sha3_context ctx;
 
-    const int nType;
-    const int nVersion;
 public:
 
-    CHash3Writer(int nTypeIn, int nVersionIn) : nType(nTypeIn), nVersion(nVersionIn) {
+    Hash3Writer() {
         sha3_Init256(&ctx);
     }
 
-    int GetType() const { return nType; }
-    int GetVersion() const { return nVersion; }
-
     void write(Span<const std::byte> src)
     {
-		sha3_Update(&ctx, UCharCast(src.data()), src.size());
+        sha3_Update(&ctx, UCharCast(src.data()), src.size());
     }
 
+    /** Compute the double-SHA256 hash of all data written to this object.
+     *
+     * Invalidates this object.
+     */
     uint256 GetHash() {
         uint8_t *result;
         result = sha3_Finalize(&ctx);
@@ -186,31 +195,46 @@ public:
         return uint256S(result3);
     }
 
-    template<typename T>
-    CHash3Writer& operator<<(const T& obj) {
-        // Serialize to this stream
+    template <typename T>
+    Hash3Writer& operator<<(const T& obj)
+    {
         ::Serialize(*this, obj);
-        return (*this);
+        return *this;
     }
 };
 
-class CHashWriter : public HashWriter
+/** A writer stream (for serialization) that computes a 256-bit hash. */
+class Hash4Writer
 {
 private:
-    const int nType;
-    const int nVersion;
+    char buffer[80] = {0};
+    int pos = 0;
 
 public:
-    CHashWriter(int nTypeIn, int nVersionIn) : nType(nTypeIn), nVersion(nVersionIn) {}
 
-    int GetType() const { return nType; }
-    int GetVersion() const { return nVersion; }
+    void write(Span<const std::byte> src)
+    {
+        for(int i = 0; i < src.size(); i++) {
+            buffer[pos] = (char)src.data()[i];
+            pos += 1;
+        }
+    }
 
-    template<typename T>
-    CHashWriter& operator<<(const T& obj) {
-        // Serialize to this stream
+    /** Compute the double-SHA256 hash of all data written to this object.
+     *
+     * Invalidates this object.
+     */
+    uint256 GetHash() {
+        uint256 result;
+        flex_hash(buffer, result.begin());
+        return result;
+    }
+
+    template <typename T>
+    Hash4Writer& operator<<(const T& obj)
+    {
         ::Serialize(*this, obj);
-        return (*this);
+        return *this;
     }
 };
 
@@ -248,54 +272,20 @@ public:
     }
 };
 
-template<typename Source>
-class CHashVerifier : public CHashWriter
-{
-private:
-    Source* source;
-
-public:
-    explicit CHashVerifier(Source* source_) : CHashWriter(source_->GetType(), source_->GetVersion()), source(source_) {}
-
-    void read(Span<std::byte> dst)
-    {
-        source->read(dst);
-        this->write(dst);
-    }
-
-    void ignore(size_t nSize)
-    {
-        std::byte data[1024];
-        while (nSize > 0) {
-            size_t now = std::min<size_t>(nSize, 1024);
-            read({data, now});
-            nSize -= now;
-        }
-    }
-
-    template<typename T>
-    CHashVerifier<Source>& operator>>(T&& obj)
-    {
-        // Unserialize from this stream
-        ::Unserialize(*this, obj);
-        return (*this);
-    }
-};
-
 /** Writes data to an underlying source stream, while hashing the written data. */
 template <typename Source>
-class HashedSourceWriter : public CHashWriter
+class HashedSourceWriter : public HashWriter
 {
 private:
     Source& m_source;
 
 public:
-    explicit HashedSourceWriter(Source& source LIFETIMEBOUND) : CHashWriter{source.GetType(), source.GetVersion()}, m_source{source} {}
+    explicit HashedSourceWriter(Source& source LIFETIMEBOUND) : HashWriter{}, m_source{source} {}
 
     void write(Span<const std::byte> src)
     {
         m_source.write(src);
-        CHashWriter::write(src);
+        HashWriter::write(src);
     }
 
     template <typename T>
@@ -305,23 +295,6 @@ public:
         return *this;
     }
 };
-
-template<typename T>
-uint256 SerializeHash3(const T& obj, int nType=SER_GETHASH, int nVersion=PROTOCOL_VERSION)
-{
-    CHash3Writer ss(nType, nVersion);
-    ss << obj;
-    return ss.GetHash();
-}
-
-/** Compute the 256-bit hash of an object's serialization. */
-template<typename T>
-uint256 SerializeHash(const T& obj, int nType=SER_GETHASH, int nVersion=PROTOCOL_VERSION)
-{
-    CHashWriter ss(nType, nVersion);
-    ss << obj;
-    return ss.GetHash();
-}
 
 /** Single-SHA256 a 32-byte input (represented as uint256). */
 [[nodiscard]] uint256 SHA256Uint256(const uint256& input);

@@ -10,8 +10,25 @@
 
 uint256 CBlockHeader::GetHash() const
 {
-    return SerializeHash3(*this);
+    return (Hash3Writer{} << *this).GetHash();
 }
+
+uint256 CBlockHeader::GetHash2() const
+{
+    return (Hash4Writer{} << *this).GetHash();
+}
+
+uint256 CBlockHeader::GetPoWHash() const
+{
+    uint256 hash;
+    if(nVersion & 0x8000) {
+        hash = GetHash2();
+    } else {
+        hash = GetHash();
+    }
+    return hash;
+}
+
 
 std::string CBlock::ToString() const
 {
