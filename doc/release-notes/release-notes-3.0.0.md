@@ -13,7 +13,7 @@ Algorithm Change
 The new proof-of-work algorithm, which tends to be only minable with CPUs,
 has already been activated on the testnet.
 Since the testnet was never used before, the testnet genesis block is regenerated.
-The new algorithm will be activated on the mainnet after blockheight of 1128985.
+The new algorithm will be activated on the mainnet after blockheight of 1133000.
 
 libbitcoinconsensus
 -------------------
