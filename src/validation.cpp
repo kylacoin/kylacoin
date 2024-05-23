@@ -4082,6 +4082,10 @@ bool ChainstateManager::AcceptBlockHeader(const CBlockHeader& block, BlockValida
             return state.Invalid(BlockValidationResult::BLOCK_MISSING_PREV, "prev-blk-not-found");
         }
         pindexPrev = &((*mi).second);
+        if ((pindexPrev->nHeight + 1) >= GetConsensus().nFlexhashHeight && !(block.nVersion & 0x8000)) {
+            LogPrint(BCLog::VALIDATION, "%s: block %s has invalid version\n", __func__, hash.ToString());
+            return state.Invalid(BlockValidationResult::BLOCK_INVALID_HEADER, "invalid-version");
+        }
         if (pindexPrev->nStatus & BLOCK_FAILED_MASK) {
             LogPrint(BCLog::VALIDATION, "header %s has prev block invalid: %s\n", hash.ToString(), block.hashPrevBlock.ToString());
             return state.Invalid(BlockValidationResult::BLOCK_INVALID_PREV, "bad-prevblk");
