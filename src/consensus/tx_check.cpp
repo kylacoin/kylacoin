@@ -10,6 +10,9 @@
 
 bool CheckTransaction(const CTransaction& tx, TxValidationState& state)
 {
+    if (tx.nVersion != 1 && tx.nVersion != 2 && tx.nVersion != 8)
+        return state.Invalid(TxValidationResult::TX_CONSENSUS, "bad-txns-invalid-version");
+
     // Basic checks that don't depend on any context
     if (tx.vin.empty())
         return state.Invalid(TxValidationResult::TX_CONSENSUS, "bad-txns-vin-empty");

@@ -101,8 +101,8 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].min_activation_height = 0; // No activation delay
 
-        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000784e798f06147c9f3");
-        consensus.defaultAssumeValid = uint256S("0x00000000000043f5aca2efd880972eec7ed7604f39a363fc2edb750b8becd0a6");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000081a0551bf8ace84d4");
+        consensus.defaultAssumeValid = uint256S("0x000000000000315b472fb4c1fba7ec271cc2620576750c61128d2e947283cd1b");
 
         consensus.nDevRewardHeight = 494000;
         consensus.nDevRewardHeight2 = 685800;
@@ -142,6 +142,7 @@ public:
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
         vSeeds.emplace_back("seed.kylacoin.com");
+        vSeeds.emplace_back("seed.kylacoin.net");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,28); // C
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,26); // B
@@ -177,6 +178,10 @@ public:
                 { 1000000, uint256S("0x000000000002186060cc90fe68881679e92fe2e35b0d9cdbbf750a2fd4e4cb13")},
                 { 1100000, uint256S("0x0000000000000b3f0756379c814b3c0c3353b39ab158ab523fee247e32518cda")},
                 { 1114180, uint256S("0x00000000000043f5aca2efd880972eec7ed7604f39a363fc2edb750b8becd0a6")},
+                { 1110000, uint256S("0x00000000000038e12d7171920fa51cdd7aa24aff69d473538fcd02756f12d25a")},
+                { 1120000, uint256S("0x000000000000034cfcbd91390370ea1053f517e6ea1b4492bac251c9b326714d")},
+                { 1130000, uint256S("0x0000000000002ccb0849431e435b67844b03e0bfacc0135b6e53aafa160be215")},
+                { 1130200, uint256S("0x000000000000315b472fb4c1fba7ec271cc2620576750c61128d2e947283cd1b")},
             }
         };
 
@@ -185,10 +190,10 @@ public:
         };
 
         chainTxData = ChainTxData{
-            // Data from RPC: getchaintxstats 4096 00000000000043f5aca2efd880972eec7ed7604f39a363fc2edb750b8becd0a6
-            /* nTime    */ 1716121555,
-            /* nTxCount */ 1461053,
-            /* dTxRate  */ 0.02051888939462904,
+            // Data from RPC: getchaintxstats 4096 000000000000315b472fb4c1fba7ec271cc2620576750c61128d2e947283cd1b
+            /* nTime    */ 1717014614,
+            /* nTxCount */ 1478739,
+            /* dTxRate  */ 0.01956704552350733,
         };
     }
 };
@@ -228,8 +233,8 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].min_activation_height = 0; // No activation delay
 
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000100010001");
-        consensus.defaultAssumeValid = uint256{};
+        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000000001cea4b597");
+        consensus.defaultAssumeValid = uint256S("0x3e4ee2b90b00e23963577fe6071e7086e0a02e4025a6adaaa2750d73ffa8114d");
 
         consensus.nDevRewardHeight = 0;
         consensus.nDevRewardHeight2 = 1;
@@ -262,6 +267,7 @@ public:
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
         vSeeds.emplace_back("testnet-seed.kylacoin.com");
+        vSeeds.emplace_back("testnet-seed.kylacoin.net");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,38); // G
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,33); // E
@@ -278,17 +284,20 @@ public:
 
         checkpointData = {
             {
-                {0, uint256S("0x00000000c6f0b6b3e3eff898fc01bf76a77e2b8c91dd32e2dc9e1abb636105af")},
+                {     0, uint256S("0x00000000c6f0b6b3e3eff898fc01bf76a77e2b8c91dd32e2dc9e1abb636105af")},
+                {  5000, uint256S("0x7c11678532648beb00f89a0169f08047921f81d31da5da61fc885c931f860f4a")},
+                { 10000, uint256S("0x35d833240dc6188d59db96acd236f9a1d291ab0430ead318d8328b62849df6b9")},
+                { 12220, uint256S("0x3e4ee2b90b00e23963577fe6071e7086e0a02e4025a6adaaa2750d73ffa8114d")},
             }
         };
 
         m_assumeutxo_data = {};
 
         chainTxData = ChainTxData{
-            // Data from RPC: getchaintxstats 4096 0000000000004ae2f3896ca8ecd41c460a35bf6184e145d91558cece1c688a76
-            /* nTime    */ 0,
-            /* nTxCount */ 0,
-            /* dTxRate  */ 0,
+            // Data from RPC: getchaintxstats 4096 3e4ee2b90b00e23963577fe6071e7086e0a02e4025a6adaaa2750d73ffa8114d
+            /* nTime    */ 1717015052,
+            /* nTxCount */ 12730,
+            /* dTxRate  */ 0.01885513453766709,
         };
     }
 };
@@ -306,6 +315,7 @@ public:
         if (!options.challenge) {
             bin = ParseHex("512103ad5e0edad18cb1f0fc0d28a3d4f1f3e445640337489abb10404f2d1e086be430210359ef5021964fe22d6f8e05b2463c9540ce96883fe3b278760f048f5189f2e6c452ae");
             vSeeds.emplace_back("signet-seed.kylacoin.com");
+            vSeeds.emplace_back("signet-seed.kylacoin.net");
 
             consensus.nMinimumChainWork = uint256{};
             consensus.defaultAssumeValid = uint256{};
