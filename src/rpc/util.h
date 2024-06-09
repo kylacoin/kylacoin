@@ -117,7 +117,7 @@ std::string HelpExampleRpcNamed(const std::string& methodname, const RPCArgList&
 
 CPubKey HexToPubKey(const std::string& hex_in);
 CPubKey AddrToPubKey(const FillableSigningProvider& keystore, const std::string& addr_in);
-CTxDestination AddAndGetMultisigDestination(const int required, const std::vector<CPubKey>& pubkeys, OutputType type, FillableSigningProvider& keystore, CScript& script_out);
+CTxDestination AddAndGetMultisigDestination(const int required, const std::vector<CPubKey>& pubkeys, OutputType type, FlatSigningProvider& keystore, CScript& script_out);
 
 UniValue DescribeAddress(const CTxDestination& dest);
 
@@ -162,6 +162,7 @@ struct RPCArgOptions {
                                          //!< methods set the also_positional flag and read values from both positions.
 };
 
+// NOLINTNEXTLINE(misc-no-recursion)
 struct RPCArg {
     enum class Type {
         OBJ,
@@ -271,6 +272,7 @@ struct RPCArg {
     std::string ToDescriptionString(bool is_named_arg) const;
 };
 
+// NOLINTNEXTLINE(misc-no-recursion)
 struct RPCResult {
     enum class Type {
         OBJ,
@@ -402,22 +404,26 @@ public:
 
     UniValue HandleRequest(const JSONRPCRequest& request) const;
     /**
-     * Helper to get a request argument.
-     * This function only works during m_fun(), i.e. it should only be used in
-     * RPC method implementations. The helper internally checks whether the
-     * user-passed argument isNull() and parses (from JSON) and returns the
-     * user-passed argument, or the default value derived from the RPCArg
-     * documentation, or a falsy value if no default was given.
+     * @brief Helper to get a required or default-valued request argument.
      *
-     * Use Arg<Type>(i) to get the argument or its default value. Otherwise,
-     * use MaybeArg<Type>(i) to get the optional argument or a falsy value.
+     * Use this function when the argument is required or when it has a default value. If the
+     * argument is optional and may not be provided, use MaybeArg instead.
      *
-     * The Type passed to this helper must match the corresponding
-     * RPCArg::Type.
+     * This function only works during m_fun(), i.e., it should only be used in
+     * RPC method implementations. It internally checks whether the user-passed
+     * argument isNull() and parses (from JSON) and returns the user-passed argument,
+     * or the default value derived from the RPCArg documentation.
+     *
+     * The instantiation of this helper for type R must match the corresponding RPCArg::Type.
+     *
+     * @return The value of the RPC argument (or the default value) cast to type R.
+     *
+     * @see MaybeArg for handling optional arguments without default values.
      */
     template <typename R>
-    auto Arg(size_t i) const
+    auto Arg(std::string_view key) const
     {
+        auto i{GetParamIndex(key)};
         // Return argument (required or with default value).
         if constexpr (std::is_integral_v<R> || std::is_floating_point_v<R>) {
             // Return numbers by value.
@@ -427,9 +433,29 @@ public:
             return ArgValue<const R&>(i);
         }
     }
+    /**
+     * @brief Helper to get an optional request argument.
+     *
+     * Use this function when the argument is optional and does not have a default value. If the
+     * argument is required or has a default value, use Arg instead.
+     *
+     * This function only works during m_fun(), i.e., it should only be used in
+     * RPC method implementations. It internally checks whether the user-passed
+     * argument isNull() and parses (from JSON) and returns the user-passed argument,
+     * or a falsy value if no argument was passed.
+     *
+     * The instantiation of this helper for type R must match the corresponding RPCArg::Type.
+     *
+     * @return For integral and floating-point types, a std::optional<R> is returned.
+     *         For other types, a R* pointer to the argument is returned. If the
+     *         argument is not provided, std::nullopt or a null pointer is returned.
+     *
+     * @see Arg for handling arguments that are required or have a default value.
+     */
     template <typename R>
-    auto MaybeArg(size_t i) const
+    auto MaybeArg(std::string_view key) const
     {
+        auto i{GetParamIndex(key)};
         // Return optional argument (without default).
         if constexpr (std::is_integral_v<R> || std::is_floating_point_v<R>) {
             // Return numbers by value, wrapped in optional.
@@ -458,6 +484,8 @@ private:
     mutable const JSONRPCRequest* m_req{nullptr}; // A pointer to the request for the duration of m_fun()
     template <typename R>
     R ArgValue(size_t i) const;
+    //! Return positional index of a parameter using its name as key.
+    size_t GetParamIndex(std::string_view key) const;
 };
 
 /**
@@ -468,5 +496,7 @@ private:
  */
 void PushWarnings(const UniValue& warnings, UniValue& obj);
 void PushWarnings(const std::vector<bilingual_str>& warnings, UniValue& obj);
+
+UniValue GetNodeWarnings(bool use_deprecated);
 
 #endif // BITCOIN_RPC_UTIL_H

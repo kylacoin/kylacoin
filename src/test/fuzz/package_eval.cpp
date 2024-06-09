@@ -47,7 +47,7 @@ void initialize_tx_pool()
             g_outpoints_coinbase_init_mature.push_back(prevout);
         }
     }
-    SyncWithValidationInterfaceQueue();
+    g_setup->m_node.validation_signals->SyncWithValidationInterfaceQueue();
 }
 
 struct OutpointsUpdater final : public CValidationInterface {
@@ -147,7 +147,7 @@ FUZZ_TARGET(tx_package_eval, .init = initialize_tx_pool)
     }
 
     auto outpoints_updater = std::make_shared<OutpointsUpdater>(mempool_outpoints);
-    RegisterSharedValidationInterface(outpoints_updater);
+    node.validation_signals->RegisterSharedValidationInterface(outpoints_updater);
 
     CTxMemPool tx_pool_{MakeMempool(fuzzed_data_provider, node)};
     MockedTxPool& tx_pool = *static_cast<MockedTxPool*>(&tx_pool_);
@@ -173,7 +173,7 @@ FUZZ_TARGET(tx_package_eval, .init = initialize_tx_pool)
             // Create transaction to add to the mempool
             const CTransactionRef tx = [&] {
                 CMutableTransaction tx_mut;
-                tx_mut.nVersion = fuzzed_data_provider.ConsumeBool() ? 3 : CTransaction::CURRENT_VERSION;
+                tx_mut.nVersion = fuzzed_data_provider.ConsumeBool() ? TRUC_VERSION : CTransaction::CURRENT_VERSION;
                 tx_mut.nLockTime = fuzzed_data_provider.ConsumeBool() ? 0 : fuzzed_data_provider.ConsumeIntegral<uint32_t>();
                 // Last tx will sweep all outpoints in package
                 const auto num_in = last_tx ? package_outpoints.size()  : fuzzed_data_provider.ConsumeIntegralInRange<int>(1, mempool_outpoints.size());
@@ -269,15 +269,21 @@ FUZZ_TARGET(tx_package_eval, .init = initialize_tx_pool)
         // Remember all added transactions
         std::set<CTransactionRef> added;
         auto txr = std::make_shared<TransactionsDelta>(added);
-        RegisterSharedValidationInterface(txr);
+        node.validation_signals->RegisterSharedValidationInterface(txr);
 
         // When there are multiple transactions in the package, we call ProcessNewPackage(txs, test_accept=false)
         // and AcceptToMemoryPool(txs.back(), test_accept=true). When there is only 1 transaction, we might flip it
         // (the package is a test accept and ATMP is a submission).
         auto single_submit = txs.size() == 1 && fuzzed_data_provider.ConsumeBool();
 
+        // Exercise client_maxfeerate logic
+        std::optional<CFeeRate> client_maxfeerate{};
+        if (fuzzed_data_provider.ConsumeBool()) {
+            client_maxfeerate = CFeeRate(fuzzed_data_provider.ConsumeIntegralInRange<CAmount>(-1, 50 * COIN), 100);
+        }
+
         const auto result_package = WITH_LOCK(::cs_main,
-                                    return ProcessNewPackage(chainstate, tx_pool, txs, /*test_accept=*/single_submit));
+                                    return ProcessNewPackage(chainstate, tx_pool, txs, /*test_accept=*/single_submit, client_maxfeerate));
 
         // Always set bypass_limits to false because it is not supported in ProcessNewPackage and
         // can be a source of divergence.
@@ -285,8 +291,8 @@ FUZZ_TARGET(tx_package_eval, .init = initialize_tx_pool)
                                    /*bypass_limits=*/false, /*test_accept=*/!single_submit));
         const bool passed = res.m_result_type == MempoolAcceptResult::ResultType::VALID;
 
-        SyncWithValidationInterfaceQueue();
-        UnregisterSharedValidationInterface(txr);
+        node.validation_signals->SyncWithValidationInterfaceQueue();
+        node.validation_signals->UnregisterSharedValidationInterface(txr);
 
         // There is only 1 transaction in the package. We did a test-package-accept and a ATMP
         if (single_submit) {
@@ -310,7 +316,7 @@ FUZZ_TARGET(tx_package_eval, .init = initialize_tx_pool)
         CheckMempoolV3Invariants(tx_pool);
     }
 
-    UnregisterSharedValidationInterface(outpoints_updater);
+    node.validation_signals->UnregisterSharedValidationInterface(outpoints_updater);
 
     WITH_LOCK(::cs_main, tx_pool.check(chainstate.CoinsTip(), chainstate.m_chain.Height() + 1));
 }

@@ -4,9 +4,7 @@
 
 #include <node/kernel_notifications.h>
 
-#if defined(HAVE_CONFIG_H)
-#include <config/bitcoin-config.h>
-#endif
+#include <config/bitcoin-config.h> // IWYU pragma: keep
 
 #include <chain.h>
 #include <common/args.h>
@@ -16,6 +14,7 @@
 #include <node/abort.h>
 #include <node/interface_ui.h>
 #include <util/check.h>
+#include <util/signalinterrupt.h>
 #include <util/strencodings.h>
 #include <util/string.h>
 #include <util/translation.h>
@@ -84,15 +83,15 @@ void KernelNotifications::warning(const bilingual_str& warning)
     DoWarning(warning);
 }
 
-void KernelNotifications::flushError(const std::string& debug_message)
+void KernelNotifications::flushError(const bilingual_str& message)
 {
-    AbortNode(&m_shutdown, m_exit_status, debug_message);
+    AbortNode(&m_shutdown, m_exit_status, message);
 }
 
-void KernelNotifications::fatalError(const std::string& debug_message, const bilingual_str& user_message)
+void KernelNotifications::fatalError(const bilingual_str& message)
 {
     node::AbortNode(m_shutdown_on_fatal_error ? &m_shutdown : nullptr,
-                    m_exit_status, debug_message, user_message);
+                    m_exit_status, message);
 }
 
 void ReadNotificationArgs(const ArgsManager& args, KernelNotifications& notifications)
