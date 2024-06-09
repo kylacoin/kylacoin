@@ -130,8 +130,9 @@ bool BlockTreeDB::LoadBlockIndexGuts(const Consensus::Params& consensusParams, s
                 pindexNew->nStatus        = diskindex.nStatus;
                 pindexNew->nTx            = diskindex.nTx;
 
-                if (!CheckProofOfWork(pindexNew->GetBlockHeader(), consensusParams)) {
-                    return error("%s: CheckProofOfWork failed: %s", __func__, pindexNew->ToString());
+                if (pindexNew->GetBlockHeader().GetHash() != pindexNew->GetBlockHash()) {
+                    LogError("%s: GetHash failed: %s\n", __func__, pindexNew->ToString());
+                    return false;
                 }
 
                 pcursor->Next();
