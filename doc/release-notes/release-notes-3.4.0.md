@@ -24,5 +24,4 @@ Notable changes
 - [#30151](https://github.com/bitcoin/bitcoin/pull/30151) depends: Fetch miniupnpc sources from an alternative website
 
 ### Misc
-- [#30151](https://github.com/bitcoin/bitcoin/pull/30149) contrib: Renew Windows code signing certificate
 - Performance improved when loading the blockchain index
