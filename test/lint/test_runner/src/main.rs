@@ -4,9 +4,9 @@
 
 use std::env;
 use std::fs;
+use std::io::ErrorKind;
 use std::path::{Path, PathBuf};
-use std::process::Command;
-use std::process::ExitCode;
+use std::process::{Command, ExitCode, Stdio};
 
 type LintError = String;
 type LintResult = Result<(), LintError>;
@@ -14,7 +14,9 @@ type LintFn = fn() -> LintResult;
 
 /// Return the git command
 fn git() -> Command {
-    Command::new("git")
+    let mut git = Command::new("git");
+    git.arg("--no-pager");
+    git
 }
 
 /// Return stdout
@@ -95,9 +97,87 @@ fs:: namespace, which has unsafe filesystem functions marked as deleted.
     }
 }
 
+/// Return the pathspecs for whitespace related excludes
+fn get_pathspecs_exclude_whitespace() -> Vec<String> {
+    let mut list = get_pathspecs_exclude_subtrees();
+    list.extend(
+        [
+            // Permanent excludes
+            "*.patch",
+            "src/qt/locale",
+            "contrib/windeploy/win-codesign.cert",
+            "doc/README_windows.txt",
+            // Temporary excludes, or existing violations
+            "doc/release-notes/release-notes-0.*",
+            "contrib/init/bitcoind.openrc",
+            "contrib/macdeploy/macdeployqtplus",
+            "src/crypto/sha256_sse4.cpp",
+            "src/qt/res/src/*.svg",
+            "test/functional/test_framework/crypto/ellswift_decode_test_vectors.csv",
+            "test/functional/test_framework/crypto/xswiftec_inv_test_vectors.csv",
+            "contrib/qos/tc.sh",
+            "contrib/verify-commits/gpg.sh",
+            "src/univalue/include/univalue_escapes.h",
+            "src/univalue/test/object.cpp",
+            "test/lint/git-subtree-check.sh",
+        ]
+        .iter()
+        .map(|s| format!(":(exclude){}", s)),
+    );
+    list
+}
+
+fn lint_trailing_whitespace() -> LintResult {
+    let trailing_space = git()
+        .args(["grep", "-I", "--line-number", "\\s$", "--"])
+        .args(get_pathspecs_exclude_whitespace())
+        .status()
+        .expect("command error")
+        .success();
+    if trailing_space {
+        Err(r#"
+^^^
+Trailing whitespace (including Windows line endings [CR LF]) is problematic, because git may warn
+about it, or editors may remove it by default, forcing developers in the future to either undo the
+changes manually or spend time on review.
+
+Thus, it is best to remove the trailing space now.
+
+Please add any false positives, such as subtrees, Windows-related files, patch files, or externally
+sourced files to the exclude list.
+            "#
+        .to_string())
+    } else {
+        Ok(())
+    }
+}
+
+fn lint_tabs_whitespace() -> LintResult {
+    let tabs = git()
+        .args(["grep", "-I", "--line-number", "--perl-regexp", "^\\t", "--"])
+        .args(["*.cpp", "*.h", "*.md", "*.py", "*.sh"])
+        .args(get_pathspecs_exclude_whitespace())
+        .status()
+        .expect("command error")
+        .success();
+    if tabs {
+        Err(r#"
+^^^
+Use of tabs in this codebase is problematic, because existing code uses spaces and tabs will cause
+display issues and conflict with editor settings.
+
+Please remove the tabs.
+
+Please add any false positives, such as subtrees, or externally sourced files to the exclude list.
+            "#
+        .to_string())
+    } else {
+        Ok(())
+    }
+}
+
 fn lint_includes_build_config() -> LintResult {
     let config_path = "./src/config/bitcoin-config.h.in";
-    let include_directive = "#include <config/bitcoin-config.h>";
     if !Path::new(config_path).is_file() {
         assert!(Command::new("./autogen.sh")
             .status()
@@ -154,7 +234,11 @@ fn lint_includes_build_config() -> LintResult {
                 } else {
                     "--files-with-matches"
                 },
-                include_directive,
+                if mode {
+                    "^#include <config/bitcoin-config.h> // IWYU pragma: keep$"
+                } else {
+                    "#include <config/bitcoin-config.h>" // Catch redundant includes with and without the IWYU pragma
+                },
                 "--",
             ])
             .args(defines_files.lines())
@@ -175,6 +259,11 @@ even though bitcoin-config.h indicates that a faster feature is available and sh
 
 If you are unsure which symbol is used, you can find it with this command:
 git grep --perl-regexp '{}' -- file_name
+
+Make sure to include it with the IWYU pragma. Otherwise, IWYU may falsely instruct to remove the
+include again.
+
+#include <config/bitcoin-config.h> // IWYU pragma: keep
             "#,
             defines_regex
         ));
@@ -200,6 +289,51 @@ fn lint_doc() -> LintResult {
         Ok(())
     } else {
         Err("".to_string())
+    }
+}
+
+fn lint_markdown() -> LintResult {
+    let bin_name = "mlc";
+    let mut md_ignore_paths = get_subtrees();
+    md_ignore_paths.push("./doc/README_doxygen.md");
+    let md_ignore_path_str = md_ignore_paths.join(",");
+
+    let mut cmd = Command::new(bin_name);
+    cmd.args([
+        "--offline",
+        "--ignore-path",
+        md_ignore_path_str.as_str(),
+        "--root-dir",
+        ".",
+    ])
+    .stdout(Stdio::null()); // Suppress overly-verbose output
+
+    match cmd.output() {
+        Ok(output) if output.status.success() => Ok(()),
+        Ok(output) => {
+            let stderr = String::from_utf8_lossy(&output.stderr);
+            let filtered_stderr: String = stderr // Filter out this annoying trailing line
+                .lines()
+                .filter(|&line| line != "The following links could not be resolved:")
+                .collect::<Vec<&str>>()
+                .join("\n");
+            Err(format!(
+                r#"
+One or more markdown links are broken.
+
+Relative links are preferred (but not required) as jumping to file works natively within Emacs.
+
+Markdown link errors found:
+{}
+                "#,
+                filtered_stderr
+            ))
+        }
+        Err(e) if e.kind() == ErrorKind::NotFound => {
+            println!("`mlc` was not found in $PATH, skipping markdown lint check.");
+            Ok(())
+        }
+        Err(e) => Err(format!("Error running mlc: {}", e)), // Misc errors
     }
 }
 
@@ -232,8 +366,11 @@ fn main() -> ExitCode {
     let test_list: Vec<(&str, LintFn)> = vec![
         ("subtree check", lint_subtree),
         ("std::filesystem check", lint_std_filesystem),
+        ("trailing whitespace check", lint_trailing_whitespace),
+        ("no-tabs check", lint_tabs_whitespace),
         ("build config includes check", lint_includes_build_config),
         ("-help=1 documentation check", lint_doc),
+        ("markdown hyperlink check", lint_markdown),
         ("lint-*.py scripts", lint_all),
     ];
 

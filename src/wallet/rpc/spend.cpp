@@ -627,15 +627,7 @@ CreatedTransactionResult FundTransaction(CWallet& wallet, const CMutableTransact
         const UniValue solving_data = options["solving_data"].get_obj();
         if (solving_data.exists("pubkeys")) {
             for (const UniValue& pk_univ : solving_data["pubkeys"].get_array().getValues()) {
-                const std::string& pk_str = pk_univ.get_str();
-                if (!IsHex(pk_str)) {
-                    throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, strprintf("'%s' is not hex", pk_str));
-                }
-                const std::vector<unsigned char> data(ParseHex(pk_str));
-                const CPubKey pubkey(data.begin(), data.end());
-                if (!pubkey.IsFullyValid()) {
-                    throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, strprintf("'%s' is not a valid public key", pk_str));
-                }
+                const CPubKey pubkey = HexToPubKey(pk_univ.get_str());
                 coinControl.m_external_provider.pubkeys.emplace(pubkey.GetID(), pubkey);
                 // Add witness script for pubkeys
                 const CScript wit_script = GetScriptForDestination(WitnessV0KeyHash(pubkey));
@@ -726,7 +718,7 @@ static void SetOptionsInputWeights(const UniValue& inputs, UniValue& options)
             weights.push_back(input);
         }
     }
-    options.pushKV("input_weights", weights);
+    options.pushKV("input_weights", std::move(weights));
 }
 
 RPCHelpMan fundrawtransaction()
@@ -1175,7 +1167,7 @@ static RPCHelpMan bumpfee_helper(std::string method_name)
     for (const bilingual_str& error : errors) {
         result_errors.push_back(error.original);
     }
-    result.pushKV("errors", result_errors);
+    result.pushKV("errors", std::move(result_errors));
 
     return result;
 },
@@ -1303,7 +1295,7 @@ RPCHelpMan sendall()
 {
     return RPCHelpMan{"sendall",
         "EXPERIMENTAL warning: this call may be changed in future releases.\n"
-        "\nSpend the value of all (or specific) confirmed UTXOs in the wallet to one or more recipients.\n"
+        "\nSpend the value of all (or specific) confirmed UTXOs and unconfirmed change in the wallet to one or more recipients.\n"
         "Unconfirmed inbound UTXOs and locked UTXOs will not be spent. Sendall will respect the avoid_reuse wallet flag.\n"
         "If your wallet contains many small inputs, either because it received tiny payments or as a result of accumulating change, consider using `send_max` to exclude inputs that are worth less than the fees needed to spend them.\n",
         {
@@ -1396,7 +1388,7 @@ RPCHelpMan sendall()
                 if (recipient.isStr()) {
                     UniValue rkvp(UniValue::VOBJ);
                     rkvp.pushKV(recipient.get_str(), 0);
-                    recipient_key_value_pairs.push_back(rkvp);
+                    recipient_key_value_pairs.push_back(std::move(rkvp));
                     addresses_without_amount.insert(recipient.get_str());
                 } else {
                     recipient_key_value_pairs.push_back(recipient);
@@ -1478,10 +1470,18 @@ RPCHelpMan sendall()
                 }
             }
 
+            std::vector<COutPoint> outpoints_spent;
+            outpoints_spent.reserve(rawTx.vin.size());
+
+            for (const CTxIn& tx_in : rawTx.vin) {
+                outpoints_spent.push_back(tx_in.prevout);
+            }
+
             // estimate final size of tx
             const TxSize tx_size{CalculateMaximumSignedTxSize(CTransaction(rawTx), pwallet.get())};
             const CAmount fee_from_size{fee_rate.GetFee(tx_size.vsize)};
-            const CAmount effective_value{total_input_value - fee_from_size};
+            const std::optional<CAmount> total_bump_fees{pwallet->chain().calculateCombinedBumpFee(outpoints_spent, fee_rate)};
+            CAmount effective_value = total_input_value - fee_from_size - total_bump_fees.value_or(0);
 
             if (fee_from_size > pwallet->m_default_max_tx_fee) {
                 throw JSONRPCError(RPC_WALLET_ERROR, TransactionErrorString(TransactionError::MAX_FEE_EXCEEDED).original);
