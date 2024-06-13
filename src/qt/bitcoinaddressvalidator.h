@@ -20,7 +20,7 @@ public:
     State validate(QString &input, int &pos) const override;
 };
 
-/** Bitcoin address widget validator, checks for a valid bitcoin address.
+/** Bitcoin address widget validator, checks for a valid kylacoin address.
  */
 class BitcoinAddressCheckValidator : public QValidator
 {

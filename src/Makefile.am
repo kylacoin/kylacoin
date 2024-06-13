@@ -589,49 +589,35 @@ crypto_libbitcoin_crypto_base_la_SOURCES = \
   crypto/sha512.h \
   crypto/siphash.cpp \
   crypto/siphash.h \
-  crypto/flex/cryptonote/unistd.h \
-  crypto/flex/cryptonote/cryptonight.h \
-  crypto/flex/cryptonote/cryptonight.c \
-  crypto/flex/cryptonote/cryptonight_dark.h \
-  crypto/flex/cryptonote/cryptonight_dark.c \
-  crypto/flex/cryptonote/cryptonight_dark_lite.h \
-  crypto/flex/cryptonote/cryptonight_dark_lite.c \
-  crypto/flex/cryptonote/cryptonight_fast.h \
-  crypto/flex/cryptonote/cryptonight_fast.c \
-  crypto/flex/cryptonote/cryptonight_lite.h \
-  crypto/flex/cryptonote/cryptonight_lite.c \
-  crypto/flex/cryptonote/cryptonight_soft_shell.h \
-  crypto/flex/cryptonote/cryptonight_soft_shell.c \
-  crypto/flex/cryptonote/cryptonight_turtle.h \
-  crypto/flex/cryptonote/cryptonight_turtle.c \
-  crypto/flex/cryptonote/cryptonight_turtle_lite.h \
-  crypto/flex/cryptonote/cryptonight_turtle_lite.c \
-  crypto/flex/cryptonote/getopt/getopt.h \
-  crypto/flex/cryptonote/getopt/getopt_long.c \
-  crypto/flex/cryptonote/crypto/aesb.c \
-  crypto/flex/cryptonote/crypto/c_blake256.h \
-  crypto/flex/cryptonote/crypto/c_blake256.c \
-  crypto/flex/cryptonote/crypto/c_groestl.h \
-  crypto/flex/cryptonote/crypto/c_groestl.c \
-  crypto/flex/cryptonote/crypto/c_jh.h \
-  crypto/flex/cryptonote/crypto/c_jh.c \
-  crypto/flex/cryptonote/crypto/c_keccak.h \
-  crypto/flex/cryptonote/crypto/c_keccak.c \
-  crypto/flex/cryptonote/crypto/c_skein.h \
-  crypto/flex/cryptonote/crypto/c_skein.c \
-  crypto/flex/cryptonote/crypto/crypto.h \
-  crypto/flex/cryptonote/crypto/groestl_tables.h \
-  crypto/flex/cryptonote/crypto/hash.c \
-  crypto/flex/cryptonote/crypto/hash.h \
-  crypto/flex/cryptonote/crypto/hash-ops.h \
-  crypto/flex/cryptonote/crypto/int-util.h \
-  crypto/flex/cryptonote/crypto/oaes_config.h \
-  crypto/flex/cryptonote/crypto/oaes_lib.c \
-  crypto/flex/cryptonote/crypto/oaes_lib.h \
-  crypto/flex/cryptonote/crypto/skein_port.h \
-  crypto/flex/cryptonote/crypto/variant2_int_sqrt.h \
-  crypto/flex/cryptonote/crypto/wild_keccak.h \
-  crypto/flex/cryptonote/crypto/wild_keccak.cpp \
+  crypto/flex/cnfiles/unistd.h \
+  crypto/flex/cnfiles/cnfn.h \
+  crypto/flex/cnfiles/cnfn.c \
+  crypto/flex/cnfiles/getopt/getopt.h \
+  crypto/flex/cnfiles/getopt/getopt_long.c \
+  crypto/flex/cnfiles/crypto/aesb.c \
+  crypto/flex/cnfiles/crypto/c_blake256.h \
+  crypto/flex/cnfiles/crypto/c_blake256.c \
+  crypto/flex/cnfiles/crypto/c_groestl.h \
+  crypto/flex/cnfiles/crypto/c_groestl.c \
+  crypto/flex/cnfiles/crypto/c_jh.h \
+  crypto/flex/cnfiles/crypto/c_jh.c \
+  crypto/flex/cnfiles/crypto/c_keccak.h \
+  crypto/flex/cnfiles/crypto/c_keccak.c \
+  crypto/flex/cnfiles/crypto/c_skein.h \
+  crypto/flex/cnfiles/crypto/c_skein.c \
+  crypto/flex/cnfiles/crypto/crypto.h \
+  crypto/flex/cnfiles/crypto/groestl_tables.h \
+  crypto/flex/cnfiles/crypto/hash.c \
+  crypto/flex/cnfiles/crypto/hash.h \
+  crypto/flex/cnfiles/crypto/hash-ops.h \
+  crypto/flex/cnfiles/crypto/int-util.h \
+  crypto/flex/cnfiles/crypto/oaes_config.h \
+  crypto/flex/cnfiles/crypto/oaes_lib.c \
+  crypto/flex/cnfiles/crypto/oaes_lib.h \
+  crypto/flex/cnfiles/crypto/skein_port.h \
+  crypto/flex/cnfiles/crypto/variant2_int_sqrt.h \
+  crypto/flex/cnfiles/crypto/wild_keccak.h \
+  crypto/flex/cnfiles/crypto/wild_keccak.cpp \
   crypto/flex/sph/aes_helper.c \
   crypto/flex/sph/blake.c \
   crypto/flex/sph/bmw.c \
@@ -658,7 +644,7 @@ crypto_libbitcoin_crypto_base_la_SOURCES = \
   crypto/flex/sph/sponge.c \
   crypto/flex/sph/tiger.c \
   crypto/flex/sph/whirlpool.c \
-  crypto/flex/flex.c
+  crypto/flex/flex.cpp
 
 # See explanation for -static in crypto_libbitcoin_crypto_base_la's LDFLAGS and
 # CXXFLAGS above
