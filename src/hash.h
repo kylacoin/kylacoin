@@ -15,19 +15,10 @@
 #include <serialize.h>
 #include <span.h>
 #include <uint256.h>
+#include <crypto/flex/flex.h>
 
 #include <string>
 #include <vector>
-
-#if defined (__cplusplus)
-extern "C" {
-#endif
-
-#include <crypto/flex/flex.h>
-
-#if defined (__cplusplus)
-}
-#endif
 
 typedef uint256 ChainCode;
 
@@ -214,7 +205,7 @@ public:
 
     void write(Span<const std::byte> src)
     {
-        for(int i = 0; i < src.size(); i++) {
+        for(size_t i = 0; i < src.size(); i++) {
             buffer[pos] = (char)src.data()[i];
             pos += 1;
         }

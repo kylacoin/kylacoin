@@ -2165,7 +2165,7 @@ If you are receiving this error you should request the merchant provide a BIP21 
         <context-group purpose="location"><context context-type="linenumber">238</context></context-group>
       </trans-unit>
       <trans-unit id="_msg479">
-        <source xml:space="preserve">URI cannot be parsed! This can be caused by an invalid Bitcoin address or malformed URI parameters.</source>
+        <source xml:space="preserve">URI cannot be parsed! This can be caused by an Invalid Kylacoin address or malformed URI parameters.</source>
         <context-group purpose="location"><context context-type="linenumber">228</context></context-group>
       </trans-unit>
       <trans-unit id="_msg480">
@@ -3627,7 +3627,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of &quot;100 
         </trans-unit>
       </group>
       <trans-unit id="_msg788">
-        <source xml:space="preserve">Warning: Invalid Bitcoin address</source>
+        <source xml:space="preserve">Warning: Invalid Kylacoin address</source>
         <context-group purpose="location"><context context-type="linenumber">977</context></context-group>
       </trans-unit>
       <trans-unit id="_msg789">
