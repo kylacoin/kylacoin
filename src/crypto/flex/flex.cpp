@@ -95,7 +95,7 @@ void print_hex_memory(void* mem, unsigned int size) {
     printf("\n");
 }
 
-void flex_hash(const char* input, unsigned char* output) {
+void flex_hash(const char* input, int size, unsigned char* output) {
     uint32_t hash[64 / 4];
     sph_blake512_context ctx_blake;
     sph_bmw512_context ctx_bmw;
@@ -113,7 +113,6 @@ void flex_hash(const char* input, unsigned char* output) {
     sph_whirlpool_context ctx_whirlpool;
 
     void* in = const_cast<void*>(static_cast<const void*>(input));
-    int size = 80;
     sph_keccak512_init(&ctx_keccak);
     sph_keccak512(&ctx_keccak, in, size);
     sph_keccak512_close(&ctx_keccak, hash);

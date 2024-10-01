@@ -136,7 +136,19 @@ unsigned int CalculateNextWorkRequired(const CBlockIndex* pindexLast, int64_t nF
     // Retarget
     const arith_uint256 bnPowLimit = UintToArith256(params.powLimit);
     arith_uint256 bnNew;
-    bnNew.SetCompact(pindexLast->nBits);
+
+    // Special difficulty rule for Testnet4
+    if (params.enforce_BIP94) {
+        // Here we use the first block of the difficulty period. This way
+        // the real difficulty is always preserved in the first block as
+        // it is not allowed to use the min-difficulty exception.
+        int nHeightFirst = pindexLast->nHeight - (params.DifficultyAdjustmentInterval()-1);
+        const CBlockIndex* pindexFirst = pindexLast->GetAncestor(nHeightFirst);
+        bnNew.SetCompact(pindexFirst->nBits);
+    } else {
+        bnNew.SetCompact(pindexLast->nBits);
+    }
+
     bnNew *= nActualTimespan;
     if((pindexLast->nHeight+1) < params.n2023DiffAlgoHeight) {
         bnNew /= params.nPowTargetTimespan;
@@ -250,16 +262,13 @@ bool PermittedDifficultyTransition(const Consensus::Params& params, int64_t heig
     return true;
 }
 
-bool CheckProofOfWork(const CBlockHeader &block, const Consensus::Params& params)
+bool CheckProofOfWork(uint256 hash, unsigned int nBits, const Consensus::Params& params)
 {
-    uint256 hash;
     bool fNegative;
     bool fOverflow;
     arith_uint256 bnTarget;
 
-    hash = block.GetPoWHash();
-
-    bnTarget.SetCompact(block.nBits, &fNegative, &fOverflow);
+    bnTarget.SetCompact(nBits, &fNegative, &fOverflow);
 
     // Check range
     if (fNegative || bnTarget == 0 || fOverflow || bnTarget > UintToArith256(params.powLimit))

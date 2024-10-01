@@ -50,6 +50,7 @@ static const int TOOLTIP_WRAP_THRESHOLD = 80;
 #define QAPP_ORG_DOMAIN "kylacoin.com"
 #define QAPP_APP_NAME_DEFAULT "Kylacoin-Qt"
 #define QAPP_APP_NAME_TESTNET "Kylacoin-Qt-testnet"
+#define QAPP_APP_NAME_TESTNET4 "Kylacoin-Qt-testnet4"
 #define QAPP_APP_NAME_SIGNET "Kylacoin-Qt-signet"
 #define QAPP_APP_NAME_REGTEST "Kylacoin-Qt-regtest"
 

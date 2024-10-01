@@ -1,1 +1,1 @@
-void flex_hash(const char* input, unsigned char* output);
+void flex_hash(const char* input, int size, unsigned char* output);
