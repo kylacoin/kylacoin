@@ -112,8 +112,8 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].min_activation_height = 0; // No activation delay
 
-        consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000008330a58c98ea88fae");
-        consensus.defaultAssumeValid = uint256S("0x45f0050de6b342c004ef065e80375f0cb0a791cd17cdfb1a0a364753507d0fdf"); // 1302000
+        consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000008330a7b05fe47715b");
+        consensus.defaultAssumeValid = uint256S("0x1f9315eb2469625a3dc9b24d26837c1da11ca33144e01fe864ffae5d557f6058"); // 1506000
 
         consensus.nDevRewardHeight = 494000;
         consensus.nDevRewardHeight2 = 685800;
@@ -193,17 +193,19 @@ public:
                 { 1150000, uint256S("0x8fab1b100a06669b5fc7a2fc7274b9fc4e15e1facdd4b8863a5f3ea117af6f89")},
                 { 1160000, uint256S("0xe3536cee589d75f24519c269ba587b6512f4831872dac6105e78c4a0930b40e3")},
                 { 1200000, uint256S("0xed4d19d71e785da21b3bf2127175e8d7be68aab8143e6ae70637ca49f5cdc0dd")},
-                { 1302000, uint256S("0x45f0050de6b342c004ef065e80375f0cb0a791cd17cdfb1a0a364753507d0fdf")},
+                { 1300000, uint256S("0xff4ec6de29e9467e971ca22eab57f67d7e4225738040169fc80b6af5cb1f0ca9")},
+                { 1400000, uint256S("0xaaaa5e096952a54365e3a1fe91e8b693878251f728416f1bf88551552d61950a")},
+                { 1506000, uint256S("0x1f9315eb2469625a3dc9b24d26837c1da11ca33144e01fe864ffae5d557f6058")},
             }
         };
 
         m_assumeutxo_data = {};
 
         chainTxData = ChainTxData{
-            // Data from RPC: getchaintxstats 4096 45f0050de6b342c004ef065e80375f0cb0a791cd17cdfb1a0a364753507d0fdf
-            /* nTime    */ 1728040698,
-            /* nTxCount */ 9253,
-            /* dTxRate  */ 0.0345453255727998,
+            // Data from RPC: getchaintxstats 4096 1f9315eb2469625a3dc9b24d26837c1da11ca33144e01fe864ffae5d557f6058
+            /* nTime    */ 1741389644,
+            /* nTxCount */ 2348935,
+            /* dTxRate  */ 0.03867838191041831,
         };
     }
 };
